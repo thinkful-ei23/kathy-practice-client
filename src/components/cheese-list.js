@@ -1,17 +1,41 @@
 import React from 'react';
-import React, { Component } from 'react';
+//import { connect } from 'react-redux'
+//import store from './store.js';
 
 
 export default class CheeseList extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+
 	render() {
-		const cheeseItems = this.props.cheese.map(cheese => (<li>{cheese}</li>));
 		return (
 			<ul>
-				{cheeseItems}
-			</ul >
+				<li>Bath Blue</li>
+				<li>Barkham Blue</li>
+				<li>Buxton Blue</li>
+			</ul>
 		);
 	}
 }
+
+// const mapStateToProps = state => {
+// 	return {
+// 		cheeses: state.cheeses
+// 	};
+// };
+
+// export default connect(mapStateToProps)(CheeseList);
+
+
+
+/*
+const cheeses = [
+			"Bath Blue",
+			"Barkham Blue",
+			"Buxton Blue"
+		]
+		console.log(cheeseItem, 'cheeses2')
+		const cheeseItem = this.props.cheeses.map(cheeses => (
+			<li>
+				{cheeses}
+			</li>
+		));
+		*/
