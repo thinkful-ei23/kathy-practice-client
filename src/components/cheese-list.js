@@ -7,12 +7,11 @@ export default class CheeseList extends React.Component {
 		super(props);
 	}
 	render() {
+		const cheeseItems = this.props.cheese.map(cheese => (<li>{cheese}</li>));
 		return (
-			<div className="cheeses" >
-				<ul>
-					<li>{this.props.name}</li>
-				</ul >
-			</div>
+			<ul>
+				{cheeseItems}
+			</ul >
 		);
 	}
 }
