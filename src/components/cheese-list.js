@@ -6,6 +6,7 @@ import React from 'react';
 export default class CheeseList extends React.Component {
 
 	render() {
+		console.log(CheeseList, 'anybody there?');
 		return (
 			<ul>
 				<li>Bath Blue</li>
