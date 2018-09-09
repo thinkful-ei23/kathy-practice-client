@@ -1,42 +1,35 @@
 import React from 'react';
-//import { connect } from 'react-redux'
-//import store from './store.js';
+import { connect } from 'react-redux'
+import { fetchCheeses } from '../actions/cheese.js';
 
 
-export default class CheeseList extends React.Component {
+export class CheeseList extends React.Component {
+
+	componentDidMount() {
+		console.log('componentDidMount');
+		this.props.dispatch(fetchCheeses());
+	}
 
 	render() {
-		console.log(CheeseList, 'anybody there?');
+
+		const cheeseItems = this.props.cheeses.map(cheeses => (
+			<li>
+				{cheeses}
+			</li>
+		));
+
 		return (
-			<ul>
-				<li>Bath Blue</li>
-				<li>Barkham Blue</li>
-				<li>Buxton Blue</li>
+			<ul className='cheese-list'>
+				{cheeseItems}
 			</ul>
 		);
 	}
 }
 
-// const mapStateToProps = state => {
-// 	return {
-// 		cheeses: state.cheeses
-// 	};
-// };
+const mapStateToProps = (state) => {
+	return {
+		cheeses: state.cheeses
+	};
+};
 
-// export default connect(mapStateToProps)(CheeseList);
-
-
-
-/*
-const cheeses = [
-			"Bath Blue",
-			"Barkham Blue",
-			"Buxton Blue"
-		]
-		console.log(cheeseItem, 'cheeses2')
-		const cheeseItem = this.props.cheeses.map(cheeses => (
-			<li>
-				{cheeses}
-			</li>
-		));
-		*/
+export default connect(mapStateToProps)(CheeseList);

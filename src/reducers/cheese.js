@@ -5,13 +5,13 @@ import {
 } from '../actions/cheese.js';
 
 
-const inititalState = {
+const initialState = {
 	cheeses: [],
 	loading: false,
 	error: null
 }
 
-export default function reducer(state = initialState, action) {
+export default function cheeseReducer(state = initialState, action) {
 	if (action.type === FETCH_CHEESES_REQUEST) {
 		return Object.assign({}, state, {
 			loading: true
@@ -29,5 +29,6 @@ export default function reducer(state = initialState, action) {
 			error: action.error
 		});
 	}
+
 	return state;
 }
