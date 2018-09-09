@@ -6,7 +6,7 @@ import { fetchCheeses } from '../actions/cheese.js';
 export class CheeseList extends React.Component {
 
 	componentDidMount() {
-		console.log('componentDidMount');
+		//console.log('componentDidMount');
 		this.props.dispatch(fetchCheeses());
 	}
 

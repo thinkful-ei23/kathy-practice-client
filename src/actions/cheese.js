@@ -18,7 +18,7 @@ export const fetchCheesesError = error => ({
 const BASE_URL = 'http://localhost:8080';
 
 export const fetchCheeses = () => (dispatch) => {
-	console.log('fetching a pail')
+	//console.log('fetching a pail')
 	dispatch(fetchCheesesRequest());
 	return fetch(`${BASE_URL}/api/cheeses`)
 		.then(res => res.json())
