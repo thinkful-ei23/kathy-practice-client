@@ -10,7 +10,7 @@ export function LogInForm(props) {
 	const { handleSubmit, pristine, reset, submitting } = props;
 	return (
 		<form className="logInForm" onSubmit={handleSubmit}>
-			<div className="row">
+			<div className="rowL">
 				<label>Username or Email</label>
 				<div>
 					<Field
@@ -23,7 +23,7 @@ export function LogInForm(props) {
 				</div>
 			</div>
 
-			<div className="row">
+			<div className="rowL">
 				<label>Password</label>
 				<div>
 					<Field
@@ -36,7 +36,7 @@ export function LogInForm(props) {
 				</div>
 			</div>
 
-			<div className="row">
+			<div className="rowL">
 				<button
 					type="submit"
 					disabled={pristine || submitting}>

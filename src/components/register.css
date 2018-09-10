@@ -1,0 +1,27 @@
+.register{
+	display: flex;
+	flex-direction: column;
+	border: 5px#bbb solid;
+}
+
+.row:nth-child(1){
+	background-color: lavender;
+}
+.row:nth-child(2){
+	background-color: palevioletred;
+}
+.row:nth-child(3){
+	background-color: lightskyblue;
+}
+.row:nth-child(4){
+	background-color: lightgreen;
+}
+.row:nth-child(5){
+	background-color: lightgoldenrodyellow;
+}
+.row:nth-child(6){
+	background-color: lightsalmon;
+}
+.row:nth-child(7){
+	background-color: lightpink;
+}
