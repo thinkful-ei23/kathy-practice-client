@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import CheeseList from './components/cheese-list.js';
+//import CheeseList from './components/cheese-list.js';
+import AddList from './components/add-list.js';
+import List from './components/list.js';
 
 class App extends Component {
   render() {
     return (
-      <CheeseList />
+      <div className="working">
+        <AddList />
+        <List />
+      </div>
     )
   }
 };
