@@ -1,14 +1,14 @@
 .register{
 	display: flex;
 	flex-direction: column;
-	border: 5px#bbb solid;
+	border: 5px#000 solid;
 }
 
 .row:nth-child(1){
 	background-color: lavender;
 }
 .row:nth-child(2){
-	background-color: palevioletred;
+	background-color: paleturquoise;
 }
 .row:nth-child(3){
 	background-color: lightskyblue;

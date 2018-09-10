@@ -1,11 +1,10 @@
 import React from 'react';
 
 
-import './card.css';
-import Card from './card.js';
-//import Edit from './components/edit.js';
+import './edit.css';
 
-export default function BoardS(props) {
+
+export default function Edit(props) {
 	return (
 		<section className="dash">
 			<div className="teacher">
