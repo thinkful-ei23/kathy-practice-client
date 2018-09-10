@@ -5,16 +5,20 @@ import './App.css';
 //import AddList from './components/add-list.js';
 //import List from './components/list.js';
 //import Card from './components/card.js';
-import LogIn from './components/log-in.js';
-import RegisterForm from './components/register.js';
-import BoardS from './components/boardS.js';
-import TitleList from './components/title-listT.js';
+// import LogIn from './components/log-in.js';
+// import RegisterForm from './components/register.js';
+// import BoardS from './components/boardS.js';
+// import TitleList from './components/title-listT.js';
+// import Edit from './components/edit.js';
+import BoardT from './components/boardT.js';
+
+
 class App extends Component {
   render() {
     return (
       <div className="working">
-        <BoardS />
-        <TitleList />
+
+        <BoardT />
 
       </div>
     )
@@ -25,9 +29,13 @@ export default App;
 
 
 /*
- <AddList />
-        <List />
-        <Card />
-        <LogIn />
+
         <RegisterForm />
+        <LogIn />
+
+         <BoardS />
+          <Card />
+         <List />
+         <AddList />
+<TitleList />
         */

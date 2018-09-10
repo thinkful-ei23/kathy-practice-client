@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Card from './card.js';
 
 import './edit.css';
 
@@ -11,7 +12,7 @@ export default function Edit(props) {
 				<Card />
 
 			</div>
-			<button>Log out</button>
+			<button>Save</button>
 		</section>
 	);
 
