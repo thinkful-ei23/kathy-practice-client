@@ -1,6 +1,7 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
-import cheeseReducer from './reducers/cheese.js';
+//import cheeseReducer from './reducers/cheese.js';
+import { reducer as formReducer } from 'redux-form';
 
 // const store = createStore(
 // 	cheeseReducer,
@@ -10,4 +11,9 @@ import cheeseReducer from './reducers/cheese.js';
 // );
 //export default store;
 
-export default createStore(cheeseReducer, applyMiddleware(thunk));
+export default createStore(
+	combineReducers({
+		form: formReducer
+	}),
+	applyMiddleware(thunk)
+	+ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

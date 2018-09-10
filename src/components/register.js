@@ -1,23 +1,26 @@
 import React from 'react';
 import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
+
+import Input from './input';
+import { required, nonEmpty, isAllDigits } from '../validators';
 import './register.css';
 
 
 export function RegisterForm(props) {
-	const { handleSubmit, pristine, reset, submitting } = props;
+	const { handleSubmit, pristine, submitting } = props;
 
 	return (
-		<form className="register" onSubmit={handleSubmit}>
+		<form className="register" onSubmit={handleSubmit(values => console.log(values, "I'm in register values"))}>
 			<div className="row">
 				<label>Name</label>
 				<div>
 					<Field
 						name="name"
-						component="input"
+						component={Input}
 						type="text"
 						placeholder="Name"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
@@ -26,7 +29,7 @@ export function RegisterForm(props) {
 				<div>
 					<Field
 						name="lastName"
-						component="input"
+						component={Input}
 						type="text"
 						placeholder="Last Name (optional)"
 					//validate={isTrimmed}
@@ -39,10 +42,10 @@ export function RegisterForm(props) {
 				<div>
 					<Field
 						name="email"
-						component="input"
+						component={Input}
 						type="text"
 						placeholder="Email"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
@@ -51,10 +54,10 @@ export function RegisterForm(props) {
 				<div>
 					<Field
 						name="password"
-						component="input"
-						type="text"
+						component={Input}
+						type="password"
 						placeholder="Password"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
@@ -63,10 +66,10 @@ export function RegisterForm(props) {
 				<div>
 					<Field
 						name="confirmpassword"
-						component="input"
-						type="text"
+						component={Input}
+						type="password"
 						placeholder="Confirm Password"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
@@ -76,10 +79,10 @@ export function RegisterForm(props) {
 				<div>
 					<Field
 						name="teachercode"
-						component="input"
-						type="text"
+						component={Input}
+						type="number"
 						placeholder="Teacher Code"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty, isAllDigits]}
 					/>
 				</div>
 			</div>
@@ -98,12 +101,13 @@ export function RegisterForm(props) {
 
 }
 
-RegisterForm = connect()(RegisterForm);
-
 export default reduxForm({
 	form: 'register',
 	onSubmitFail: (errors, dispatch) => {
 		console.log(errors, 'errors')
 		return dispatch(focus('register', Object.keys(errors)[0]))
 	}
-})(RegisterForm);
+})(connect()(RegisterForm));
+
+
+//mapStatetoProps = (dispatch) =>({type: 'REGISTER_FORM', payload})

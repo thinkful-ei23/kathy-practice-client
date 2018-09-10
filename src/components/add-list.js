@@ -5,6 +5,8 @@ import './add-list.css';
 export default function AddList(props) {
 	return (
 		<div className="add">
+
+
 			<form className="add-list" >
 				<div className="form-row">
 					<input type="text" />
@@ -14,6 +16,8 @@ export default function AddList(props) {
 					<button type="button">Cancel</button>
 				</div>
 			</form>
+
+
 		</div>
 
 	);

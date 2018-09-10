@@ -3,13 +3,12 @@ import React from 'react';
 
 import './class-list.css';
 
-
 export default function ClassList(props) {
 	return (
 
 		<div className="classlist">
+			<h5>Class List</h5>
 			<ul>
-				<li>Class list</li>
 				<li>Student 1</li>
 				<li>Student 2</li>
 				<li>Student 3</li>
@@ -18,7 +17,7 @@ export default function ClassList(props) {
 				<li>Student 6</li>
 				<li>Student 7</li>
 			</ul>
-
+			<button>Assign</button>
 		</div>
 
 	);

@@ -2,36 +2,40 @@ import React from 'react';
 import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
+import Input from './input';
+import { required, nonEmpty } from '../validators';
 import './log-in.css';
-
 
 export function LogInForm(props) {
 
-	const { handleSubmit, pristine, reset, submitting } = props;
+	const { handleSubmit, pristine, submitting } = props;
+	//console.log(props, "log in props");
+
 	return (
-		<form className="logInForm" onSubmit={handleSubmit}>
+		<form className="logInForm" onSubmit={handleSubmit(values => console.log(values)
+		)}>
 			<div className="rowL">
-				<label>Username or Email</label>
+				<label htmlFor="user">Username or Email</label>
 				<div>
 					<Field
 						name="user"
-						component="input"
+						component={Input}
 						type="text"
 						placeholder="Username or Email"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
 
 			<div className="rowL">
-				<label>Password</label>
+				<label htmlFor="password">Password</label>
 				<div>
 					<Field
 						name="password"
-						component="input"
-						type="text"
+						component={Input}
+						type="password"
 						placeholder="Password"
-					//validate={[required, nonEmpty, isTrimmed]}
+						validate={[required, nonEmpty]}
 					/>
 				</div>
 			</div>
@@ -46,10 +50,10 @@ export function LogInForm(props) {
 		</form>
 
 	);
-
 }
 
-LogInForm = connect()(LogInForm);
+
+
 
 export default reduxForm({
 	form: 'login',
@@ -57,4 +61,4 @@ export default reduxForm({
 		console.log(errors, 'errors')
 		return dispatch(focus('login', Object.keys(errors)[0]))
 	}
-})(LogInForm);
+})(connect()(LogInForm));
