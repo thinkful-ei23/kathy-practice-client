@@ -1,3 +1,10 @@
+ .list{
+	width: 100%;
+ }
+ /*
+	display: flex;
+	justify-content: flex-end;
+} */
 .collapsible {
 	background-color: #ddd;
 	color: #777;
@@ -23,15 +30,15 @@
 	background-color: #f1f1f1;
 }
 .collapsible:after {
-content: ' \21E9'; /* Unicode character for arrow */
-color: #777;
+	content: ' \21E9'; /* Unicode character for arrow */
+	color: #777;
 }
 .active:after {
-content: '\2613';/* Unicode character for X sign */
- color: orange;
+	content: '\2613';/* Unicode character for X sign */
+ 	color: orange;
 }
 .content {
-color: #555;
+	color: #555;
 }
 .edit {
 	 width: 100%;

@@ -1,9 +1,5 @@
-* {
-  box-sizing: border-box;
-  font-family: sans-serif;
-  margin: 10px;
-}
 .add {
+  width: 100%;
   display: flex;
   justify-content: center;
 	flex-wrap: wrap;
