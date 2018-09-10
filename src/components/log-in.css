@@ -1,0 +1,15 @@
+.logInForm {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px blueviolet dotted;
+}
+.row:nth-child(1){
+	background-color: red;
+}
+.row:nth-child(2){
+	background-color: orange;
+}
+.row:nth-child(3){
+	background-color: yellowgreen;
+}

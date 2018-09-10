@@ -5,17 +5,25 @@ import './App.css';
 import AddList from './components/add-list.js';
 import List from './components/list.js';
 import Card from './components/card.js';
+import LogIn from './components/log-in.js';
+
 
 class App extends Component {
   render() {
     return (
       <div className="working">
-        <AddList />
-        <List />
-        <Card />
+
+        <LogIn />
       </div>
     )
   }
 };
 
 export default App;
+
+
+/*
+ <AddList />
+        <List />
+        <Card />
+        */
