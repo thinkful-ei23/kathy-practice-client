@@ -18,8 +18,8 @@ class App extends Component {
     return (
       <div className="working">
 
-        <BoardT />
 
+        <List />
 
       </div>
     )
