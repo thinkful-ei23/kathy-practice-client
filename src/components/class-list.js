@@ -17,7 +17,7 @@ export default function ClassList(props) {
 				<li>Student 6</li>
 				<li>Student 7</li>
 			</ul>
-			<button>Assign</button>
+			<button className="btn">Assign</button>
 		</div>
 
 	);

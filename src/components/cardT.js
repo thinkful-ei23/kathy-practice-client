@@ -1,15 +1,17 @@
 import React from 'react';
 import './card.css';
-import List from './list.js';
-import AddList from './add-list.js';
+import List from './list';
+import AddList from './add-list';
 
-export default function Card(props) {
+export default function CardT(props) {
 
 	return (
 		<div className="card">
+			<h4 className="title">Title</h4>
 			<ul>
-				<li className="title">Title</li>
 				<li>{props.list}</li>
+				<li><List /></li>
+				<li><List /></li>
 				<li><List /></li>
 				<li><AddList /></li>
 			</ul>

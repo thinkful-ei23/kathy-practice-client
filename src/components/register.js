@@ -90,6 +90,7 @@ export function RegisterForm(props) {
 
 			<div className="row">
 				<button
+					className="btn"
 					type="submit"
 					disabled={pristine || submitting}>
 					Login

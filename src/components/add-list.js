@@ -12,8 +12,8 @@ export default function AddList(props) {
 					<input type="text" />
 				</div>
 				<div className="form-row">
-					<button type="button">Add</button>
-					<button type="button">Cancel</button>
+					<button className="btn" type="button">Add</button>
+					<button className="btn" type="button">Cancel</button>
 				</div>
 			</form>
 

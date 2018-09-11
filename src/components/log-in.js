@@ -9,7 +9,6 @@ import './log-in.css';
 export function LogInForm(props) {
 
 	const { handleSubmit, pristine, submitting } = props;
-	//console.log(props, "log in props");
 
 	return (
 		<form className="logInForm" onSubmit={handleSubmit(values => console.log(values)
@@ -42,13 +41,15 @@ export function LogInForm(props) {
 
 			<div className="rowL">
 				<button
+					className="btn btn-large"
 					type="submit"
 					disabled={pristine || submitting}>
 					Login
 				</button>
 			</div>
-		</form>
 
+			<button className="btn btn-large" >Sign Up</button>
+		</form>
 	);
 }
 
