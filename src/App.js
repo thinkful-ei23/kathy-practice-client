@@ -7,11 +7,11 @@ import './App.css';
 // import CardT from './components/cardT';
 // import CardS from './components/cardS';
 import LogIn from './components/log-in.js';
-// import RegisterForm from './components/register.js';
+import RegisterForm from './components/register.js';
 // import BoardS from './components/boardS.js';
 // import TitleList from './components/title-listT.js';
 // import Edit from './components/edit.js';
-//import BoardT from './components/boardT.js';
+import BoardT from './components/boardT.js';
 // import ClassList from './components/class-list.js';
 
 class App extends Component {
@@ -20,8 +20,8 @@ class App extends Component {
       <div className="working">
 
         <LogIn />
-
-
+        <RegisterForm />
+        <BoardT />
       </div>
     )
   }

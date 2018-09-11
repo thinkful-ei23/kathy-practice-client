@@ -1,9 +1,10 @@
 .logInForm {
   display: flex;
 	flex-direction: column;
-	justify-content: center;
+	/*justify-content: center; */
 	border: 1px blueviolet dotted;
 }
+
 .rowL:nth-child(1){
 	background-color: red;
 }
@@ -12,4 +13,27 @@
 }
 .rowL:nth-child(3){
 	background-color: yellowgreen;
+}
+.btn{
+	padding: 5px 10px;
+	background-color: palegoldenrod;
+	color: #000;
+	border-radius: 3px;
+}
+.btn:hover
+.btn:active {
+	background-color: purple;
+	color: #fff;
+}
+.btn-large {
+	padding: 10px;
+	font-size: 20px;
+	background-color: #fff;
+	color: purple;
+
+}
+.btn-large:hover
+.btn-large:active {
+	background-color: purple;
+	color: #fff;
 }

@@ -88,14 +88,14 @@ export function RegisterForm(props) {
 			</div>
 
 
-			<div className="row">
-				<button
-					className="btn"
-					type="submit"
-					disabled={pristine || submitting}>
-					Login
+			{/*<div className="row"> */}
+			<button
+				className="btn btn-large"
+				type="submit"
+				disabled={pristine || submitting}>
+				Login
 				</button>
-			</div>
+			{/*}	</div> */}
 		</form>
 
 	);
