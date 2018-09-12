@@ -39,16 +39,19 @@ export function LogInForm(props) {
 				</div>
 			</div>
 
-			{/* <div className="rowL"> */}
+
 			<button
 				className="btn btn-large"
 				type="submit"
 				disabled={pristine || submitting}>
 				Login
 				</button>
-			{/*</div> */}
 
-			<button className="btn btn-large" >Sign Up</button>
+
+			<button
+				className="btn btn-large">
+				First Time? Sign Up Here
+			</button>
 		</form>
 	);
 }
