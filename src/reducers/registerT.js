@@ -2,7 +2,7 @@ import {
 	REGISTER_TEACHER_REQUEST,
 	REGISTER_TEACHER_SUCCESS,
 	REGISTER_TEACHER_ERROR
-} from '../actions/usersS.js';
+} from '../actions/usersT.js';
 
 const initialState = {
 	id: null,
@@ -32,20 +32,3 @@ export default function teacherSignupReducer(state = initialState, action) {
 
 	return state;
 }
-
-
-
-
-
-
-
-
-// import REGISTER_STUDENT from '../actions/users.js';
-// const initialState = {
-// 	id: null,
-// 	name: null,
-// 	last_name: null,
-// 	email: null,
-// 	password: null,
-// 	teacher_code: null
-// };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm, Field, focus, SubmissionError, } from 'redux-form';
 import { connect } from 'react-redux';
-import { registerTeacher } from '../actions/usersS';
+
 import Input from './input';
 import { required, nonEmpty } from '../validators';
 import './register.css';
@@ -10,9 +10,8 @@ import './register.css';
 export class RegisterFormT extends React.Component {
 
 	onSubmit(values) {
-		console.log(values, 'Values')
-
-		return fetch('/api/teachers', {
+		//console.log(values, 'Values')
+		return fetch('http://localhost:8080/api/teachers', {
 			method: 'POST',
 			body: JSON.stringify(values),
 			headers: {
@@ -20,7 +19,7 @@ export class RegisterFormT extends React.Component {
 			}
 		})
 			.then(res => {
-				console.log(res, 'results here')
+				//console.log(res, 'results here in regT compoenents line 22ish')
 				if (!res.ok) {
 					if (
 						res.headers.has('content-type') &&
@@ -39,9 +38,9 @@ export class RegisterFormT extends React.Component {
 				}
 				return res.json();
 			})
-			.then((data) => console.log('Submitted with data', data))
+			.then((data) => console.log('Submitted with dataT', data))
 			.catch(err => {
-				console.log(err, 'error')
+				//console.log(err, 'error regT componenets line 43ish')
 				const { reason, message, location } = err;
 				if (reason === 'ValidationError') {
 					// Convert ValidationErrors into SubmissionErrors for Redux Form
@@ -57,7 +56,6 @@ export class RegisterFormT extends React.Component {
 					})
 				);
 			});
-
 	}
 	render() {
 		const { handleSubmit, pristine, submitting } = this.props;
@@ -82,7 +80,7 @@ export class RegisterFormT extends React.Component {
 
 					<label className="row" >First Name</label>
 					<Field
-						name="firstName"
+						name="first_name"
 						component={Input}
 						type="text"
 						placeholder="First Name"
@@ -91,10 +89,11 @@ export class RegisterFormT extends React.Component {
 
 					<label className="row">Last Name</label>
 					<Field
-						name="lastName"
+						name="last_name"
 						component={Input}
 						type="text"
 						placeholder="Last Name"
+						validate={[required, nonEmpty]}
 					/>
 
 					<label className="row">Email</label>
@@ -136,18 +135,17 @@ export class RegisterFormT extends React.Component {
 		);
 	}
 }
-
 export default reduxForm({
 	form: 'registerT',
 	onSubmitFail: (errors, dispatch) => {
-		console.log(errors, 'errors in the bottom')
+		console.log(errors, 'errors in the bottom of regT/components')
 		return dispatch(focus('registerT', Object.keys(errors)[0]))
 	}
 })(connect()(RegisterFormT));
 
+/*
 
-//mapStatetoProps = (dispatch) =>({type: 'REGISTER_FORM', payload})
-//	<form className="register" onSubmit={handleSubmit} >
-//				{/* <form className="register" onSubmit={handleSubmit(values =></form>
-//				this.onSubmit(values)
-//			)}> */}
+const mapStateToProps = state => ({
+	form: state.form
+});
+*/

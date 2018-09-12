@@ -10,7 +10,8 @@ import './register.css';
 export class RegisterFormS extends React.Component {
 
 	onSubmit(values) {
-		return fetch('/api/students', {
+
+		return fetch('http://localehost:8080/api/students', {
 			method: 'POST',
 			body: JSON.stringify(values),
 			headers: {
@@ -34,9 +35,9 @@ export class RegisterFormS extends React.Component {
 						message: res.statusText
 					});
 				}
-				return;
+				return res.json;
 			})
-			.then(() => console.log('Submitted with values', values))
+			.then((data) => console.log('Submitted with dataS', data))
 			.catch(err => {
 				const { reason, message, location } = err;
 				if (reason === 'ValidationError') {
@@ -57,26 +58,26 @@ export class RegisterFormS extends React.Component {
 
 	render() {
 		const { handleSubmit, pristine, submitting } = this.props;
-		// let successMessage;
-		// if (this.props.submitSucceeded) {
-		// 	successMessage = (
-		// 		<div className="message message-success">
-		// 			Message submitted successfully
-		// 				</div>
-		// 	);
-		// }
+		let successMessage;
+		if (this.props.submitSucceeded) {
+			successMessage = (
+				<div className="message message-success">
+					Message submitted successfully
+						</div>
+			);
+		}
 
-		// let errorMessage;
-		// if (this.props.error) {
-		// 	errorMessage = (
-		// 		<div className="message message-error">{this.props.error}</div>
-		// 	);
-		// }
+		let errorMessage;
+		if (this.props.error) {
+			errorMessage = (
+				<div className="message message-error">{this.props.error}</div>
+			);
+		}
 
 
 		return (
 			<div>
-				<form className="register" onSubmit={handleSubmit((values) => { this.onSubmit(values, this.props); })}>
+				<form className="register" onSubmit={handleSubmit((values) => { return this.onSubmit(values, this.props); })}>
 
 					<label className="row" >Name</label>
 					<Field
@@ -89,7 +90,7 @@ export class RegisterFormS extends React.Component {
 
 					<label className="row">Last Name</label>
 					<Field
-						name="lastName"
+						name="last_name"
 						component={Input}
 						type="text"
 						placeholder="Last Name (optional)"
@@ -124,7 +125,7 @@ export class RegisterFormS extends React.Component {
 
 					<label className="row">Teacher Code</label>
 					<Field
-						name="teachercode"
+						name="teacher_code"
 						component={Input}
 						type="number"
 						placeholder="Teacher Code"
@@ -137,7 +138,6 @@ export class RegisterFormS extends React.Component {
 						disabled={pristine || submitting}>
 						Sign Up!
 				</button>
-
 				</form >
 			</div>
 
