@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #ddd;
+}
+.brand {
+	padding: 5px;
+	color: orange;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+
+.btn{
+	padding: 5px 10px;
+	background-color: #ffc966;
+	color: #000;
+	border-radius: 3px;
+	font-size: 12px;
+}
+.btn:hover
+.btn:active {
+	background-color: purple;
+	color: #fff;
+}
+.btn-large {
+	padding: 10px;
+	font-size: 20px;
+	background-color: #fff;
+	color: purple;
+	border: 5px #ffc966 solid;
+
+}
+.btn-large:hover
+.btn-large:active {
+	background-color: purple;
+	color: #fff;
+}

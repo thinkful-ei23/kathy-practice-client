@@ -1,9 +1,20 @@
 .title-list{
-	background-color: burlywood;
-	color: brown;
+	background-color:#fff;
+	color: orange;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	border: 1px purple dashed;
 }
 .title{
 	color: purple;
-	background: #ddd;
+	background: #eee;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+}
+.sub-title {
+	padding: 10px;
 
 }

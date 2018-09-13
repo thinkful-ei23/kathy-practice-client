@@ -4,17 +4,16 @@
   justify-content: center;
 	flex-wrap: wrap;
 	background-color: aliceblue;
-  border: 2px black dashed;
+  border: 1px black dashed;
 }
-/* .wrapper {
-  background-color: aliceblue;
-  border: 2px black dashed;
-} */
 .form-row {
   display: flex;
   justify-content: space-around;
+  padding: 10px;
   margin: 0;
 }
-.button {
-  background-color: blueviolet;
+.form-row-input {
+  margin-top: 5px;
+  padding: 5px;
+
 }

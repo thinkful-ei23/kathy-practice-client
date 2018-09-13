@@ -8,13 +8,13 @@ export default function TitleList(props) {
 	return (
 
 		<div className="title-list">
+			<h3 className="title">Saved Practice Logs</h3>
 			<ul>
-				<li className="title">Saved Practice Logs</li>
-				<li>Title 1</li>
-				<li>Title 2</li>
-				<li>Title 3</li>
-				<li>Title 4</li>
-				<li>Title 5</li>
+				<li className="sub-title">Title 1</li>
+				<li className="sub-title">Title 2</li>
+				<li className="sub-title">Title 3</li>
+				<li className="sub-title">Title 4</li>
+				<li className="sub-title">Title 5</li>
 			</ul>
 
 		</div>

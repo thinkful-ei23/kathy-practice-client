@@ -10,16 +10,22 @@ import ClassList from './class-list.js';
 export default function BoardT(props) {
 
 	return (
-
 		<section className="dash">
-			<div className="teacher">
 
+			<div className="edit">
 				<Edit />
-				<TitleList />
-				<ClassList />
+			</div>
+
+			<div className="flex" >
+
+				<TitleList className="titleList" />
+
+				<ClassList className="classList" />
 			</div>
 
 		</section>
 	);
 
 };
+
+

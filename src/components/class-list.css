@@ -1,5 +1,21 @@
 .classlist {
 color: green;
-border: 3px greenyellow dotted;
+border: 1px green dotted;
 background-color: #eee;
+font-size: 15px;
+display:flex;
+flex-direction: column;
+flex-wrap: wrap;
+}
+.classTitle {
+	font-size: 18px;
+	align-self: center;
+}
+.classRoom{
+	list-style-type: none;
+	padding: 6px;
+
+}
+.student {
+	margin-top: 5px;
 }

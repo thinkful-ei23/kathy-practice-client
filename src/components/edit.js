@@ -8,7 +8,7 @@ import './edit.css';
 export default function Edit(props) {
 	return (
 
-		<div className="teacher">
+		<div className="teacher-card">
 			<CardT />
 			<button className="btn btn-large">Save</button>
 		</div >
