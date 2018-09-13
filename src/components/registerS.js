@@ -3,9 +3,10 @@ import { reduxForm, Field, focus, SubmissionError, } from 'redux-form';
 import { connect } from 'react-redux';
 
 import Input from './input';
-import { required, nonEmpty, isAllDigits } from '../validators';
+import { required, nonEmpty, isAllDigits, matches } from '../validators';
 import './register.css';
 
+const matchesPassword = matches('password');
 
 export class RegisterFormS extends React.Component {
 
@@ -120,7 +121,7 @@ export class RegisterFormS extends React.Component {
 						component={Input}
 						type="password"
 						placeholder="Confirm Password"
-						validate={[required, nonEmpty]}
+						validate={[required, nonEmpty, matchesPassword]}
 					/>
 
 					<label className="row">Teacher Code</label>
