@@ -1,11 +1,13 @@
 .logInForm {
   display: flex;
 	flex-direction: column;
-	/*justify-content: center; */
-	border: 1px blueviolet dotted;
+	flex-wrap: wrap;
+	align-items: stretch;
+	padding: 15px;
+	border: 2px blueviolet dotted;
 }
 
-.rowL:nth-child(1){
+/* .rowL:nth-child(1){
 	background-color: red;
 }
 .rowL:nth-child(2){
@@ -13,8 +15,28 @@
 }
 .rowL:nth-child(3){
 	background-color: yellowgreen;
+} */
+.rowL {
+	padding:10px 10px 5px 10px;
+	border: none;
 }
-.btn{
+Input{
+	padding: 10px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #444;
+	background-color: #eee;
+	width: 100%;
+}
+.login-btn2 {
+	background-color:#ffc966;
+}
+.login-btn,
+.login-btn2 {
+	margin: 15px 0;
+}
+/* .btn{
 	padding: 5px 10px;
 	background-color: palegoldenrod;
 	color: #000;
@@ -30,10 +52,9 @@
 	font-size: 20px;
 	background-color: #fff;
 	color: purple;
-
 }
 .btn-large:hover
 .btn-large:active {
 	background-color: purple;
 	color: #fff;
-}
+} */

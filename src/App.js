@@ -10,11 +10,11 @@ import './App.css';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
 // import List from './components/list.js';
-// import LogIn from './components/log-in.js';
+import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar.js';
-import RegisterFormS from './components/registerS.js';
+// import RegisterFormS from './components/registerS.js';
 // import RegisterFormT from './components/registerT.js';
-import TitleList from './components/title-listT.js';
+// import TitleList from './components/title-listT.js';
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="working">
         <NavBar />
-        <RegisterFormS />
+        <LogIn />
 
       </div>
     )
