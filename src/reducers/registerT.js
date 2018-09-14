@@ -3,9 +3,7 @@ import {
 	REGISTER_TEACHER_SUCCESS,
 	REGISTER_TEACHER_ERROR
 } from '../actions/usersT.js';
-// const REGISTER_TEACHER_REQUEST = "nope";
-// const REGISTER_TEACHER_SUCCESS = "nope";
-// const REGISTER_TEACHER_ERROR = "nope";
+
 const initialState = {
 	id: null,
 	first_name: null,

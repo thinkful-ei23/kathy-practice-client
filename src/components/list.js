@@ -18,9 +18,9 @@ export default function List(props) {
 	return (
 
 		<div className="list">
-			<button onClick={handleToggle} className="collapsible">Title of skill</button>
+			<button onClick={handleToggle} className="collapsible">{...title}</button>
 			<div className="content">
-				<textarea className="edit" type="text" rows="4"></textarea>
+				<textarea className="edit" type="text" rows="4">{this.props.content}</textarea>
 			</div>
 		</div>
 	);

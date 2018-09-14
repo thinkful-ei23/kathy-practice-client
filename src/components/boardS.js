@@ -39,4 +39,4 @@ const mapStateToProps = state => {
 	};
 };
 
-export default requiresLogin()(connect(mapStateToProps)(BoardD));
+export default requiresLogin()(connect(mapStateToProps)(BoardS));
