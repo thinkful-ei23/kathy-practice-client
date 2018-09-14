@@ -2,83 +2,28 @@ import React from 'react';
 import { reduxForm, Field, focus, SubmissionError, } from 'redux-form';
 import { connect } from 'react-redux';
 
+import { registerUser } from '../actions/users';
+import { login } from '../actions.auth';
 import Input from './input';
 import { required, nonEmpty, isAllDigits, matches } from '../validators';
 import './register.css';
-
 const matchesPassword = matches('password');
 
 export class RegisterFormS extends React.Component {
 
-	onSubmit(values) {
-
-		return fetch('http://localehost:8080/api/students', {
-			method: 'POST',
-			body: JSON.stringify(values),
-			headers: {
-				'Content-Type': 'application/json'
-			}
-		})
-			.then(res => {
-				if (!res.ok) {
-					if (
-						res.headers.has('content-type') &&
-						res.headers
-							.get('content-type')
-							.startsWith('application/json')
-					) {
-						// It's a nice JSON error returned by us, so decode it
-						return res.json().then(err => Promise.reject(err));
-					}
-					// It's a less informative error returned by express
-					return Promise.reject({
-						code: res.status,
-						message: res.statusText
-					});
-				}
-				return res.json;
-			})
-			.then((data) => console.log('Submitted with dataS', data))
-			.catch(err => {
-				const { reason, message, location } = err;
-				if (reason === 'ValidationError') {
-					// Convert ValidationErrors into SubmissionErrors for Redux Form
-					return Promise.reject(
-						new SubmissionError({
-							[location]: message
-						})
-					);
-				}
-				return Promise.reject(
-					new SubmissionError({
-						_error: 'Error submitting message'
-					})
-				);
-			});
+	onSubmit(values) { //console.log(values, 'Values')
+		const { first_name, last_name, email, password } = values;
+		const user = { first_name, last_name, email, password };
+		return this.props
+			.dispatch(registerUser(user))
+			.then(() => this.props.dispatch(login(email, password)));
 	}
-
 	render() {
-		const { handleSubmit, pristine, submitting } = this.props;
-		let successMessage;
-		if (this.props.submitSucceeded) {
-			successMessage = (
-				<div className="message message-success">
-					Message submitted successfully
-						</div>
-			);
-		}
-
-		let errorMessage;
-		if (this.props.error) {
-			errorMessage = (
-				<div className="message message-error">{this.props.error}</div>
-			);
-		}
-
-
 		return (
 			<div>
-				<form className="register" onSubmit={handleSubmit((values) => { return this.onSubmit(values, this.props); })}>
+				<form className="register" onSubmit={handleSubmit((values) => {
+					return this.onSubmit(values, this.props);
+				})}>
 
 					<label className="row" >Name</label>
 					<Field
@@ -154,9 +99,3 @@ export default reduxForm({
 	}
 })(connect()(RegisterFormS));
 
-
-//mapStatetoProps = (dispatch) =>({type: 'REGISTER_FORM', payload})
-//	<form className="register" onSubmit={handleSubmit} >
-//				{/* <form className="register" onSubmit={handleSubmit(values =></form>
-//				this.onSubmit(values)
-//			)}> */}

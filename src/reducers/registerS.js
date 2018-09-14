@@ -13,8 +13,8 @@ const initialState = {
 	teacher_code: null
 };
 
+
 export default function reducer(state = initialState, action) {
-	//console.log(state, 'Massachusetts');
 	if (action.type === REGISTER_STUDENT_REQUEST) {
 		return Object.assign({}, state, {
 			data: action.data,

@@ -1,9 +1,9 @@
 import React from 'react';
-import { reduxForm, Field, focus, SubmissionError, } from 'redux-form';
+import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
-//import {API_BASE_URL} from '../config';
-import { normalizeResponseErrors } from './utils';
+import { registerUser } from '../actions/users';
+import { login } from '../actions.auth';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
@@ -19,39 +19,111 @@ export class RegisterFormT extends React.Component {
 			.then(() => this.props.dispatch(login(email, password)));
 	}
 
+	//=====================================
+	render() {
+		return (
+			<div>
+				<form className="register" onSubmit={handleSubmit((user) => {
+					return this.onSubmit(user, this.props);
+				})}>
 
+					<label className="row" >First Name</label>
+					<Field
+						name="first_name"
+						component={Input}
+						type="text"
+						placeholder="First Name"
+						validate={[required, nonEmpty]}
+					/>
 
+					<label className="row">Last Name</label>
+					<Field
+						name="last_name"
+						component={Input}
+						type="text"
+						placeholder="Last Name"
+						validate={[required, nonEmpty]}
+					/>
 
-		{
-	//console.log(res, 'results here in regT compoenents line 22ish')
-	if (!res.ok) {
-		if (
-			res.headers.has('content-type') &&
-			res.headers
-				.get('content-type')
-				.startsWith('application/json')
-		) {
-			// It's a nice JSON error returned by us, so decode it
-			return res.json().then(err => Promise.reject(err));
-		}
-		// It's a less informative error returned by express
-		return Promise.reject({
-			code: res.status,
-			message: res.statusText
-		});
-	}
-	return res.json();
-})
-			.then((data) => console.log('Submitted with dataT', data))
-	.catch(err => {
-		//console.log(err, 'error regT componenets line 43ish')
+					<label className="row">Email</label>
+					<Field
+						name="email"
+						component={Input}
+						type="text"
+						placeholder="Email"
+						validate={[required, nonEmpty]}
+					/>
 
-		return Promise.reject(
-			new SubmissionError({
-				_error: 'Error submitting message'
-			})
+					<label className="row">Password</label>
+					<Field
+						name="password"
+						component={Input}
+						type="password"
+						placeholder="Password"
+						validate={[required, nonEmpty]}
+					/>
+
+					<label className="row">Confirm Password</label>
+					<Field
+						name="confirmpassword"
+						component={Input}
+						type="password"
+						placeholder="Confirm Password"
+						validate={[required, nonEmpty, matchesPassword]}
+					/>
+
+					<button
+						className="row btn btn-large"
+						type="submit"
+						disabled={pristine || submitting}>
+						Sign Up
+				</button>
+				</form >
+			</div>
+
 		);
-	});
+	}
+}
+export default reduxForm({
+	form: 'registerT',
+	onSubmitFail: (errors, dispatch) => {
+		console.log(errors, 'errors in the bottom of regT/components')
+		return dispatch(focus('registerT', Object.keys(errors)[0]))
+	}
+})(connect()(RegisterFormT));
+
+
+
+
+	//console.log(res, 'results here in regT compoenents line 22ish')
+// 	if (!res.ok) {
+// 		if (
+// 			res.headers.has('content-type') &&
+// 			res.headers
+// 				.get('content-type')
+// 				.startsWith('application/json')
+// 		) {
+// 			// It's a nice JSON error returned by us, so decode it
+// 			return res.json().then(err => Promise.reject(err));
+// 		}
+// 		// It's a less informative error returned by express
+// 		return Promise.reject({
+// 			code: res.status,
+// 			message: res.statusText
+// 		});
+// 	}
+// 	return res.json();
+// })
+// 			.then((data) => console.log('Submitted with dataT', data))
+// 	.catch(err => {
+// 		//console.log(err, 'error regT componenets line 43ish')
+
+// 		return Promise.reject(
+// 			new SubmissionError({
+// 				_error: 'Error submitting message'
+// 			})
+// 		);
+// 	});
 
 
 // const { handleSubmit, pristine, submitting } = this.props;
@@ -69,77 +141,6 @@ export class RegisterFormT extends React.Component {
 // 		<div className="message message-error">{this.props.error}</div>
 // 	);
 // }
-//=====================================
-render() {
-
-	return (
-		<div>
-			<form className="register" onSubmit={handleSubmit((values) => { return this.onSubmit(values, this.props); })}>
-
-				<label className="row" >First Name</label>
-				<Field
-					name="first_name"
-					component={Input}
-					type="text"
-					placeholder="First Name"
-					validate={[required, nonEmpty]}
-				/>
-
-				<label className="row">Last Name</label>
-				<Field
-					name="last_name"
-					component={Input}
-					type="text"
-					placeholder="Last Name"
-					validate={[required, nonEmpty]}
-				/>
-
-				<label className="row">Email</label>
-				<Field
-					name="email"
-					component={Input}
-					type="text"
-					placeholder="Email"
-					validate={[required, nonEmpty]}
-				/>
-
-				<label className="row">Password</label>
-				<Field
-					name="password"
-					component={Input}
-					type="password"
-					placeholder="Password"
-					validate={[required, nonEmpty]}
-				/>
-
-				<label className="row">Confirm Password</label>
-				<Field
-					name="confirmpassword"
-					component={Input}
-					type="password"
-					placeholder="Confirm Password"
-					validate={[required, nonEmpty, matchesPassword]}
-				/>
-
-				<button
-					className="row btn btn-large"
-					type="submit"
-					disabled={pristine || submitting}>
-					Sign Up
-				</button>
-			</form >
-		</div>
-
-	);
-}
-}
-export default reduxForm({
-	form: 'registerT',
-	onSubmitFail: (errors, dispatch) => {
-		console.log(errors, 'errors in the bottom of regT/components')
-		return dispatch(focus('registerT', Object.keys(errors)[0]))
-	}
-})(connect()(RegisterFormT));
 
 /*
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import './add-list.css';
 
-
 export default function AddList(props) {
 	return (
 		<div className="add">
@@ -13,11 +12,5 @@ export default function AddList(props) {
 				</div>
 			</form>
 		</div>
-
 	);
-
-
 };
-
-// 	<div className="form-row">  </div></div>
-// 				<div className="form-row">	</div>

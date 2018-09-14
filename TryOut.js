@@ -3,18 +3,14 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import { fetchProtectedData } from '../actions/protected-data';
 
-import './card.css';
-import CardS from './cardS.js';
-
-
-export class BoardS extends React.Component {
+export class Dashboard extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
 	}
+
 	render() {
 		return (
-			<section className="dash" >
-
+			<div className="dashboard">
 				<div className="dashboard-username">
 					Username: {this.props.username}
 				</div>
@@ -22,14 +18,11 @@ export class BoardS extends React.Component {
 				<div className="dashboard-protected-data">
 					Protected data: {this.props.protectedData}
 				</div>
-
-				<div className="student">
-					<CardS />
-				</div>
-			</section>
+			</div>
 		);
 	}
-};
+}
+
 const mapStateToProps = state => {
 	const { currentUser } = state.auth;
 	return {
@@ -39,4 +32,4 @@ const mapStateToProps = state => {
 	};
 };
 
-export default requiresLogin()(connect(mapStateToProps)(BoardD));
+export default requiresLogin()(connect(mapStateToProps)(Dashboard));

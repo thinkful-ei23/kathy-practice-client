@@ -1,7 +1,6 @@
 import React from 'react';
 
 import CardT from './cardT.js';
-
 import './edit.css';
 
 
