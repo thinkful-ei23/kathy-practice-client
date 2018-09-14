@@ -1,9 +1,9 @@
 import React from 'react';
-import { reduxForm, Field, focus, SubmissionError, } from 'redux-form';
+import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
-import { registerUser } from '../actions/users';
-import { login } from '../actions.auth';
+import { registerUser } from '../actions/usersS';
+import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, isAllDigits, matches } from '../validators';
 import './register.css';
@@ -21,7 +21,7 @@ export class RegisterFormS extends React.Component {
 	render() {
 		return (
 			<div>
-				<form className="register" onSubmit={handleSubmit((values) => {
+				<form className="register" onSubmit={this.props.handleSubmit((values) => {
 					return this.onSubmit(values, this.props);
 				})}>
 
@@ -81,7 +81,7 @@ export class RegisterFormS extends React.Component {
 					<button
 						className="row btn btn-large"
 						type="submit"
-						disabled={pristine || submitting}>
+						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up!
 				</button>
 				</form >
@@ -94,7 +94,7 @@ export class RegisterFormS extends React.Component {
 export default reduxForm({
 	form: 'registerS',
 	onSubmitFail: (errors, dispatch) => {
-		console.log(errors, 'errors')
+		console.log(errors, 'errors in regS.component')
 		return dispatch(focus('registerS', Object.keys(errors)[0]))
 	}
 })(connect()(RegisterFormS));

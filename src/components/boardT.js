@@ -7,7 +7,7 @@ import './boardT.css';
 import Edit from './edit.js';
 import TitleList from './title-listT.js';
 import ClassList from './class-list.js';
-
+import AddCard from './add-card.js';
 
 export class BoardT extends React.Component {
 	componentDidMount() {
@@ -25,6 +25,7 @@ export class BoardT extends React.Component {
 					Protected data: {this.props.protectedData}
 				</div>
 				<div className="edit">
+					<AddCard />
 					<Edit />
 				</div>
 				<div className="flex" >

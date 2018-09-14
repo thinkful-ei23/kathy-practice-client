@@ -1,4 +1,4 @@
-import { SubmissionError } from 'redux-form';
+//import { SubmissionError } from 'redux-form';
 
 export const LOG_IN_SUCCESS = 'LOG_IN_SUCCESS';
 export const logInSuccess = () => ({

@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import { Route, withRouter } from 'react-router-dom';
 
 
 //import logo from './logo.svg';
 import './App.css';
+// import AddCard from './components/add-card.js';
 // import AddList from './components/add-list.js';
 // import BoardS from './components/boardS.js';
 // import BoardT from './components/boardT';
@@ -12,10 +14,12 @@ import './App.css';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
+// import LandingPageS from './components/landingPageS.js';
+// import LandingPageT from './components/landingPageT.js';
 // import List from './components/list.js';
-// import LogIn from './components/log-in.js';
+import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-// import RegisterFormS from './components/registerS.js';
+import RegisterFormS from './components/registerS.js';
 import RegisterFormT from './components/registerT.js';
 // import TitleList from './components/title-listT.js';
 import { refreshAuthToken } from './actions/auth';
@@ -49,26 +53,11 @@ export class App extends React.Component {
     return (
       <div className="working">
 
-        <NavBar />
         <RegisterFormT />
-
-
-        {/*
-        <AddList />
-        <BoardS />
-        <BoardT />
-        <CardS />
-        <CardT />
-        <ClassList />
-        <Edit />
-        <List />
-        <LogIn />
         <NavBar />
-        <TitleList />
-        <RegisterFormT />
         <RegisterFormS />
-
-         */}
+        <NavBar />
+        <LogIn />
 
       </div>
     );
@@ -87,6 +76,24 @@ export default /*withRouter*/ (connect(mapStateToProps)(App));
   /*
   select for saved logs and student list with one assign button
   teacher code = last name
+{/*
+        <AddCard />
+        <AddList />
+        <BoardS />
+        <BoardT />
+        <CardS />
+        <CardT />
+        <ClassList />
+        <Edit />
+        <LandingPageS />
+        <LandingPageT />
+        <List />
+        <LogIn />
+        <NavBar />
+        <TitleList />
+        <RegisterFormT />
+        <RegisterFormS />
+
 
         <RegisterFormT />
         <RegisterFormS />

@@ -1,31 +1,41 @@
-.addList {
+.addCard {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 	flex-wrap: wrap;
-	background-color: aliceblue;
-  border: 1px black dashed;
+	background-color: #ffc966;
+  border: 1px blue solid;
   font-size: 12px;
 }
-.form-row {
+.form-row-AddCard  {
   display: flex;
   justify-content: space-around;
   padding: 10px;
   margin: 0;
 }
-.form-row-input {
+.form-row-input-AddCard {
   margin-top: 5px;
   padding: 5px;
+
 }
-.btnL{
+.btnC{
 	padding: 5px 10px;
 	color: #000;
 	border-radius: 3px;
   font-size: 12px;
-
+  margin-right: 15px;
 }
-.btnL:hover
-.btnL:active {
+.btnC:hover
+.btnC:active {
 	background-color: purple;
 	color: #fff;
 }
+
+
+
+/*
+
+color palette
+	#ffc966;
+
+  */

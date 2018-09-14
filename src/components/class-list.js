@@ -23,9 +23,22 @@ export default function ClassList(props) {
 	);
 
 };
+/*
+.mapStateToProps
+$.ajax({
+	type: "POST",
+	contentType: "application/json; charset=utf-8",
+	dataType: "",
+	url: "",
+	data: "",
+	success: function (response) {
 
+	}
+});
 
-
+backend route
+GET
+*/
 // In renderSelectField I needed to add {...field.input } into the select to allow redux - form to monitor it.
 
 // < select className = "form-control" id = "sel1" {...field.input }>

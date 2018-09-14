@@ -14,7 +14,7 @@ export const registerUser = user => dispatch => {
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
 		.catch(err => {
-			const { reason, message, location } = err;
+			const { reason } = err;  //original const { reason, message, location } = err;
 			if (reason === 'ValidationError') {
 				const { reason, message, location } = err;
 				if (reason === 'ValidationError') {

@@ -2,6 +2,7 @@ import React from 'react';
 import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
+import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty } from '../validators';
 import './log-in.css';
@@ -49,14 +50,14 @@ export class LogInForm extends React.Component {
 				<button
 					className="login-btn btn-large"
 					type="submit"
-					disabled={pristine || submitting}>
+					disabled={this.props.pristine || this.props.submitting}>
 					Login
 				</button>
 
 				<button
 					className="login-btn2 btn-large"
 					type="submit"
-					disabled={pristine || submitting}>
+					disabled={this.props.pristine || this.props.submitting}>
 					First Time? Sign Up Here
 			</button>
 			</form>

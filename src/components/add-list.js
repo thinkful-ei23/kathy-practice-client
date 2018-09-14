@@ -3,12 +3,12 @@ import './add-list.css';
 
 export default function AddList(props) {
 	return (
-		<div className="add">
+		<div className="addList">
 			<form className="add-list" >
-				<input className="form-row form-row-input" type="text" />
+				<input className="form-row form-row-input" type="text" placeholder="Type in new skill or topic" />
 				<div className="form-row">
-					<button className="btn" type="button">Add</button>
-					<button className="btn" type="button">Cancel</button>
+					<button className="btnL" type="button">Add a new list</button>
+					<button className="btnL" type="button">Cancel list</button>
 				</div>
 			</form>
 		</div>

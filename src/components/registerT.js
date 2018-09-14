@@ -2,8 +2,8 @@ import React from 'react';
 import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
-import { registerUser } from '../actions/users';
-import { login } from '../actions.auth';
+import { registerUser } from '../actions/usersT';
+import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
@@ -23,7 +23,7 @@ export class RegisterFormT extends React.Component {
 	render() {
 		return (
 			<div>
-				<form className="register" onSubmit={handleSubmit((user) => {
+				<form className="register" onSubmit={this.props.handleSubmit((user) => {
 					return this.onSubmit(user, this.props);
 				})}>
 
@@ -75,7 +75,7 @@ export class RegisterFormT extends React.Component {
 					<button
 						className="row btn btn-large"
 						type="submit"
-						disabled={pristine || submitting}>
+						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up
 				</button>
 				</form >
@@ -86,9 +86,10 @@ export class RegisterFormT extends React.Component {
 }
 export default reduxForm({
 	form: 'registerT',
-	onSubmitFail: (errors, dispatch) => {
-		console.log(errors, 'errors in the bottom of regT/components')
-		return dispatch(focus('registerT', Object.keys(errors)[0]))
+	onSubmitFail: (error, dispatch) => {
+		console.log(error, 'errors in the bottom of regT/components')
+
+		return dispatch(focus('registerT', Object.keys(error)[0]))
 	}
 })(connect()(RegisterFormT));
 
