@@ -5,7 +5,7 @@
 	flex-wrap: wrap;
 	flex-direction: column;
 
-	border: 1px purple dashed;
+	/* border: 1px purple dashed; */
 }
 .title{
 	color: purple;

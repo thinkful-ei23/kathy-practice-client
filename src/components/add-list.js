@@ -24,12 +24,12 @@ export default class AddList extends React.Component {
         });
     }
 
-    render() {
+    render() {  //TODO not sure how the button is to work
         if (!this.state.editing) {
             return (
                 <div className="add-button"
                     onClick={() => this.setEditing(true)}>
-                    <a href="#">Add a  {this.props.type}...</a></div>
+                    <a href="List.js">Add a  {this.props.type}...</a></div>
             );
         }
 

@@ -98,12 +98,12 @@ const onSubmitFail = (errors, dispatch, submitError) => {
 RegisterFormT = connect()(RegisterFormT)
 export default reduxForm({
 	form: 'registerT',
-	onSubmitFail
-	// onSubmitFail: (error, dispatch) => {
-	// 	console.log(error, 'errors in the bottom of regT/components')
+	// onSubmitFail
+	onSubmitFail: (error, dispatch) => {
+		console.log(error, 'errors in the bottom of regT/components')
 
-	// 	return dispatch(focus('registerT', Object.keys(error)[0]))
-	// }
+		return dispatch(focus('registerT', Object.keys(error)[0]))
+	}
 })(RegisterFormT)
 
 

@@ -9,7 +9,7 @@ export default function ClassList(props) {
 		<div className="classlist">
 			<h5 className="classTitle">Class List</h5>
 			<ul className="classRoom">
-				<li className="student">{Student} </li>
+				<li className="student"> </li>
 				<li className="student">Student 2</li>
 				<li className="student">Student 3</li>
 				<li className="student">Student 4</li>
