@@ -5,11 +5,13 @@ import List from './list.js';
 
 import './card.css';
 
+
+
 export class CardS extends React.Component {
 
-	// addList(text) { //TODO need this here?
-	// 	this.props.dispatch(addList(text, this.props.index));
-	// }
+	addList(text) {
+		this.props.dispatch(addList(text, this.props.index));
+	}
 
 	render() {
 		const list = this.props.list.map((list, index) =>
@@ -23,7 +25,6 @@ export class CardS extends React.Component {
 				<h4 className="title">{this.props.title} </h4>
 				<ul>
 					{list}
-
 				</ul>
 			</div>
 		);
@@ -32,5 +33,8 @@ export class CardS extends React.Component {
 CardS.defaultProps = {
 	title: ''
 };
+const mapStateToProps = state => ({
+	list: state.course.card[0].list
+});
 
-export default connect()(CardS);
+export default connect(mapStateToProps)(CardS);

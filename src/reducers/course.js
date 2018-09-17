@@ -12,7 +12,7 @@ const initialState = {
 		list: [{ title: '', content: '' }]
 	}]
 };
-
+console.log(initialState.card[0].list)
 export const practiceReducer = (state = initialState, action) => {
 
 	if (action.type === ADD_CARD) {
@@ -23,7 +23,6 @@ export const practiceReducer = (state = initialState, action) => {
 				list: []
 			}]
 		});
-
 	} else if (action.type === ADD_LIST) {
 		let card = state.card.map((card, index) => {
 			if (index !== action.cardIndex) {

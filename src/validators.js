@@ -8,4 +8,4 @@ export const matches = field => (value, allValues) =>
 	field in allValues && value.trim() === allValues[field].trim()
 		? undefined : 'Does not match';
 
-// export const isAllDigits = value => value !== (/[0-9]/.test(value))  ? undefined : 'Please enter the 4 digit code your teacher gave you.';
+//TODO better validator statement?? export const isAllDigits = value => value !== (/[0-9]/.test(value))  ? undefined : 'Please enter the 4 digit code your teacher gave you.';

@@ -9,6 +9,7 @@ export default function Edit(props) {
 
 		<div className="teacher-card">
 			<CardT />
+			{/* TODO onClick onClick /> finish*/}
 			<button className="btn btn-large">Save</button>
 		</div >
 

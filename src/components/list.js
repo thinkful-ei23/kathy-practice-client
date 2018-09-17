@@ -30,9 +30,9 @@ List.defaultProps = {
 	title: '',
 	content: ''
 };
- //TODO change to stateful? and add below
-//  const mapStateToProps = state => ({
-// 	list: state.list
-// });
+//TODO change to stateful? and add below
+const mapStateToProps = state => ({
+	list: state.list
+});
 
 // export default connect(mapStateToProps)(List);

@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+	font-family: sans-serif;
+
 }
 
 /* color possibilities
@@ -18,7 +19,41 @@ background: #eee;
 background-color: #555;
 color: #000;
 background-color: #ffc966;
-  color: orange;
+	color: orange;
+
+	#F1C40F    SUN FLOWER
+#F39C12    ORANGE
+#E67E22    CARROT
+#D35400    PUMPKIN
+
+.color-primary {
+background-color: #fff;
+}
+.color-secondary {
+background-color: #eee
+	}
+.color-gray-light {
+	background-color: #ddd;
+	}
+.color-gray-medium {
+	background-color: #ccc;
+	}
+.color-gray-dark {
+	background-color: #bbb;
+	}
+
+
+$color-primary:#f39c12;
+
+$color-secondary:#e67e22;
+
+$color-gray-background:#fff;
+
+$color-gray-light:#eee;
+
+$color-gray-medium: #777;
+
+$color-gray-dark:#555;
   */
 
 
