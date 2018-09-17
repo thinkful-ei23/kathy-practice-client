@@ -3,7 +3,7 @@ import {
 	ADD_CARD,
 	FETCH_BOARDS_SUCCESS,
 	FETCH_BOARDT_SUCCESS
-} from '../actions/courses';
+} from '../actions/course';
 
 const initialState = {
 	// card sample with one list
@@ -15,7 +15,7 @@ const initialState = {
 
 export const practiceReducer = (state = initialState, action) => {
 
-	if (action.type === actions.ADD_CARD) {
+	if (action.type === ADD_CARD) {
 		return Object.assign({}, state, {
 			card: [...state.card, {
 				title: action.title,
@@ -24,7 +24,7 @@ export const practiceReducer = (state = initialState, action) => {
 			}]
 		});
 
-	} else if (action.type === actions.ADD_LIST) {
+	} else if (action.type === ADD_LIST) {
 		let card = state.card.map((card, index) => {
 			if (index !== action.cardIndex) {
 				return card;
@@ -38,10 +38,10 @@ export const practiceReducer = (state = initialState, action) => {
 		return Object.assign({}, state, {
 			card
 		});
-	} else if (action.type === actions.FETCH_BOARDS_SUCCESS) {
+	} else if (action.type === FETCH_BOARDS_SUCCESS) {
 		return action.boardS;
 
-	} else if (action.type === actions.FETCH_BOARDT_SUCCESS) {
+	} else if (action.type === FETCH_BOARDT_SUCCESS) {
 		return action.boardT;
 
 	}

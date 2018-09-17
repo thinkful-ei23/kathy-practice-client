@@ -1,4 +1,4 @@
-import { API_BASE_URL } from ',,/config';
+import { API_BASE_URL } from '../config';
 
 export const ADD_CARD = 'ADD_CARD';
 export const addCard = ({
@@ -29,7 +29,7 @@ export const fetchBoardT = () => dispatch => {
 			return res.json();
 		})
 		.then(boardT => {
-			dispatch(fetchBoardSuccess(boardT));
+			dispatch(fetchBoardTSuccess(boardT));
 		});
 };
 
@@ -48,7 +48,7 @@ export const fetchBoardS = () => dispatch => {
 			return res.json();
 		})
 		.then(boardS => {
-			dispatch(fetchBoardSuccess(boardS));
+			dispatch(fetchBoardTSuccess(boardS));
 		});
 };
 
