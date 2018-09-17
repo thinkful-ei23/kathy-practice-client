@@ -33,14 +33,6 @@ export const authError = error => ({
 	error
 });
 
-// Stores the auth token in state and localStorage, and decodes and stores
-// the user data stored in the token
-const storeAuthInfo = (authToken, dispatch) => {
-	const decodedToken = jwtDecode(authToken);
-	dispatch(setAuthToken(authToken));
-	dispatch(authSuccess(decodedToken.user));
-	saveAuthToken(authToken);
-};
 
 export const login = (email, password) => dispatch => {
 	dispatch(authRequest());
@@ -99,4 +91,13 @@ export const refreshAuthToken = () => (dispatch, getState) => {
 			dispatch(clearAuth());
 			clearAuthToken(authToken);
 		});
+};
+
+// Stores the auth token in state and localStorage, and decodes and stores
+// the user data stored in the token
+const storeAuthInfo = (authToken, dispatch) => {
+	const decodedToken = jwtDecode(authToken);
+	dispatch(setAuthToken(authToken));
+	dispatch(authSuccess(decodedToken.user));
+	saveAuthToken(authToken);
 };

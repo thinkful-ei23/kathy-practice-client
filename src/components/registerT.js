@@ -9,6 +9,7 @@ import { required, nonEmpty, matches } from '../validators';
 import './register.css';
 const matchesPassword = matches('password');
 console.log(registerUser, "I am a user")
+
 export class RegisterFormT extends React.Component {
 
 	onSubmit(values) {

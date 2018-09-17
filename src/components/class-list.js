@@ -23,6 +23,7 @@ export default function ClassList(props) {
 	);
 
 };
+//TODO - connect? or and data from db
 /*
 .mapStateToProps
 $.ajax({
