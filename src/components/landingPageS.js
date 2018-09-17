@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom'; //TODO add back Redirect
 
 import LoginForm from './log-in.js';
 
 export function LandingPage(props) {
 	// If we are logged in redirect straight to the user's dashboard
-	if (props.loggedIn) {
-		return <Redirect to="/boardS" />;
-	}
+	// if (props.loggedIn) {
+	// 	return <Redirect to="/boardS" />;
+	// }
 
 	return (
 		<div className="home">

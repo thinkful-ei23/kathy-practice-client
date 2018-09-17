@@ -15,13 +15,13 @@ export class BoardS extends React.Component {
 		return (
 			<section className="dash" >
 
-				<div className="dashboard-username">
+				{/* <div className="dashboard-username">
 					Username: {this.props.username}
 				</div>
 				<div className="dashboard-name">Name: {this.props.name}</div>
 				<div className="dashboard-protected-data">
 					Protected data: {this.props.protectedData}
-				</div>
+				</div> */}
 
 				<div className="student">
 					<CardS />

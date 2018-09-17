@@ -1,23 +1,36 @@
 import React from 'react';
-import './card.css';
+import { connect } from 'react-redux';
+
 import List from './list.js';
 
+import './card.css';
 
-export default function CardS(props) {
+export class CardS extends React.Component {
 
-	return (
-		<div className="card">
-			<h4 className="title">Title</h4>
-			<ul>
-				<li>{props.list}</li>
-				<li><List /></li>
-				<li><List /></li>
-				<li><List /></li>
-				<li><List /></li>
-				<li><List /></li>
-			</ul>
-		</div>
+	addList(text) {
+		this.props.dispatch(addList(text, this.props.index));
+	}
 
-	);
+	render() {
+		const list = this.props.list.map((list, index) =>
+			<li key={index}>
+				<List {...list} />>
+				</li>
+		);
 
+		return (
+			<div className="card" >
+				<h4 className="title">{this.props.title} </h4>
+				<ul>
+					{list}
+
+				</ul>
+			</div>
+		);
+	}
+}
+CardS.defaultProps = {
+	title: ''
 };
+
+export default connect()(CardS);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { reduxForm, Field, focus } from 'redux-form';
+import { reduxForm, Field, focus, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 
 import { registerUser } from '../actions/usersT';
@@ -8,24 +8,25 @@ import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
 const matchesPassword = matches('password');
-
+console.log(registerUser, "I am a user")
 export class RegisterFormT extends React.Component {
 
-	onSubmit(values) { //console.log(values, 'Values')
-		const { first_name, last_name, email, password } = values;
-		const user = { first_name, last_name, email, password };
+	onSubmit(values) {
+		const { username, password, firstName, lastName } = values;
+		const user = { username, password, firstName, lastName };
+
 		return this.props
 			.dispatch(registerUser(user))
-			.then(() => this.props.dispatch(login(email, password)));
+			.then(() => this.props.dispatch(login(username, password)));
 	}
 
 	//=====================================
 	render() {
 		return (
 			<div>
-				<form className="register" onSubmit={this.props.handleSubmit((user) => {
-					return this.onSubmit(user, this.props);
-				})}>
+				<form className="register" onSubmit={this.props.handleSubmit(values =>
+					this.onSubmit(values)
+				)}>
 
 					<label className="row" >First Name</label>
 					<Field
@@ -84,14 +85,26 @@ export class RegisterFormT extends React.Component {
 		);
 	}
 }
+const onSubmitFail = (errors, dispatch, submitError) => {
+	if (submitError instanceof SubmissionError) {
+		console.log(submitError, 'Here in hello world')
+		// optionally do something
+	} else {
+		throw submitError // or handle it
+	}
+}
+
+RegisterFormT = connect()(RegisterFormT)
 export default reduxForm({
 	form: 'registerT',
-	onSubmitFail: (error, dispatch) => {
-		console.log(error, 'errors in the bottom of regT/components')
+	onSubmitFail
+	// onSubmitFail: (error, dispatch) => {
+	// 	console.log(error, 'errors in the bottom of regT/components')
 
-		return dispatch(focus('registerT', Object.keys(error)[0]))
-	}
-})(connect()(RegisterFormT));
+	// 	return dispatch(focus('registerT', Object.keys(error)[0]))
+	// }
+})(RegisterFormT)
+
 
 
 

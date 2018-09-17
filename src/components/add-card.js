@@ -2,6 +2,7 @@ import React from 'react';
 import './add-card.css';
 
 export default function AddCard(props) {
+
 	return (
 		<div className="addCard">
 			<form className="cardAdd" >

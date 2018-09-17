@@ -18,11 +18,15 @@ export default function List(props) {
 	return (
 
 		<div className="list">
-			<button onClick={handleToggle} className="collapsible">Skills and Thrills</button>
+			<button onClick={handleToggle} className="collapsible">{props.text}</button>
 			<div className="content">
-				<textarea className="edit" type="text" rows="4">Assignment, reminders go here</textarea>
+				<textarea className="edit" type="text" rows="4">{props.content}</textarea>
 			</div>
 		</div>
 	);
 
-}
+};
+List.defaultProps = {
+	title: '',
+	content: ''
+};

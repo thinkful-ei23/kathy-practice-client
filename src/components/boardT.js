@@ -13,6 +13,9 @@ export class BoardT extends React.Component {
 	componentDidMount() {
 		this.props.dispatch(fetchProtectedData());
 	}
+	addCard(title) {
+		this.props.dispatch(addCard(title, this.props.match.params.card));
+	}
 
 	render() {
 		return (

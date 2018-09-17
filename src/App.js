@@ -1,27 +1,27 @@
 import React from 'react';
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import { Route, withRouter } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
 // import AddList from './components/add-list.js';
-// import BoardS from './components/boardS.js';
-// import BoardT from './components/boardT';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
+// import List from './components/list.js';
+// import TitleList from './components/title-listT.js';
+//================== compnenets needed below ============
+// import BoardS from './components/boardS.js';
+// import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-// import List from './components/list.js';
-import LogIn from './components/log-in.js';
+// import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-import RegisterFormS from './components/registerS.js';
-import RegisterFormT from './components/registerT.js';
-// import TitleList from './components/title-listT.js';
+// import RegisterFormS from './components/registerS.js';
+// import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
@@ -51,15 +51,19 @@ export class App extends React.Component {
   }
   render() {
     return (
-      <div className="working">
-
-        <RegisterFormT />
-        <NavBar />
-        <RegisterFormS />
-        <NavBar />
-        <LogIn />
-
-      </div>
+      <Router>
+        <div className="app">
+          <NavBar />
+          <main>
+            {/* <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={LogIn} />
+            <Route exact path="/registerS" component={RegisterFormS} />
+            <Route exact path="/registerT" component={RegisterFormT} />
+            <Route exact path="/boardS" component={BoardS} />
+            <Route exact path="/boardT" component={BoardT} />  */}
+          </main>
+        </div>
+      </Router>
     );
   }
 }

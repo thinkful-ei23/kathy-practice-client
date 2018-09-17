@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 //import { LogInForm } from './log-in';
 
@@ -9,9 +9,10 @@ export default () => Component => {
 		const { authenticating, loggedIn, error, ...passThroughProps } = props;
 		if (authenticating) {
 			return <div>Logging in...the mice are working</div>;
-		} else if (!loggedIn || error) {
-			return <Redirect to="/log-in" />;
 		}
+		// else if (!loggedIn || error) {
+		// 	return <Redirect to="/log-in" />;
+		// }
 
 		return <Component {...passThroughProps} />;
 	}

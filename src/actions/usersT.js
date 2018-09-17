@@ -3,31 +3,56 @@ import { SubmissionError } from 'redux-form';
 import { API_BASE_URL } from '../config';
 import { normalizeResponseErrors } from './utils';
 
+
 export const registerUser = user => dispatch => {
-	return fetch(`${API_BASE_URL}/api/teachers`, {
+	return fetch(`${API_BASE_URL}/teachers`, {
 		method: 'POST',
 		headers: {
-			'Content-Type': 'application/json'
+			'content-type': 'application/json'
 		},
 		body: JSON.stringify(user)
 	})
 		.then(res => normalizeResponseErrors(res))
 		.then(res => res.json())
 		.catch(err => {
-			const { reason } = err;  //original const { reason, message, location } = err;
+			const { reason, message, location } = err;
 			if (reason === 'ValidationError') {
-				const { reason, message, location } = err;
-				if (reason === 'ValidationError') {
-					// Convert ValidationErrors into SubmissionErrors for Redux Form
-					return Promise.reject(
-						new SubmissionError({
-							[location]: message
-						})
-					);
-				}
+				// Convert ValidationErrors into SubmissionErrors for Redux Form
+				return Promise.reject(
+					new SubmissionError({
+						[location]: message
+					})
+				);
 			}
 		});
 };
+// export const registerUser = user => dispatch => {
+// 	console.log('before line 7')
+// 	return fetch(`${API_BASE_URL}/api/teachers`, {
+// 		method: 'POST',
+// 		headers: {
+// 			'Content-Type': 'application/json'
+// 		},
+// 		body: JSON.stringify(user)
+// 	})
+// 		.then(res => normalizeResponseErrors(res))
+// 		.then(res => res.json())
+// 		.then(data => { console.log(data) })
+// 		.catch(err => {
+// 			const { reason } = err;  //original const { reason, message, location } = err;
+// 			if (reason === 'ValidationError') {
+// 				const { reason, message, location } = err;
+// 				if (reason === 'ValidationError') {
+// 					// Convert ValidationErrors into SubmissionErrors for Redux Form
+// 					return Promise.reject(
+// 						new SubmissionError({
+// 							[location]: message
+// 						})
+// 					);
+// 				}
+// 			}
+// 		});
+// };
 
 export const REGISTER_TEACHER_REQUEST = 'REGISTER_TEACHER_REQUEST';
 export const registerTeacherRequest = () => ({
