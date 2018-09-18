@@ -3,58 +3,13 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: stretch;
-	padding: 15px;
-	border: 2px blueviolet dotted;
-}
-
-/* .rowL:nth-child(1){
-	background-color: red;
-}
-.rowL:nth-child(2){
-	background-color: orange;
-}
-.rowL:nth-child(3){
-	background-color: yellowgreen;
-} */
-.rowL {
-	padding:10px 10px 5px 10px;
-	border: none;
-}
-Input{
-	padding: 10px;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	border-bottom: 1px solid #444;
+	padding: 1.5rem;
+	border: 2px solid #555;
 	background-color: #eee;
-	width: 100%;
+
 }
-.login-btn2 {
-	background-color:#ffc966;
+.rowL {
+	padding:1rem 1rem .5rem 1rem;
+	border: none;
+	font-size: 1.5rem;
 }
-.login-btn,
-.login-btn2 {
-	margin: 15px 0;
-}
-/* .btn{
-	padding: 5px 10px;
-	background-color: palegoldenrod;
-	color: #000;
-	border-radius: 3px;
-}
-.btn:hover
-.btn:active {
-	background-color: purple;
-	color: #fff;
-}
-.btn-large {
-	padding: 10px;
-	font-size: 20px;
-	background-color: #fff;
-	color: purple;
-}
-.btn-large:hover
-.btn-large:active {
-	background-color: purple;
-	color: #fff;
-} */

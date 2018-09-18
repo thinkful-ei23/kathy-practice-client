@@ -9,6 +9,7 @@ import './log-in.css';
 
 export class LogInForm extends React.Component {
 	onSubmit(values) {
+		console.log(values, 'values in login.js')
 		return this.props.distpatch(login(values.email, values.password));
 	}
 	render() {
@@ -21,46 +22,42 @@ export class LogInForm extends React.Component {
 			);
 		}
 		return (
-			<form
-				className="logInForm"
-				onSubmit={this.props.handleSubmit(values =>
-					//return ( before this.onSubmit(values))
-					this.onSubmit(values)
-				)}>
-				{error}
-				<label className="rowL"
-					htmlFor="email">Email</label>
-				<Field
-					name="email"
-					component={Input}
-					type="text"
-					placeholder="Email"
-					validate={[required, nonEmpty]}
-				/>
+			<section>
+				<form
+					className="logInForm"
+					onSubmit={this.props.handleSubmit(values =>
+						//return ( before this.onSubmit(values))
+						this.onSubmit(values)
+					)}>
+					{error}
+					<label className="rowL"
+						htmlFor="email">Email</label>
+					<Field
+						name="email"
+						component={Input}
+						type="text"
+						placeholder="Email"
+						validate={[required, nonEmpty]}
+					/>
 
-				<label className="rowL" htmlFor="password">Password</label>
-				<Field
-					name="password"
-					component={Input}
-					type="password"
-					placeholder="Password"
-					validate={[required, nonEmpty]}
-				/>
+					<label className="rowL" htmlFor="password">Password</label>
+					<Field
+						name="password"
+						component={Input}
+						type="password"
+						placeholder="Password"
+						validate={[required, nonEmpty]}
+					/>
 
-				<button
-					className="login-btn btn-large"
-					type="submit"
-					disabled={this.props.pristine || this.props.submitting}>
-					Login
+					<button
+						className="login-btn btn-large"
+						type="submit"
+						disabled={this.props.pristine || this.props.submitting}>
+						Login
 				</button>
+				</form>
 
-				<button
-					className="login-btn2 btn-large"
-					type="submit"
-					disabled={this.props.pristine || this.props.submitting}>
-					First Time? Sign Up Here
-			</button>
-			</form>
+			</section>
 		);
 	}
 }

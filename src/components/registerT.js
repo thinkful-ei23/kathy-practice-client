@@ -13,19 +13,20 @@ console.log(registerUser, "I am a user")
 export class RegisterFormT extends React.Component {
 
 	onSubmit(values) {
-		const { username, password, firstName, lastName } = values;
-		const user = { username, password, firstName, lastName };
+		console.log(values, 'values in registerT')
+		const { first_name, last_name, email, password } = values;
+		const user = { first_name, last_name, email, password };
 
 		return this.props
 			.dispatch(registerUser(user))
-			.then(() => this.props.dispatch(login(username, password)));
+			.then(() => this.props.dispatch(login(email, password)));
 	}
 
 	//=====================================
 	render() {
 		return (
-			<div>
-				<form className="register" onSubmit={this.props.handleSubmit(values =>
+			<div className="register">
+				<form onSubmit={this.props.handleSubmit(values =>
 					this.onSubmit(values)
 				)}>
 
@@ -73,14 +74,13 @@ export class RegisterFormT extends React.Component {
 						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
 					/>
-
-					<button
-						className="row btn btn-large"
-						type="submit"
-						disabled={this.props.pristine || this.props.submitting}>
-						Sign Up
-				</button>
 				</form >
+				<button
+					className="row btn-large"
+					type="submit"
+					disabled={this.props.pristine || this.props.submitting}>
+					Sign Up
+				</button>
 			</div>
 
 		);
@@ -105,57 +105,6 @@ export default reduxForm({
 		return dispatch(focus('registerT', Object.keys(error)[0]))
 	}
 })(RegisterFormT)
-
-
-
-
-
-	//console.log(res, 'results here in regT compoenents line 22ish')
-// 	if (!res.ok) {
-// 		if (
-// 			res.headers.has('content-type') &&
-// 			res.headers
-// 				.get('content-type')
-// 				.startsWith('application/json')
-// 		) {
-// 			// It's a nice JSON error returned by us, so decode it
-// 			return res.json().then(err => Promise.reject(err));
-// 		}
-// 		// It's a less informative error returned by express
-// 		return Promise.reject({
-// 			code: res.status,
-// 			message: res.statusText
-// 		});
-// 	}
-// 	return res.json();
-// })
-// 			.then((data) => console.log('Submitted with dataT', data))
-// 	.catch(err => {
-// 		//console.log(err, 'error regT componenets line 43ish')
-
-// 		return Promise.reject(
-// 			new SubmissionError({
-// 				_error: 'Error submitting message'
-// 			})
-// 		);
-// 	});
-
-
-// const { handleSubmit, pristine, submitting } = this.props;
-// let successMessage;
-// if (this.props.submitSucceeded) {
-// 	successMessage = (
-// 		<div className="message message-success">
-// 			Message submitted successfully
-// 						</div>
-// 	);
-// }
-// let errorMessage;
-// if (this.props.error) {
-// 	errorMessage = (
-// 		<div className="message message-error">{this.props.error}</div>
-// 	);
-// }
 
 /*
 

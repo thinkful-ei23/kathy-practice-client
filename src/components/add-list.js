@@ -25,21 +25,21 @@ export default class AddList extends React.Component {
     }
 
     render() {  //TODO not sure how the button is to work
-        if (!this.state.editing) {
-            return (
-                <div className="add-button"
-                    onClick={() => this.setEditing(true)}>
-                    <a href="List.js">Add a  {this.props.type}...</a></div>
-            );
-        }
+        // if (!this.state.editing) {
+        //     return (
+        //         <div className="add-button"
+        //             onClick={() => this.setEditing(true)}>
+        //             <a href="List.js">Add a  {this.props.type}...</a></div>
+        //     );
+        // }
 
         return (
             <div className="addList">
                 <form className="add-list" >
                     <input className="form-row form-row-input" type="text" placeholder="Type in new skill or topic" />
                     <div className="form-row">
-                        <button className="btnL" type="button">Add a new list</button>
-                        <button className="btnL" type="button" onClick={() => this.setEditing(false)}>Cancel list</button>
+                        <button className="btn" type="button" onClick={() => this.setEditing(false)}>Add list</button>
+                        <button className="btn" type="button" onClick={() => this.setEditing(false)}>Cancel list</button>
                     </div>
                 </form>
             </div>

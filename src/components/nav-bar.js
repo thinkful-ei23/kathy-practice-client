@@ -16,7 +16,21 @@ export class NavBar extends React.Component {
 		let logOutButton;
 		if (this.props.loggedIn) {
 			logOutButton = (
-				<button className="btn" onClick={() => this.logOut()}>Log out</button>
+				<button className="btn-nav" onClick={() => this.logOut()}>Log out</button>
+			);
+		}
+		// Only render the sign up button if we are logged out
+		let signUpButtonT;
+		if (this.props.loggedOut) {
+			signUpButtonT = (
+				<button className="btn-nav" onClick={() => this.signUpT()}>Teachers Sign up</button>
+			);
+		}
+		// Only render the sign up button if we are logged out
+		let signUpButtonS;
+		if (this.props.loggedOut) {
+			signUpButtonS = (
+				<button className="btn-nav" onClick={() => this.signUpS()}>Students Sign up</button>
 			);
 		}
 		return (
@@ -24,6 +38,8 @@ export class NavBar extends React.Component {
 			<header className="header" >
 				<h1 className="brand">Practice Partner</h1>
 				{logOutButton}
+				{signUpButtonT}
+				{signUpButtonS}
 			</header>
 		);
 	}

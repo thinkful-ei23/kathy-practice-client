@@ -9,15 +9,11 @@ import './card.css';
 
 export class CardS extends React.Component {
 
-	addList(text) {
-		this.props.dispatch(addList(text, this.props.index));
-	}
-
 	render() {
 		const list = this.props.list.map((list, index) =>
 			<li key={index}>
-				<List {...list} />>
-				</li>
+				<List {...list} />
+			</li>
 		);
 
 		return (

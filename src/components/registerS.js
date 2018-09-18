@@ -32,6 +32,7 @@ export class RegisterFormS extends React.Component {
 						type="text"
 						placeholder="Name"
 						validate={[required, nonEmpty]}
+						className="formField"
 					/>
 
 					<label className="row">Last Name</label>
@@ -40,6 +41,7 @@ export class RegisterFormS extends React.Component {
 						component={Input}
 						type="text"
 						placeholder="Last Name (optional)"
+						className="formField"
 					/>
 
 					<label className="row">Email</label>
@@ -49,6 +51,7 @@ export class RegisterFormS extends React.Component {
 						type="text"
 						placeholder="Email"
 						validate={[required, nonEmpty]}
+						className="formField"
 					/>
 
 					<label className="row">Password</label>
@@ -58,6 +61,7 @@ export class RegisterFormS extends React.Component {
 						type="password"
 						placeholder="Password"
 						validate={[required, nonEmpty]}
+						className="formField"
 					/>
 
 					<label className="row">Confirm Password</label>
@@ -67,6 +71,7 @@ export class RegisterFormS extends React.Component {
 						type="password"
 						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
+						className="formField"
 					/>
 
 					<label className="row">Teacher Code</label>
@@ -76,10 +81,11 @@ export class RegisterFormS extends React.Component {
 						type="number"
 						placeholder="Teacher Code"
 						validate={[required, nonEmpty, isAllDigits]}
+
 					/>
 
 					<button
-						className="row btn btn-large"
+						className="row btn-large"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up!

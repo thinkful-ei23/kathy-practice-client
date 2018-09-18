@@ -3,29 +3,16 @@
   display: flex;
   justify-content: center;
 	flex-wrap: wrap;
-	background-color: aliceblue;
-  border: 1px black dashed;
-  font-size: 12px;
+	background-color: #ffc966;
+   font-size: 1.2rem;
 }
 .form-row {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 1rem;
   margin: 0;
 }
 .form-row-input {
-  margin-top: 5px;
-  padding: 5px;
-}
-.btnL{
-	padding: 5px 10px;
-	color: #000;
-	border-radius: 3px;
-  font-size: 12px;
-
-}
-.btnL:hover
-.btnL:active {
-	background-color: purple;
-	color: #fff;
+  margin-top: .5rem;
+  padding: .5rem;
 }

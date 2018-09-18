@@ -1,20 +1,20 @@
 .title-list{
-	background-color:#fff;
-	color: orange;
+	background-color:#eee;
+	color: #F39C12;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-
-	/* border: 1px purple dashed; */
+	border: 5px solid #555;
 }
 .title{
-	color: purple;
-	background: #eee;
-	padding: 5px;
+	background: #ddd;
+	padding: .5rem;
 	display: flex;
 	justify-content: center;
+	font-size: 2rem;
+	text-transform: uppercase;
 }
 .sub-title {
-	padding: 10px;
-
+	padding: 1rem;
+	font-size: 1.5rem;
 }

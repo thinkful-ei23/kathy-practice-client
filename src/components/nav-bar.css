@@ -2,11 +2,25 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: #ddd;
+	background-color: #777;
 }
 .brand {
-	padding: 5px;
-	color: orange;
-	font-size: 30px;
+	padding: .5rem;
+	color: #f39c12;
+	font-size: 3rem;
 	text-transform: uppercase;
+}
+.btn-nav {
+	font-size: 1.5rem;
+	padding: 1rem;
+	margin: 0 1rem;
+	background-color: #fff;
+	color: #555;
+	align-self: flex-start;
+	border: 2px solid #f39c12;
+}
+.btn:hover,
+.btn:active {
+	background-color: #f39c12;
+	color: #fff;
 }

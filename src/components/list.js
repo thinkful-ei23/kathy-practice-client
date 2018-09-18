@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import './list.css';
 
 
-export default function List(props) {
+export function List(props) {
 
 	function handleToggle(e) {
 		e.preventDefault()
@@ -30,9 +32,9 @@ List.defaultProps = {
 	title: '',
 	content: ''
 };
-//TODO change to stateful? and add below
+
 const mapStateToProps = state => ({
 	list: state.list
 });
 
-// export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps)(List);
