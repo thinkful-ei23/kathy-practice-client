@@ -24,6 +24,7 @@ export class LogInForm extends React.Component {
 		return (
 			<section>
 				<form
+					aria-labelledby="logInForm"
 					className="logInForm"
 					onSubmit={this.props.handleSubmit(values =>
 						//return ( before this.onSubmit(values))

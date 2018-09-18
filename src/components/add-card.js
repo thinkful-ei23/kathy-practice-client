@@ -11,11 +11,11 @@ export default function AddCard(props) {
 					<button
 						className="btn"
 						type="button"
-						aria-label="click to add another practice chart">Add card</button>
+						aria-label="click to add another practice chart">Add chart</button>
 					<button
 						className="btn"
 						type="button"
-						aria-label="click to delete practice chart">Delete card</button>
+						aria-label="click to delete practice chart">Delete chart</button>
 				</div>
 			</form>
 		</div>

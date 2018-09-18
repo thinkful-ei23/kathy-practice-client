@@ -44,7 +44,7 @@ export class NavBar extends React.Component {
 		}
 		return (
 
-			<header className="header" >
+			<header role="banner" className="header" >
 				<h1 className="brand">Practice Partner</h1>
 				{logOutButton}
 				{signUpButtonT}

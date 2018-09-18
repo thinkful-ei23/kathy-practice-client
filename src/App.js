@@ -54,7 +54,7 @@ export class App extends React.Component {
       <Router>
         <div className="app">
           <NavBar />
-          <main>
+          <main role="main">
             <RegisterFormT />
             <NavBar />
             <RegisterFormS />

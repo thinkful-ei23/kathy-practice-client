@@ -26,59 +26,65 @@ export class RegisterFormT extends React.Component {
 	render() {
 		return (
 			<div className="register">
-				<form onSubmit={this.props.handleSubmit(values =>
-					this.onSubmit(values)
-				)}>
+				<form
+					aria-labelledby="signUpTeacher"
+					onSubmit={this.props.handleSubmit(values =>
+						this.onSubmit(values)
+					)}>
 
-					<label className="row" >First Name</label>
+					<label htmlFor="first_name" className="row" >First Name:</label>
 					<Field
 						name="first_name"
 						component={Input}
 						type="text"
 						placeholder="First Name"
 						validate={[required, nonEmpty]}
+						aria-labelledby="first_name"
 					/>
 
-					<label className="row">Last Name</label>
+					<label htmlFor="last_name" className="row">Last Name:</label>
 					<Field
 						name="last_name"
 						component={Input}
 						type="text"
 						placeholder="Last Name"
 						validate={[required, nonEmpty]}
+						aria-labelledby="last_name"
 					/>
 
-					<label className="row">Email</label>
+					<label htmlFor="email" className="row">Email:</label>
 					<Field
 						name="email"
 						component={Input}
 						type="text"
 						placeholder="Email"
 						validate={[required, nonEmpty]}
+						aria-labelledby="email"
 					/>
 
-					<label className="row">Password</label>
+					<label htmlFor="password" className="row">Password:</label>
 					<Field
 						name="password"
 						component={Input}
 						type="password"
 						placeholder="Password"
 						validate={[required, nonEmpty]}
+						aria-labelledby="password"
 					/>
 
-					<label className="row">Confirm Password</label>
+					<label htmlFor="confirmPassword" className="row">Confirm Password:</label>
 					<Field
 						name="confirmpassword"
 						component={Input}
 						type="password"
 						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
+						aria-labelledby="confirmPassword"
 					/>
 				</form >
 				<button
 					className="row btn-large"
 					aria-label="Button to log in"
-
 					type="submit"
 					disabled={this.props.pristine || this.props.submitting}>
 					Sign Up

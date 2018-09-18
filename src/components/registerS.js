@@ -21,11 +21,13 @@ export class RegisterFormS extends React.Component {
 	render() {
 		return (
 			<div>
-				<form className="register" onSubmit={this.props.handleSubmit((values) => {
-					return this.onSubmit(values, this.props);
-				})}>
+				<form
+					aria-labelledby="signUpStudent"
+					className="register" onSubmit={this.props.handleSubmit((values) => {
+						return this.onSubmit(values, this.props);
+					})}>
 
-					<label className="row" >Name</label>
+					<label htmlFor="first_name" className="row" >Name</label>
 					<Field
 						name="name"
 						component={Input}
@@ -33,18 +35,20 @@ export class RegisterFormS extends React.Component {
 						placeholder="Name"
 						validate={[required, nonEmpty]}
 						className="formField"
+						aria-labelledby="first_name"
 					/>
 
-					<label className="row">Last Name</label>
+					<label htmlFor="last_name" className="row">Last Name</label>
 					<Field
 						name="last_name"
 						component={Input}
 						type="text"
 						placeholder="Last Name (optional)"
 						className="formField"
+						aria-labelledby="last_name"
 					/>
 
-					<label className="row">Email</label>
+					<label htmlFor="email" className="row">Email</label>
 					<Field
 						name="email"
 						component={Input}
@@ -52,9 +56,10 @@ export class RegisterFormS extends React.Component {
 						placeholder="Email"
 						validate={[required, nonEmpty]}
 						className="formField"
+						aria-labelledby="email"
 					/>
 
-					<label className="row">Password</label>
+					<label htmlFor="password" className="row">Password</label>
 					<Field
 						name="password"
 						component={Input}
@@ -62,9 +67,10 @@ export class RegisterFormS extends React.Component {
 						placeholder="Password"
 						validate={[required, nonEmpty]}
 						className="formField"
+						aria-labelledby="password"
 					/>
 
-					<label className="row">Confirm Password</label>
+					<label htmlFor="confirmPassword" className="row">Confirm Password</label>
 					<Field
 						name="confirmpassword"
 						component={Input}
@@ -72,15 +78,17 @@ export class RegisterFormS extends React.Component {
 						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
 						className="formField"
+						aria-labelledby="confirmPassword"
 					/>
 
-					<label className="row">Teacher Code</label>
+					<label htmlFor="teacherCode" className="row">Teacher Code</label>
 					<Field
 						name="teacher_code"
 						component={Input}
 						type="number"
 						placeholder="Teacher Code"
 						validate={[required, nonEmpty, isAllDigits]}
+						aria-labelledby="teacherCode"
 
 					/>
 
