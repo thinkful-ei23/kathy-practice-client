@@ -20,9 +20,9 @@ export function List(props) {
 	return (
 
 		<div className="list">
-			<button onClick={handleToggle} className="collapsible">{props.text}</button>
+			<button aria-label="click to expand and collapse row" onClick={handleToggle} className="collapsible">{props.text}</button>
 			<div className="content">
-				<textarea className="edit" type="text" rows="4">{props.content}</textarea>
+				<textarea aria-label="add additional assignment to row" className="edit" type="text" rows="4">{props.content}</textarea>
 			</div>
 		</div>
 	);

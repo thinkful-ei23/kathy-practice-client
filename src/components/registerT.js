@@ -77,6 +77,8 @@ export class RegisterFormT extends React.Component {
 				</form >
 				<button
 					className="row btn-large"
+					aria-label="Button to log in"
+
 					type="submit"
 					disabled={this.props.pristine || this.props.submitting}>
 					Sign Up

@@ -38,8 +38,16 @@ export default class AddList extends React.Component {
                 <form className="add-list" >
                     <input className="form-row form-row-input" type="text" placeholder="Type in new skill or topic" />
                     <div className="form-row">
-                        <button className="btn" type="button" onClick={() => this.setEditing(false)}>Add list</button>
-                        <button className="btn" type="button" onClick={() => this.setEditing(false)}>Cancel list</button>
+                        <button
+                            className="btn"
+                            type="button"
+                            onClick={() => this.setEditing(false)}
+                            aria-label="click to add another row">Add list</button>
+                        <button
+                            className="btn"
+                            type="button"
+                            onClick={() => this.setEditing(false)}
+                            aria-label="click to cancel a row">Cancel list</button>
                     </div>
                 </form>
             </div>

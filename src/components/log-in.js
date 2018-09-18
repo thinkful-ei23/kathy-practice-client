@@ -51,6 +51,7 @@ export class LogInForm extends React.Component {
 
 					<button
 						className="login-btn btn-large"
+						aria-label="submit info for log in"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
 						Login

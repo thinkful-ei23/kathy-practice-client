@@ -89,6 +89,8 @@ export class RegisterFormS extends React.Component {
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up!
+						aria-label="Button to log in"
+
 				</button>
 				</form >
 			</div>

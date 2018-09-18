@@ -28,6 +28,7 @@ export class CardT extends React.Component {
 					<li><AddList
 						type="list"
 						onAdd={text => this.addList(text)}
+						aria-label="click to add another element in the practice chart"
 					/>
 					</li>
 				</ul>

@@ -16,7 +16,7 @@ export function RegistrationPage(props) {
 		<div className="home">
 			<h2>Register for Practice Partner</h2>
 			<RegistrationFormT />
-			<Link to="/log-in">Login</Link>
+			<Link to="/log-in" aria-label="Button to log in" attribute >Login</Link>
 		</div>
 	);
 }

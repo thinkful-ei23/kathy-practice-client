@@ -17,7 +17,7 @@ export default function ClassList(props) {
 				<li className="student">Student 6</li>
 				<li className="student">Student 7</li>
 			</ul>
-			<button className="btn">Assign</button>
+			<button className="btn" aria-label="click to assign student to practice chart">Assign</button>
 		</div>
 
 	);

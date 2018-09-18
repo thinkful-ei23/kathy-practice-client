@@ -10,7 +10,7 @@ export default function Edit(props) {
 		<div className="teacher-card">
 			<CardT />
 			{/* TODO onClick onClick /> finish*/}
-			<button className="btn btn-large">Save</button>
+			<button className="btn btn-large" aria-label="click to save the practice chart" >Save</button>
 		</div >
 
 	);

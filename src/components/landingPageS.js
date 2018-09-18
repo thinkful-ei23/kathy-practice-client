@@ -14,7 +14,7 @@ export function LandingPage(props) {
 		<div className="home">
 			<h2>Practice Partner Login</h2>
 			<LoginForm />
-			<Link to="/registerS">Register</Link>
+			<Link to="/registerS" aria-label="link to sign up for new student users">Register</Link>
 		</div>
 	);
 }

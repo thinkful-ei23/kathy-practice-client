@@ -4,7 +4,7 @@
   justify-content: center;
 	flex-wrap: wrap;
 	background-color: #ffc966;
-   font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .form-row {
   display: flex;
@@ -15,4 +15,5 @@
 .form-row-input {
   margin-top: .5rem;
   padding: .5rem;
+  background-color:white;
 }
