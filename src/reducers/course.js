@@ -12,7 +12,7 @@ const initialState = {
 		list: [{ title: '', content: '' }]
 	}]
 };
-console.log(initialState.card[0].list)
+// TODO console.log(initialState.card[0].list)
 export const practiceReducer = (state = initialState, action) => {
 
 	if (action.type === ADD_CARD) {

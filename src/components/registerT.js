@@ -7,7 +7,7 @@ import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
-const matchesPassword = matches('password');
+const matchesPassword = matches('password_signUpT');
 // TODO console.log(registerUser, "I am a user")
 export class RegisterFormT extends React.Component {
 
@@ -24,65 +24,68 @@ export class RegisterFormT extends React.Component {
 		return (
 			<div className="register">
 				<form
-					id="signUpTeacher"
+					id="registerT"
 					onSubmit={this.props.handleSubmit(values =>
 						this.onSubmit(values)
-					)}>
+					)}
+				// onSubmit={() => console.log('submitting')}
+				>
 
-					<label htmlFor="first_name-signUpT" className="row" >First Name:</label>
+					<label htmlFor="first_name_signUpT" className="row" >First Name:</label>
 					<Field
-						id="first_nameT"
-						name="first_name-signUpT"
+						id="first_name_signUpT"
+						name="first_name_signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
 
 					/>
 
-					<label htmlFor="last_name-signUpT" className="row">Last Name:</label>
+					<label htmlFor="last_name_signUpT" className="row">Last Name:</label>
 					<Field
-						id="last_nameT"
-						name="last_name-signUpT"
+						id="last_name_signUpT"
+						name="last_name_signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
 					/>
 
-					<label htmlFor="email-signUpT" className="row">Email:</label>
+					<label htmlFor="email_signUpT" className="row">Email:</label>
 					<Field
-						id="emailT"
-						name="email-signUpT"
+						id="email_signUpT"
+						name="email_signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
 					/>
 
-					<label htmlFor="password-signUpT" className="row">Password:</label>
+					<label htmlFor="password_signUpT" className="row">Password:</label>
 					<Field
-						id="passwordT"
-						name="password-signUpT"
+						id="password_signUpT"
+						name="password_signUpT"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty]}
 					/>
 
-					<label htmlFor="confirmPassword-signUpT" className="row">Confirm Password:</label>
+					<label htmlFor="confirmPassword_signUpT" className="row">Confirm Password:</label>
 					<Field
-						id="confirmpasswordT"
-						name="confirmPassword-signUpT"
+						id="confirmPassword_signUpT"
+						name="confirmPassword_signUpT"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty, matchesPassword]}
 					/>
-				</form >
-				<button
-					className="row btn-large"
-					aria-label="Button to log in"
-					type="submit"
-					disabled={this.props.pristine || this.props.submitting}
-					onSubmit={() => this.registerT()}>
-					Sign Up
+
+					<button
+						className="row btn-large"
+						aria-label="Button to log in"
+						type="submit"
+						disabled={this.props.pristine || this.props.submitting}
+					>
+						Sign Up
 				</button>
+				</form >
 			</div>
 
 		);
@@ -90,7 +93,7 @@ export class RegisterFormT extends React.Component {
 }
 const onSubmitFail = (errors, dispatch, submitError) => {
 	if (submitError instanceof SubmissionError) {
-		console.log(submitError, 'Here in hello world')
+		console.log(submitError, 'Here in hello world') // TODO
 		// optionally do something
 	} else {
 		throw submitError // or handle it

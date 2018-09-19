@@ -6,10 +6,10 @@ import {
 
 const initialState = {
 	id: null,
-	first_name: null,
-	last_name: null,
-	email: null,
-	password: null
+	first_name_signUpT: null,
+	last_name_signUpT: null,
+	email_signUpT: null,
+	password_signUpT: null
 };
 
 export default function teacherSignupReducer(state = initialState, action) {
@@ -19,6 +19,7 @@ export default function teacherSignupReducer(state = initialState, action) {
 			error: null
 		});
 	} else if (action.type === REGISTER_TEACHER_SUCCESS) {
+		console.log(action, 'action in registerT.reducer')
 		return Object.assign({}, state, {
 			success_message: null
 		});

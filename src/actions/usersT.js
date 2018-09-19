@@ -5,19 +5,22 @@ import { normalizeResponseErrors } from './utils';
 
 
 export const registerUser = user => dispatch => {
-	return fetch(`${API_BASE_URL}/teachers`, {
+	console.log(user, 'in userT') // TODO
+	return fetch(`${API_BASE_URL}/api/teachers`, {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/json'
 		},
 		body: JSON.stringify(user)
 	})
-		.then(res => normalizeResponseErrors(res))
-		.then(res => res.json())
+		.then(res => normalizeResponseErrors(res)) //normalizes the response from regT form
+		.then(res => res.json()) //sends the res as a req to backend
+		.then(user => dispatch(registerTeacherSuccess(user))) // backend sends res, this line sends data to registerTeacherSuccess in reducer
 		.catch(err => {
 			const { reason, message, location } = err;
 			if (reason === 'ValidationError') {
 				// Convert ValidationErrors into SubmissionErrors for Redux Form
+				// TODO	console.log('usersT in actions line 23', user)
 				return Promise.reject(
 					new SubmissionError({
 						[location]: message

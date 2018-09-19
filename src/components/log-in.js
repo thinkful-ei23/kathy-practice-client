@@ -45,7 +45,7 @@ export class LogInForm extends React.Component {
 					<label className="rowL" htmlFor="password-logIn">Password</label>
 					<Field
 						id="passwordLogIn"
-						name="password-login"
+						name="password-logIn"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty]}

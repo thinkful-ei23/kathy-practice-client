@@ -6,23 +6,23 @@ import { BrowserRouter as Router } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
-import AddList from './components/add-list.js';
+// import AddList from './components/add-list.js';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
-import List from './components/list.js';
+// import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
-import ClassManager from './components/classManager.js';
-
+// import ClassManager from './components/classManager.js';
+// import Scratch from './components/scratch';
 //================== compnenets needed below ============
 // import BoardS from './components/boardS.js';
 // import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-import LogIn from './components/log-in.js';
+// import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-import RegisterFormS from './components/registerS.js';
+// import RegisterFormS from './components/registerS.js';
 import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
@@ -56,19 +56,13 @@ export class App extends React.Component {
       <Router>
         <div className="app">
           <NavBar />
-          <br />
-          <br />
-          <br />
-          <br />
+
           <main role="main">
-            <LogIn />
+            {/* student1<LogIn /> */}
             <br />
+            {/* <Scratch /> */}
             <br />
-            <br />
-            <br />
-            <RegisterFormS />
-            <br />
-            <br />
+            {/* <RegisterFormS /> */}
             <br />
             <br />
             <RegisterFormT />
@@ -77,17 +71,19 @@ export class App extends React.Component {
             <br />
             <br />
             <br />
-            <List />
+            {/* <RegisterFormS /> */}
+
+            {/* <List /> */}
             <br />
             <br />
             <br />
             <br />
-            <AddList />
+            {/* <AddList /> */}
             <br />
             <br />
             <br />
             <br />
-            <ClassManager />
+            {/* <ClassManager /> */}
             <br />
             <br />
             <br />
@@ -103,7 +99,7 @@ export class App extends React.Component {
             <br />
 
 
-            <NavBar />
+
             {/* <CLassManager /> */}
             {/* <Route exact path="/" component={Home} /> */}
             {/* <Route exact path="/login" component={LogIn} /> */}
