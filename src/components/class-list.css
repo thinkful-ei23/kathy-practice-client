@@ -1,14 +1,15 @@
 .classlist {
 color: #000;
-border: 5px #555 solid;
-background-color: #eee;
+border: 5px #064784 solid;
+background-color: #f8f8f8;
 font-size: 1.5rem;
 display:flex;
 flex-direction: column;
 flex-wrap: wrap;
 }
 .classTitle {
-	background: #ddd;
+	background: #ffffff;
+	color:#064784;
 	padding: .5rem;
 	display: flex;
 	justify-content: center;
@@ -20,6 +21,8 @@ flex-wrap: wrap;
 	padding: .6rem;
 
 }
+
+  /* border: 2px #064784 solid; */
 .student {
 	padding: 1rem;
 	font-size: 1.5rem;

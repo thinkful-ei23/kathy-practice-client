@@ -8,8 +8,7 @@ import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
 const matchesPassword = matches('password');
-console.log(registerUser, "I am a user")
-
+// TODO console.log(registerUser, "I am a user")
 export class RegisterFormT extends React.Component {
 
 	onSubmit(values) {
@@ -21,63 +20,61 @@ export class RegisterFormT extends React.Component {
 			.dispatch(registerUser(user))
 			.then(() => this.props.dispatch(login(email, password)));
 	}
-
-	//=====================================
 	render() {
 		return (
 			<div className="register">
 				<form
-					aria-labelledby="signUpTeacher"
+					id="signUpTeacher"
 					onSubmit={this.props.handleSubmit(values =>
 						this.onSubmit(values)
 					)}>
 
 					<label htmlFor="first_name" className="row" >First Name:</label>
 					<Field
+						id="first_nameT"
 						name="first_name"
 						component={Input}
 						type="text"
-						placeholder="First Name"
 						validate={[required, nonEmpty]}
-						aria-labelledby="first_name"
+
 					/>
 
 					<label htmlFor="last_name" className="row">Last Name:</label>
 					<Field
+						id="last_nameT"
 						name="last_name"
 						component={Input}
 						type="text"
-						placeholder="Last Name"
 						validate={[required, nonEmpty]}
 						aria-labelledby="last_name"
 					/>
 
 					<label htmlFor="email" className="row">Email:</label>
 					<Field
+						id="emailT"
 						name="email"
 						component={Input}
 						type="text"
-						placeholder="Email"
 						validate={[required, nonEmpty]}
 						aria-labelledby="email"
 					/>
 
 					<label htmlFor="password" className="row">Password:</label>
 					<Field
+						id="passwordT"
 						name="password"
 						component={Input}
 						type="password"
-						placeholder="Password"
 						validate={[required, nonEmpty]}
 						aria-labelledby="password"
 					/>
 
 					<label htmlFor="confirmPassword" className="row">Confirm Password:</label>
 					<Field
+						id="confirmpasswordT"
 						name="confirmpassword"
 						component={Input}
 						type="password"
-						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
 						aria-labelledby="confirmPassword"
 					/>
@@ -86,7 +83,8 @@ export class RegisterFormT extends React.Component {
 					className="row btn-large"
 					aria-label="Button to log in"
 					type="submit"
-					disabled={this.props.pristine || this.props.submitting}>
+					disabled={this.props.pristine || this.props.submitting}
+					onSubmit={() => this.registerT()}>
 					Sign Up
 				</button>
 			</div>

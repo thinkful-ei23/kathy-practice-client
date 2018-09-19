@@ -10,7 +10,6 @@ html {
 
 body {
 	font-family: sans-serif;
-
 }
 .btn-large {
 	margin-top: 10px;
@@ -27,8 +26,9 @@ body {
 }
 .btn {
 	font-size: 1.5rem;
-	padding: 1rem;
-	margin: 0 1rem;
+	padding: .5rem;
+	margin: 1rem 1rem 1rem 0;
+	border-radius: .2rem;
 	background-color: #fff;
 	color: #555;
 	align-self: flex-start;
@@ -48,6 +48,13 @@ Input{
 	width: 100%;
 	font-size: 1.5rem;
 }
+p {
+	font-size: 1rem;
+	margin: .5rem;
+}
+.label{
+	font-size: 1.5rem;
+}
 /* color possibilities
 background-color:#fff;
 background: #eee;
@@ -61,9 +68,57 @@ background-color: #ffc966;
 #E67E22    CARROT
 #D35400    PUMPKIN
 
+//============
+
+#26E0DF
+//============
+#FCA129
+
+#F09625
+
+#75A91F
+
+#F7F5F4
+
+#EAF0F5
+
+#F2F7F6
+
+#FFFFFF
 
 
+//============
+MDN pages
+#E4F8E2  ==table inner row columns background
 
+#C7E2CD  ==button
+
+#369B45  == tiny accent
+
+#4287A5  ==button
+
+#BBD0E3
+
+#4287A5 == line divider
+
+#0A559D == tiny accent
+
+#E9EEF1 == table background
+
+#FFFFFF ==page
+
+#222222 ==header background
+
+#86D0F0 == header font
+//=================
+W3school
+#F1F1F1 == side panel background
+
+
+	background-color: #C7E2CD;
+
+	background-color: #FDF1E2;
+	background-color: #f3f7f3;
 $color-primary:#f39c12; NavBar title
 
 $color-secondary:#e67e22;
@@ -95,5 +150,16 @@ background-color: #eee
 .color-gray-dark {
 	background-color: #bbb;
 	}
+
+	color: #005D85;
+	color: #1abaff;
+	color: #06447F;
   */
 
+/*
+background-color: #f8f8f8;
+navbar
+
+
+
+*/

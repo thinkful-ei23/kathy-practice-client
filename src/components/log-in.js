@@ -9,8 +9,8 @@ import './log-in.css';
 
 export class LogInForm extends React.Component {
 	onSubmit(values) {
-		console.log(values, 'values in login.js')
-		return this.props.distpatch(login(values.email, values.password));
+		console.log(values, 'values in login.js') // TODO
+		return this.props.dispatch(login(values.email, values.password));
 	}
 	render() {
 		let error;
@@ -24,6 +24,7 @@ export class LogInForm extends React.Component {
 		return (
 			<section>
 				<form
+					id="logInForm"
 					aria-labelledby="logInForm"
 					className="logInForm"
 					onSubmit={this.props.handleSubmit(values =>
@@ -32,21 +33,21 @@ export class LogInForm extends React.Component {
 					)}>
 					{error}
 					<label className="rowL"
-						htmlFor="email">Email</label>
+						htmlFor="email-logIn">Email</label>
 					<Field
+						id="emailLogIn"
 						name="email"
 						component={Input}
 						type="text"
-						placeholder="Email"
 						validate={[required, nonEmpty]}
 					/>
 
 					<label className="rowL" htmlFor="password">Password</label>
 					<Field
+						id="passwordLogIn"
 						name="password"
 						component={Input}
 						type="password"
-						placeholder="Password"
 						validate={[required, nonEmpty]}
 					/>
 

@@ -22,83 +22,80 @@ export class RegisterFormS extends React.Component {
 		return (
 			<div>
 				<form
-					aria-labelledby="signUpStudent"
+					id="signUpStudent"
 					className="register" onSubmit={this.props.handleSubmit((values) => {
 						return this.onSubmit(values, this.props);
 					})}>
 
 					<label htmlFor="first_name" className="row" >Name</label>
 					<Field
+						id="nameS"
 						name="name"
 						component={Input}
 						type="text"
-						placeholder="Name"
 						validate={[required, nonEmpty]}
 						className="formField"
-						aria-labelledby="first_name"
 					/>
 
 					<label htmlFor="last_name" className="row">Last Name</label>
 					<Field
+						id="last_nameS"
 						name="last_name"
 						component={Input}
 						type="text"
-						placeholder="Last Name (optional)"
 						className="formField"
-						aria-labelledby="last_name"
 					/>
 
 					<label htmlFor="email" className="row">Email</label>
 					<Field
+						id="emailS"
 						name="email"
 						component={Input}
 						type="text"
-						placeholder="Email"
 						validate={[required, nonEmpty]}
 						className="formField"
-						aria-labelledby="email"
+
 					/>
 
 					<label htmlFor="password" className="row">Password</label>
 					<Field
+						id="passwordS"
 						name="password"
 						component={Input}
 						type="password"
-						placeholder="Password"
 						validate={[required, nonEmpty]}
 						className="formField"
-						aria-labelledby="password"
+
 					/>
 
-					<label htmlFor="confirmPassword" className="row">Confirm Password</label>
+					<label htmlFor="confirmPassword-logIn" className="row">Confirm Password</label>
 					<Field
+						id="confirmpasswordS"
 						name="confirmpassword"
 						component={Input}
 						type="password"
-						placeholder="Confirm Password"
 						validate={[required, nonEmpty, matchesPassword]}
 						className="formField"
-						aria-labelledby="confirmPassword"
+
 					/>
 
 					<label htmlFor="teacherCode" className="row">Teacher Code</label>
 					<Field
+						id="teacher_codeS"
 						name="teacher_code"
 						component={Input}
 						type="number"
-						placeholder="Teacher Code"
 						validate={[required, nonEmpty, isAllDigits]}
-						aria-labelledby="teacherCode"
+
 
 					/>
 
 					<button
+						aria-label="Button to log in"
 						className="row btn-large"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up!
-						aria-label="Button to log in"
-
 				</button>
 				</form >
 			</div>

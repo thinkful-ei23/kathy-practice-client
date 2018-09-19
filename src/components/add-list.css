@@ -1,19 +1,26 @@
 .addList {
   width: 100%;
   display: flex;
-  justify-content: center;
-	flex-wrap: wrap;
-	background-color: #ffc966;
-  font-size: 1.2rem;
-}
-.form-row {
-  display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem;
-  margin: 0;
+  background-color: #f8f8f8;
 }
-.form-row-input {
+.input-addList {
   margin-top: .5rem;
   padding: .5rem;
   background-color:white;
 }
+#label-addList {
+  font-size: 1.5rem;
+}
+/*
+width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /*
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #E4F8E2;
+  */

@@ -1,0 +1,31 @@
+.classManager{
+	background-color:#eee;
+	/* color: #F39C12; */
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	border: 5px solid #555;
+}
+#classList,
+#titleList{
+	background: #ddd;
+	/* padding: .5rem; */
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+#managerBtn {
+	padding: 1rem;
+	font-size: 1.5rem;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 20px;
+	background-color: #ffc966;
+	color: #555;
+}
+#managerBtn:hover,
+#managerBtn:active {
+	background-color: #555;
+	color: #ffc966;
+}

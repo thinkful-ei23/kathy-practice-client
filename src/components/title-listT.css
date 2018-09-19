@@ -1,13 +1,14 @@
 .title-list{
-	background-color:#eee;
-	color: #F39C12;
+	background-color:#ffffff;
+	color: #000000;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	border: 5px solid #555;
 }
 .title{
-	background: #ddd;
+	background: #f8f8f8;
+	color: #064784;
 	padding: .5rem;
 	display: flex;
 	justify-content: center;

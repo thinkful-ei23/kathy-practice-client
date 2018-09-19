@@ -3,61 +3,70 @@ import './add-list.css';
 //TODO - import connect and add connect()() below
 
 export default class AddList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            editing: false
-        }
-        this.onSubmit = this.onSubmit.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      editing: false
     }
-    onSubmit(event) {
-        event.preventDefault();
-        const text = this.textInput.value.trim();
-        if (text && this.props.onAdd) {
-            this.props.onAdd(this.textInput.value)
-        }
-        this.textInput.value = '';
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+  onSubmit(event) {
+    event.preventDefault();
+    const text = this.textInput.value.trim();
+    if (text && this.props.onAdd) {
+      this.props.onAdd(this.textInput.value)
     }
-    setEditing(editing) {
-        this.setState({
-            editing
-        });
-    }
+    this.textInput.value = '';
+  }
+  setEditing(editing) {
+    this.setState({
+      editing
+    });
+  }
 
-    render() {  //TODO not sure how the button is to work
-        // if (!this.state.editing) {
-        //     return (
-        //         <div className="add-button"
-        //             onClick={() => this.setEditing(true)}>
-        //             <a href="List.js">Add a  {this.props.type}...</a></div>
-        //     );
-        // }
+  render() {  //TODO not sure how the button is to work
+    // if (!this.state.editing) {
+    //     return (
+    //         <div className="add-button"
+    //             onClick={() => this.setEditing(true)}>
+    //             <a href="List.js">Add a  {this.props.type}...</a></div>
+    //     );
+    // }
 
-        return (
-            <div className="addList">
-                <form className="add-list" >
-                    <input className="form-row form-row-input" type="text" placeholder="Type in new skill or topic" />
-                    <div className="form-row">
-                        <button
-                            className="btn"
-                            type="button"
-                            onClick={() => this.setEditing(false)}
-                            aria-label="click to add another row">Add list</button>
-                        <button
-                            className="btn"
-                            type="button"
-                            onClick={() => this.setEditing(false)}
-                            aria-label="click to cancel a row">Cancel list</button>
-                    </div>
-                </form>
-            </div>
-        );
-    };
+    return (
+      <form className="addList" >
+
+        <label
+          id="label-addList"
+          htmlFor="input-addList">Row Title:</label>
+
+        <p>Type in new skill or topic</p>
+
+        <input id="input-addList"
+          className="input-addList" type="text" />
+
+        <div className="row-addList">
+          <button
+            className="btn btn-addList"
+            type="button"
+            onClick={() => this.setEditing(false)}
+            aria-label="click to add another row">Add row</button>
+
+          <button
+            className="btn"
+            type="button"
+            onClick={() => this.setEditing(false)}
+            aria-label="click to cancel a row">Cancel row</button>
+        </div>
+      </form>
+
+    );
+  };
 }
 
 
 /*
-xport default class AddForm extends React.Component {
+export default class AddForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

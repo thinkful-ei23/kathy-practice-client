@@ -5,14 +5,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 //import logo from './logo.svg';
 import './App.css';
-import AddCard from './components/add-card.js';
-import AddList from './components/add-list.js';
+// import AddCard from './components/add-card.js';
+// import AddList from './components/add-list.js';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
 // import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
+// import ClassManager from './components/classManager.js';
+
 //================== compnenets needed below ============
 // import BoardS from './components/boardS.js';
 // import BoardT from './components/boardT';
@@ -54,17 +56,55 @@ export class App extends React.Component {
       <Router>
         <div className="app">
           <NavBar />
+          <br />
+          <br />
+          <br />
+          <br />
           <main role="main">
-            <RegisterFormT />
-            <NavBar />
-            <RegisterFormS />
-            <NavBar />
             <LogIn />
-            <NavBar />
-            <AddList />
-            <NavBar />
-            <AddCard />
+            <br />
+            <br />
+            <br />
+            <br />
+            <RegisterFormS />
+            <br />
+            <br />
+            <br />
+            <br />
+            <RegisterFormT />
 
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+
+            <NavBar />
+            {/* <CLassManager /> */}
             {/* <Route exact path="/" component={Home} /> */}
             {/* <Route exact path="/login" component={LogIn} /> */}
             {/* <Route exact path="/registerS" component={RegisterFormS} /> */}
@@ -104,7 +144,7 @@ export default /*withRouter*/(connect(mapStateToProps)(App));
         <LandingPageS />
         <LandingPageT />
 
-        <LogIn />
+
         <NavBar />
 
         <RegisterFormT />

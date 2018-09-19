@@ -9,7 +9,7 @@ export default function ClassList(props) {
 		<div className="classlist">
 			<h5 className="classTitle">Class List</h5>
 			<ul className="classRoom">
-				<li className="student"> Studet 1</li>
+				<li className="student">Student 1</li>
 				<li className="student">Student 2</li>
 				<li className="student">Student 3</li>
 				<li className="student">Student 4</li>
@@ -17,7 +17,7 @@ export default function ClassList(props) {
 				<li className="student">Student 6</li>
 				<li className="student">Student 7</li>
 			</ul>
-			<button className="btn" aria-label="click to assign student to practice chart">Assign</button>
+			{/* <button className="btn" aria-label="click to assign student to practice chart">Assign</button> */}
 		</div>
 
 	);

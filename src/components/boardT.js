@@ -20,13 +20,13 @@ export class BoardT extends React.Component {
 	render() {
 		return (
 			<section className="dash" >
-				<div className="dashboard-username">
+				{/* <div className="dashboard-username">
 					Username: {this.props.username}
 				</div>
 				<div className="dashboard-name">Name: {this.props.name}</div>
 				<div className="dashboard-protected-data">
 					Protected data: {this.props.protectedData}
-				</div>
+				</div> */}
 				<div className="edit">
 					<AddCard />
 					<Edit />
@@ -43,9 +43,9 @@ export class BoardT extends React.Component {
 const mapStateToProps = state => {
 	const { currentUser } = state.auth;
 	return {
-		username: state.auth.currentUser.username,
-		name: `${currentUser.firstName} ${currentUser.lastName}`,
-		protectedData: state.protectedData.data
+		// username: state.auth.currentUser.username,
+		// name: `${currentUser.firstName} ${currentUser.lastName}`,
+		// protectedData: state.protectedData.data
 	};
 };
 

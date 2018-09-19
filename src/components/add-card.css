@@ -1,19 +1,21 @@
 .addCard {
-  width: 100%;
+  width: 60%;
   display: flex;
-  justify-content: center;
-	flex-wrap: wrap;
-	background-color: #ffc966;
-  font-size: 1.2rem;
-}
-.form-row-AddCard  {
-  display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem;
-  margin: 0;
+  background-color: #f8f8f8;
+  border: 2px #064784 solid;
+  border-radius: .5rem;
 }
-.form-row-input-AddCard {
-  margin-top: .5rem;
-  padding: .5rem;
+.input-AddCard {
+  margin-top: .4rem;
+  padding: .4rem;
   background-color:white;
+}
+#label-addCard {
+  font-size: 1.5rem;
+}
+.btn-addCard {
+  align-items: center;
 }

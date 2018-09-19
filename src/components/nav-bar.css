@@ -2,11 +2,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: #555;
+	background-color: #f8f8f8;
 }
 .brand {
 	padding: .5rem;
-	color: #f39c12;
+	color: #064784;
 	font-size: 3rem;
 	text-transform: uppercase;
 }
