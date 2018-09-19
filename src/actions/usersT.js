@@ -5,7 +5,7 @@ import { normalizeResponseErrors } from './utils';
 
 
 export const registerUser = user => dispatch => {
-	console.log(user, 'in userT') // TODO
+	// console.log(user, 'in actions/userT') // TODO
 	return fetch(`${API_BASE_URL}/api/teachers`, {
 		method: 'POST',
 		headers: {

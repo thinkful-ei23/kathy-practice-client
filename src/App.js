@@ -72,7 +72,7 @@ export class App extends React.Component {
             <br />
             <br />
             {/* <RegisterFormS /> */}
-
+            {/* <ClassManager /> */}
             {/* <List /> */}
             <br />
             <br />
@@ -83,7 +83,7 @@ export class App extends React.Component {
             <br />
             <br />
             <br />
-            {/* <ClassManager /> */}
+
             <br />
             <br />
             <br />

@@ -3,7 +3,7 @@ import { reduxForm, Field, focus, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 
 import { registerUser } from '../actions/usersT';
-import { login } from '../actions/auth';
+// import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
@@ -12,13 +12,13 @@ const matchesPassword = matches('password_signUpT');
 export class RegisterFormT extends React.Component {
 
 	onSubmit(values) {
-		console.log(values, 'values in registerT')
-		const { first_name, last_name, email, password } = values;
-		const user = { first_name, last_name, email, password };
+		// console.log(values, 'values in registerT')
+		const { first_name_signUpT, last_name_signUpT, email_signUpT, password_signUpT } = values;
+		const user = { first_name_signUpT, last_name_signUpT, email_signUpT, password_signUpT };
 
 		return this.props
 			.dispatch(registerUser(user))
-			.then(() => this.props.dispatch(login(email, password)));
+		// .then(() => this.props.dispatch(registerUser(first_name_signUpT, last_name_signUpT, email_signUpT, password_signUpT)));
 	}
 	render() {
 		return (
@@ -30,9 +30,10 @@ export class RegisterFormT extends React.Component {
 					)}
 				// onSubmit={() => console.log('submitting')}
 				>
-
-					<label htmlFor="first_name_signUpT" className="row" >First Name:</label>
+					{/* <label htmlFor="first_name_signUpT" className="row" >First Name:</label> */}
 					<Field
+						label={<label htmlFor="first_name_signUpT" className="row" >First Name: inside the field tag</label>}
+
 						id="first_name_signUpT"
 						name="first_name_signUpT"
 						component={Input}
@@ -93,7 +94,9 @@ export class RegisterFormT extends React.Component {
 }
 const onSubmitFail = (errors, dispatch, submitError) => {
 	if (submitError instanceof SubmissionError) {
-		console.log(submitError, 'Here in hello world') // TODO
+		// console.log(submitError, 'Here in hello world') // TODO
+		console.log('+++++++++++++++Here in hello world registerT in React') // TODO
+
 		// optionally do something
 	} else {
 		throw submitError // or handle it
@@ -103,8 +106,10 @@ const onSubmitFail = (errors, dispatch, submitError) => {
 RegisterFormT = connect()(RegisterFormT)
 export default reduxForm({
 	form: 'registerT',
-	// onSubmitFail
+	// onSubmitFail,
 	onSubmitFail: (error, dispatch) => {
+		console.log('+++++++++++++++++++++ in Register T', error)
+
 		console.log(error, 'errors in the bottom of regT/components')
 
 		return dispatch(focus('registerT', Object.keys(error)[0]))
