@@ -58,31 +58,29 @@ export class App extends React.Component {
           <NavBar />
           <br />
           <br />
-          <br />
-          <br />
           <main role="main">
-            <LogIn />
+            {/* <LogIn /> */}
             <br />
             <br />
             <br />
             <br />
-            <RegisterFormS />
+            {/* <RegisterFormS /> */}
             <br />
             <br />
             <br />
             <br />
-            <RegisterFormT />
+            {/* <RegisterFormT /> */}
 
             <br />
             <br />
             <br />
             <br />
-            <List />
+            {/* <List /> */}
             <br />
             <br />
             <br />
             <br />
-            <AddList />
+            {/* <AddList /> */}
             <br />
             <br />
             <br />
