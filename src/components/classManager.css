@@ -12,7 +12,8 @@
 }
 #classList,
 #titleList {
-	align-items: flex-end;
+	/* align-items: flex-end; */
+	flex:1;
 	}
 
 .btn-wrapper {
