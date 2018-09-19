@@ -13,7 +13,7 @@ import AddList from './components/add-list.js';
 // import Edit from './components/edit.js';
 import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
-// import ClassManager from './components/classManager.js';
+import ClassManager from './components/classManager.js';
 
 //================== compnenets needed below ============
 // import BoardS from './components/boardS.js';
@@ -87,7 +87,7 @@ export class App extends React.Component {
             <br />
             <br />
             <br />
-
+            <ClassManager />
             <br />
             <br />
             <br />
