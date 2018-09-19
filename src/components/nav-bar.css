@@ -2,11 +2,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	background-color: #f8f8f8;
+	background-color: #064784;
 }
 .brand {
 	padding: .5rem;
-	color: #064784;
+	color: #f8f8f8;
 	font-size: 3rem;
 	text-transform: uppercase;
 }
@@ -15,12 +15,12 @@
 	padding: 1rem;
 	margin: 0 1rem;
 	background-color: #fff;
-	color: #555;
+	color: #064784;
 	align-self: flex-start;
-	border: 2px solid #f39c12;
+	border: 2px solid #ffc966;
 }
 .btn:hover,
 .btn:active {
-	background-color: #f39c12;
-	color: #fff;
+	background-color: #ffc966;
+	color: #064784;
 }

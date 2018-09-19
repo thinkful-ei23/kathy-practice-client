@@ -27,29 +27,29 @@ export class RegisterFormS extends React.Component {
 						return this.onSubmit(values, this.props);
 					})}>
 
-					<label htmlFor="first_name" className="row" >Name</label>
+					<label htmlFor="first_name-signUpS" className="row" >Name</label>
 					<Field
 						id="nameS"
-						name="name"
+						name="first_name-signUpS"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
 						className="formField"
 					/>
 
-					<label htmlFor="last_name" className="row">Last Name</label>
+					<label htmlFor="last_name-signUpS" className="row">Last Name</label>
 					<Field
 						id="last_nameS"
-						name="last_name"
+						name="last_name-signUpS"
 						component={Input}
 						type="text"
 						className="formField"
 					/>
 
-					<label htmlFor="email" className="row">Email</label>
+					<label htmlFor="email-signUpS" className="row">Email</label>
 					<Field
 						id="emailS"
-						name="email"
+						name="email-signUpS"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
@@ -57,10 +57,10 @@ export class RegisterFormS extends React.Component {
 
 					/>
 
-					<label htmlFor="password" className="row">Password</label>
+					<label htmlFor="password-signUpS" className="row">Password</label>
 					<Field
-						id="passwordS"
-						name="password"
+						id="password"
+						name="password-signUpS"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty]}
@@ -68,10 +68,10 @@ export class RegisterFormS extends React.Component {
 
 					/>
 
-					<label htmlFor="confirmPassword-logIn" className="row">Confirm Password</label>
+					<label htmlFor="confirmPassword-signUpS" className="row">Confirm Password</label>
 					<Field
 						id="confirmpasswordS"
-						name="confirmpassword"
+						name="confirmPassword-signUpS"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty, matchesPassword]}
@@ -79,10 +79,10 @@ export class RegisterFormS extends React.Component {
 
 					/>
 
-					<label htmlFor="teacherCode" className="row">Teacher Code</label>
+					<label htmlFor="teacherCode-signUpS" className="row">Teacher Code</label>
 					<Field
 						id="teacher_codeS"
-						name="teacher_code"
+						name="teacherCode-signUpS"
 						component={Input}
 						type="number"
 						validate={[required, nonEmpty, isAllDigits]}

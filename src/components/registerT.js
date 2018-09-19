@@ -29,54 +29,50 @@ export class RegisterFormT extends React.Component {
 						this.onSubmit(values)
 					)}>
 
-					<label htmlFor="first_name" className="row" >First Name:</label>
+					<label htmlFor="first_name-signUpT" className="row" >First Name:</label>
 					<Field
 						id="first_nameT"
-						name="first_name"
+						name="first_name-signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
 
 					/>
 
-					<label htmlFor="last_name" className="row">Last Name:</label>
+					<label htmlFor="last_name-signUpT" className="row">Last Name:</label>
 					<Field
 						id="last_nameT"
-						name="last_name"
+						name="last_name-signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
-						aria-labelledby="last_name"
 					/>
 
-					<label htmlFor="email" className="row">Email:</label>
+					<label htmlFor="email-signUpT" className="row">Email:</label>
 					<Field
 						id="emailT"
-						name="email"
+						name="email-signUpT"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
-						aria-labelledby="email"
 					/>
 
-					<label htmlFor="password" className="row">Password:</label>
+					<label htmlFor="password-signUpT" className="row">Password:</label>
 					<Field
 						id="passwordT"
-						name="password"
+						name="password-signUpT"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty]}
-						aria-labelledby="password"
 					/>
 
-					<label htmlFor="confirmPassword" className="row">Confirm Password:</label>
+					<label htmlFor="confirmPassword-signUpT" className="row">Confirm Password:</label>
 					<Field
 						id="confirmpasswordT"
-						name="confirmpassword"
+						name="confirmPassword-signUpT"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty, matchesPassword]}
-						aria-labelledby="confirmPassword"
 					/>
 				</form >
 				<button

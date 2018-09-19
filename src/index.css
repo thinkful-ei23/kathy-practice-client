@@ -12,17 +12,16 @@ body {
 	font-family: sans-serif;
 }
 .btn-large {
-	margin-top: 10px;
-	padding: 10px;
+	margin-top: 1rem;
+	padding: 1rem 1rem 1.2rem 1rem;
 	font-size: 20px;
 	background-color: #ffc966;
-	color: #555;
+	color: #064784;
 }
 .btn-large:hover,
 .btn-large:active {
-	background-color: #555;
+	background-color: #064784;
 	color: #ffc966;
-	/* border: 5px #555 solid; */
 }
 .btn {
 	font-size: 1.5rem;
@@ -30,13 +29,13 @@ body {
 	margin: 1rem 1rem 1rem 0;
 	border-radius: .2rem;
 	background-color: #fff;
-	color: #555;
+	color: #064784;
 	align-self: flex-start;
 }
 .btn:hover,
 .btn:active {
-	background-color: #555;
-	color: #fff;
+	background-color: #ffc966;
+	color: #064784;
 }
 Input{
 	padding: 1rem;

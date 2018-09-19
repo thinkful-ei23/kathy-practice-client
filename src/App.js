@@ -6,12 +6,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
-// import AddList from './components/add-list.js';
+import AddList from './components/add-list.js';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
-// import List from './components/list.js';
+import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
 // import ClassManager from './components/classManager.js';
 
@@ -77,12 +77,12 @@ export class App extends React.Component {
             <br />
             <br />
             <br />
-
+            <List />
             <br />
             <br />
             <br />
             <br />
-
+            <AddList />
             <br />
             <br />
             <br />
