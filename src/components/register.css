@@ -27,3 +27,6 @@ Input{
 label.row {
 	padding-top: 1rem;
 }
+.btn-large {
+	width: 100%;
+}

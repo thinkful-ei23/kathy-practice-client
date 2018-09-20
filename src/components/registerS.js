@@ -3,7 +3,6 @@ import { reduxForm, Field, focus } from 'redux-form';
 import { connect } from 'react-redux';
 
 import { registerUser } from '../actions/usersS';
-import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, isAllDigits, matches } from '../validators';
 import './register.css';

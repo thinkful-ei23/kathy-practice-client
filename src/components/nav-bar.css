@@ -24,3 +24,64 @@
 	background-color: #ffc966;
 	color: #064784;
 }
+/* below from index.css, to be put back before deployment */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+	font-family: sans-serif;
+	margin: 1rem;
+
+}
+h3{
+	font-size: 2rem;
+}
+.btn-large {
+	margin-top: 1rem;
+	padding: 1rem 1rem 1.2rem 1rem;
+	font-size: 2rem;
+	background-color: #ffc966;
+	color: #064784;
+}
+.btn-large:hover,
+.btn-large:active {
+	background-color: #064784;
+	color: #ffc966;
+}
+.btn {
+	font-size: 1.5rem;
+	padding: .5rem;
+	margin: 1rem 1rem 1rem 0;
+	border-radius: .2rem;
+	background-color: #fff;
+	color: #064784;
+	align-self: flex-start;
+}
+.btn:hover,
+.btn:active {
+	background-color: #ffc966;
+	color: #064784;
+}
+Input{
+	padding: 1rem;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #444;
+	background-color: #fff;
+	width: 100%;
+	font-size: 1.5rem;
+}
+p {
+	font-size: 1rem;
+	margin: .5rem;
+}
+.label{
+	font-size: 1.5rem;
+}

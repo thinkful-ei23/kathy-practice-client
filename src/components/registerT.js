@@ -3,7 +3,6 @@ import { reduxForm, Field, focus, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 
 import { registerUser } from '../actions/usersT';
-// import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
 import './register.css';
@@ -78,7 +77,7 @@ export class RegisterFormT extends React.Component {
 
 					<button
 						className="row btn-large"
-						aria-label="Button to log in"
+						aria-label="Button to sign up"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}
 					>

@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
-import AddList from './components/add-list.js';
+// import AddList from './components/add-list.js';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
@@ -20,13 +20,12 @@ import AddList from './components/add-list.js';
 // import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-// import LogIn from './components/log-in.js';
-import OnBoardingT from './components/onBoardingT.js';
-// import OnBoardingS from './components/onBoardingS.js';
-
+import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-// import RegisterFormS from './components/registerS.js';
-import RegisterFormT from './components/registerT.js';
+// import OnBoardingT from './components/onBoardingT.js';
+// import OnBoardingS from './components/onBoardingS.js';
+import RegisterFormS from './components/registerS.js';
+// import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
@@ -61,18 +60,18 @@ export class App extends React.Component {
           <NavBar />
 
           <main role="main">
-            {/* <LogIn /> */}
+
             <br />
             {/* <Scratch /> */}
             <br />
-
-            <OnBoardingT />
+            {/* <OnBoardingT /> */}
             <br />
             <br />
+            <RegisterFormS />
             {/* <RegisterFormT /> */}
             <br />
             <br />
-            {/* <RegisterFormS /> */}
+            <LogIn />
             <br />
             <br />
             {/* <p>ClassManager</p> */}
