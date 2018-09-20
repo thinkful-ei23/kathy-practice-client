@@ -11,7 +11,7 @@ import AddCard from './add-card.js';
 
 export class BoardT extends React.Component {
 	componentDidMount() {
-		this.props.dispatch(fetchProtectedData());
+		this.props.dispatch(fetchProtectedData()); //GET query TODO
 	}
 	// addCard(title) { TODO need this?
 	// 	this.props.dispatch(addCard(title, this.props.match.params.card));

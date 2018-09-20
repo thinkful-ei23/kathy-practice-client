@@ -30,10 +30,8 @@ export class RegisterFormT extends React.Component {
 					)}
 				// onSubmit={() => console.log('submitting')}
 				>
-					{/* <label htmlFor="first_name_signUpT" className="row" >First Name:</label> */}
+					<label htmlFor="first_name_signUpT" className="row" >First Name:</label>
 					<Field
-						label={<label htmlFor="first_name_signUpT" className="row" >First Name: inside the field tag</label>}
-
 						id="first_name_signUpT"
 						name="first_name_signUpT"
 						component={Input}

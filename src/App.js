@@ -21,6 +21,9 @@ import './App.css';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
 // import LogIn from './components/log-in.js';
+// import OnBoardingT from './components/onBoardingT.js';
+import OnBoardingS from './components/onBoardingS.js';
+
 import NavBar from './components/nav-bar';
 // import RegisterFormS from './components/registerS.js';
 import RegisterFormT from './components/registerT.js';
@@ -58,53 +61,35 @@ export class App extends React.Component {
           <NavBar />
 
           <main role="main">
-            {/* student1<LogIn /> */}
+            {/* <LogIn /> */}
             <br />
             {/* <Scratch /> */}
             <br />
-            {/* <RegisterFormS /> */}
+            <OnBoardingS />
             <br />
             <br />
             <RegisterFormT />
-
-            <br />
-            <br />
             <br />
             <br />
             {/* <RegisterFormS /> */}
+            <br />
+            <br />
             {/* <ClassManager /> */}
+            <br />
+            <br />
             {/* <List /> */}
-            <br />
-            <br />
             <br />
             <br />
             {/* <AddList /> */}
             <br />
             <br />
-            <br />
-            <br />
 
-            <br />
-            <br />
-            <br />
-            <br />
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-
-
-
-            {/* <CLassManager /> */}
             {/* <Route exact path="/" component={Home} /> */}
             {/* <Route exact path="/login" component={LogIn} /> */}
             {/* <Route exact path="/registerS" component={RegisterFormS} /> */}
             {/* <Route exact path="/registerT" component={RegisterFormT} /> */}
+            {/* <Route exact path="/landingPageT" component={landingPageT} /> */}
+            {/* <Route exact path="/landingPageS" component={landingPageS} /> */}
             {/* <Route exact path="/boardS" component={BoardS} /> */}
             {/* <Route exact path="/boardT" component={BoardT} /> */}
           </main>
