@@ -35,8 +35,8 @@ export class LogInForm extends React.Component {
 					<label className="rowL"
 						htmlFor="email-logIn">Email</label>
 					<Field
-						id="emailLogIn"
-						name="email-logIn"
+						id="email-logIn"
+						// name="email-logIn"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
@@ -44,8 +44,8 @@ export class LogInForm extends React.Component {
 
 					<label className="rowL" htmlFor="password-logIn">Password</label>
 					<Field
-						id="passwordLogIn"
-						name="password-logIn"
+						id="password-logIn"
+						// name="password-logIn"
 						component={Input}
 						type="password"
 						validate={[required, nonEmpty]}
