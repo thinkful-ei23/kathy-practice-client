@@ -2,4 +2,32 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+	/* align-items: center; */
+}
+.btn-large {
+	margin-top: 1rem;
+	padding: 1rem 1rem 1.2rem 1rem;
+	font-size: 1.5rem;
+	background-color: #ffc966;
+	color: #064784;
+}
+.btn-large:hover,
+.btn-large:active {
+	background-color: #064784;
+	color: #ffc966;
+}
+
+.btn {
+	font-size: 1.5rem;
+	padding: .5rem;
+	margin: 1rem 1rem 1rem 0;
+	border-radius: .2rem;
+	background-color: #fff;
+	color: #064784;
+	align-self: flex-start;
+}
+.btn:hover,
+.btn:active {
+	background-color: #ffc966;
+	color: #064784;
 }

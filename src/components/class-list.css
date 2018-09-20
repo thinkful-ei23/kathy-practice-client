@@ -1,14 +1,13 @@
 .classlist {
 color: #000;
-border: 5px #064784 solid;
-background-color: #f8f8f8;
-font-size: 1.5rem;
+/* background-color: #f8f8f8; */
+/* font-size: 1.5rem; */
 display:flex;
 flex-direction: column;
 flex-wrap: wrap;
 }
 .classTitle {
-	background: #ffffff;
+	background: #f8f8f8;
 	color:#064784;
 	padding: .5rem;
 	display: flex;
@@ -19,37 +18,13 @@ flex-wrap: wrap;
 .classRoom{
 	list-style-type: none;
 	padding: .6rem;
+	background-color: #ffffff;
 
 }
-
-  /* border: 2px #064784 solid; */
+h3{
+	font-size: 2rem;
+}
 .student {
 	padding: 1rem;
 	font-size: 1.5rem;
 }
-/* .btn{
-	padding: .5rem 1rem;
-	background-color: #F39C12;
-	color: #000;
-	border-radius: 3px;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-}
-.btn:hover
-.btn:active {
-	background-color: #777;
-	color: #fff;
-}
-.btn-large {
-	padding: 1rem;
-	font-size: 2rem;
-	background-color: #fff;
-	color: #ffc966;
-	border: 5px #ffc966 solid;
-
-}
-.btn-large:hover
-.btn-large:active {
-	background-color: purple;
-	color: #fff;
-} */

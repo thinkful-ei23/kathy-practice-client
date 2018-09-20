@@ -1,0 +1,37 @@
+#managerWrapper{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border: .3rem solid #F39C12;
+}
+#classManager{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+#classList{
+	flex:1;
+}
+#titleList {
+	flex:1;
+}
+.btn-wrapper {
+	display: flex;
+	flex-direction: row
+}
+#managerBtn {
+	width: 100%;
+	align-self: center;
+	font-size: 1.5rem;
+	padding: 1rem;
+	padding: 1rem;
+	font-size: 2rem;
+	background-color: #ffc966;
+	color: #064784;
+}
+#managerBtn:hover,
+#managerBtn:active {
+	background-color:#064784;
+	color: #ffc966;
+}

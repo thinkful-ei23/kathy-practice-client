@@ -6,9 +6,8 @@ import './title-listT.css';
 
 export default function TitleList(props) {
 	return (
-
 		<div className="title-list">
-			<h3 className="title">Saved Practice Logs</h3>
+			<h3 className="title">Saved Practice Charts</h3>
 			<ul>
 				<li className="sub-title">Title 1</li>
 				<li className="sub-title">Title 2</li>
@@ -16,7 +15,6 @@ export default function TitleList(props) {
 				<li className="sub-title">Title 4</li>
 				<li className="sub-title">Title 5</li>
 			</ul>
-
 		</div>
 
 	);

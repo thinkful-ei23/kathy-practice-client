@@ -22,7 +22,7 @@ export class CardT extends React.Component {
 		);
 		return (
 			<div className="card">
-				<h4 className="title">{this.props.title}</h4>
+				<h3 className="title">{this.props.title}</h3>
 				<ul className="cardT">
 					{list}
 					<li><AddList

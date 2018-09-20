@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
-// import AddList from './components/add-list.js';
+import AddList from './components/add-list.js';
 // import CardS from './components/cardS';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
@@ -21,8 +21,8 @@ import './App.css';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
 // import LogIn from './components/log-in.js';
-// import OnBoardingT from './components/onBoardingT.js';
-import OnBoardingS from './components/onBoardingS.js';
+import OnBoardingT from './components/onBoardingT.js';
+// import OnBoardingS from './components/onBoardingS.js';
 
 import NavBar from './components/nav-bar';
 // import RegisterFormS from './components/registerS.js';
@@ -65,15 +65,17 @@ export class App extends React.Component {
             <br />
             {/* <Scratch /> */}
             <br />
-            <OnBoardingS />
+
+            <OnBoardingT />
             <br />
             <br />
-            <RegisterFormT />
+            {/* <RegisterFormT /> */}
             <br />
             <br />
             {/* <RegisterFormS /> */}
             <br />
             <br />
+            {/* <p>ClassManager</p> */}
             {/* <ClassManager /> */}
             <br />
             <br />
@@ -83,7 +85,7 @@ export class App extends React.Component {
             {/* <AddList /> */}
             <br />
             <br />
-
+            {/* <OnBoardingS /> */}
             {/* <Route exact path="/" component={Home} /> */}
             {/* <Route exact path="/login" component={LogIn} /> */}
             {/* <Route exact path="/registerS" component={RegisterFormS} /> */}
