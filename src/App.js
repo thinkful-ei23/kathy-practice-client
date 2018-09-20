@@ -20,7 +20,7 @@ import './App.css';
 // import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-import LogIn from './components/log-in.js';
+// import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
 // import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardingS from './components/onBoardingS.js';
@@ -71,7 +71,7 @@ export class App extends React.Component {
             {/* <RegisterFormT /> */}
             <br />
             <br />
-            <LogIn />
+            {/* <LogIn /> */}
             <br />
             <br />
             {/* <p>ClassManager</p> */}

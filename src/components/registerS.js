@@ -28,7 +28,7 @@ export class RegisterFormS extends React.Component {
 					<label htmlFor="first_name_signUpS" className="row" >Name</label>
 					<Field
 						id="first_name_signUpS"
-						// name="first_name_signUpS"
+						name="first_name_signUpS"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
@@ -56,7 +56,7 @@ export class RegisterFormS extends React.Component {
 						id="password_signUpS"
 						name="password_signUpS"
 						component={Input}
-						type="password_signUpS"
+						type="password"
 						validate={[required, nonEmpty]}
 					/>
 
@@ -65,7 +65,7 @@ export class RegisterFormS extends React.Component {
 						id="confirmPassword-signUpS"
 						name="confirmPassword-signUpS"
 						component={Input}
-						type="password_signUpS"
+						type="password"
 						validate={[required, nonEmpty, matchesPassword]}
 					/>
 
@@ -74,8 +74,10 @@ export class RegisterFormS extends React.Component {
 						id="teacher_id_signUpS"
 						name="teacher_id_signUpS"
 						component={Input}
-						type="number"
+						type="text"
+						// validate={[required, nonEmpty]}
 						validate={[required, nonEmpty, isAllDigits]}
+
 					/>
 
 					<button
