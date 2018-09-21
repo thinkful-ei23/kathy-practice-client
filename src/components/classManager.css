@@ -8,13 +8,14 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-
+	background-color: #fff;  /* TODO */
 }
 #classList{
 	flex:1;
 }
 #titleList {
 	flex:1;
+	align-self: stretch;
 }
 .btn-wrapper {
 	display: flex;
@@ -23,7 +24,6 @@
 #managerBtn {
 	width: 100%;
 	align-self: center;
-	font-size: 1.5rem;
 	padding: 1rem;
 	padding: 1rem;
 	font-size: 2rem;

@@ -89,6 +89,7 @@ export default function OnBoardingT(props) {
 						type="button"
 						aria-label="click to add another practice chart">Add chart</button>
 				</form>
+				<div className="after">These are the directions for using this component of the Practice Partner App</div>
 			</section>
 			{/* //=========== */}
 

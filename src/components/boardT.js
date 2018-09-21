@@ -5,8 +5,8 @@ import { fetchProtectedData } from '../actions/protected-data';
 
 import './boardT.css';
 import Edit from './edit.js';
-import TitleList from './title-listT.js';
-import ClassList from './class-list.js';
+// import TitleList from './title-listT.js';
+// import ClassList from './class-list.js';
 import AddCard from './add-card.js';
 
 export class BoardT extends React.Component {
@@ -32,8 +32,8 @@ export class BoardT extends React.Component {
 					<Edit />
 				</div>
 				<div className="flex" >
-					<TitleList className="titleList" />
-					<ClassList className="classList" />
+					{/* <TitleList className="titleList" /> */}
+					{/* <ClassList className="classList" /> */}
 				</div>
 			</section>
 		);

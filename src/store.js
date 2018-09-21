@@ -10,7 +10,7 @@ import authReducer from './reducers/auth';
 import { practiceReducer } from './reducers/course';
 import protectedDataReducer from './reducers/protected-data';
 
-// import registerTeacher from './reducers/registerT';
+import registerTeacher from './reducers/registerT';
 // import registerStudent from './reducers/registerS';
 
 const store = createStore(
@@ -18,7 +18,8 @@ const store = createStore(
 		form: formReducer,
 		auth: authReducer,
 		protectedData: protectedDataReducer,
-		course: practiceReducer
+		course: practiceReducer,
+		teacher: registerTeacher
 
 	}),
 	composeWithDevTools(

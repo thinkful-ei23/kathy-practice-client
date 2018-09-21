@@ -1,7 +1,5 @@
 .classlist {
 color: #000;
-/* background-color: #f8f8f8; */
-/* font-size: 1.5rem; */
 display:flex;
 flex-direction: column;
 flex-wrap: wrap;
@@ -20,9 +18,6 @@ flex-wrap: wrap;
 	padding: .6rem;
 	background-color: #ffffff;
 
-}
-h3{
-	font-size: 2rem;
 }
 .student {
 	padding: 1rem;

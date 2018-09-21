@@ -32,6 +32,7 @@ export default function teacherSignupReducer(state = initialState, action) {
 		console.log(action, 'action in registerT.reducer')
 		return Object.assign({}, state, {
 			card_data: action.data //success message where is it called? TODO
+			// currentUser: what the updated state will be -> store //TODO
 		});
 	} else if (action.type === REGISTER_TEACHER_ERROR) {
 		return Object.assign({}, state, {
@@ -40,3 +41,5 @@ export default function teacherSignupReducer(state = initialState, action) {
 	}
 	return state;
 }
+
+// initial state login

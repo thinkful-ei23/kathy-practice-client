@@ -11,8 +11,8 @@ const matchesPassword = matches('password_signUpS');
 export class RegisterFormS extends React.Component {
 
 	onSubmit(values) {
-		const { first_name_signUpS, last_name_signUpS, email_signUpS, password_signUpS, teacher_id_signUpS } = values;
-		const user = { first_name_signUpS, last_name_signUpS, email_signUpS, password_signUpS, teacher_id_signUpS };
+		const { name_signUpS, last_name_signUpS, email_signUpS, password_signUpS, teacher_id_signUpS } = values;
+		const user = { name_signUpS, last_name_signUpS, email_signUpS, password_signUpS, teacher_id_signUpS };
 		return this.props
 			.dispatch(registerUser(user))
 	}
@@ -25,10 +25,10 @@ export class RegisterFormS extends React.Component {
 					onSubmit={this.props.handleSubmit(values =>
 						this.onSubmit(values)
 					)}>
-					<label htmlFor="first_name_signUpS" className="row" >Name</label>
+					<label htmlFor="name_signUpS" className="row" >Name</label>
 					<Field
-						id="first_name_signUpS"
-						name="first_name_signUpS"
+						id="name_signUpS"
+						name="name_signUpS"
 						component={Input}
 						type="text"
 						validate={[required, nonEmpty]}
@@ -75,7 +75,6 @@ export class RegisterFormS extends React.Component {
 						name="teacher_id_signUpS"
 						component={Input}
 						type="text"
-						// validate={[required, nonEmpty]}
 						validate={[required, nonEmpty, isAllDigits]}
 
 					/>

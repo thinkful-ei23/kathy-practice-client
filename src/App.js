@@ -13,7 +13,7 @@ import './App.css';
 // import Edit from './components/edit.js';
 // import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
-// import ClassManager from './components/classManager.js';
+import ClassManager from './components/classManager.js';
 // import Scratch from './components/scratch';
 //================== compnenets needed below ============
 // import BoardS from './components/boardS.js';
@@ -22,9 +22,9 @@ import './App.css';
 // import LandingPageT from './components/landingPageT.js';
 // import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-// import OnBoardingT from './components/onBoardingT.js';
+import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardingS from './components/onBoardingS.js';
-import RegisterFormS from './components/registerS.js';
+// import RegisterFormS from './components/registerS.js';
 // import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
@@ -60,22 +60,19 @@ export class App extends React.Component {
           <NavBar />
 
           <main role="main">
-
-            <br />
-            {/* <Scratch /> */}
-            <br />
-            {/* <OnBoardingT /> */}
+            {/* <TitleList /> */}
+            {/* <LogIn /> */}
+            <OnBoardingT />
             <br />
             <br />
-            <RegisterFormS />
             {/* <RegisterFormT /> */}
             <br />
             <br />
-            {/* <LogIn /> */}
+            {/* <RegisterFormS /> */}
             <br />
             <br />
-            {/* <p>ClassManager</p> */}
-            {/* <ClassManager /> */}
+            <p>ClassManager</p>
+            <ClassManager />
             <br />
             <br />
             {/* <List /> */}
