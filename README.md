@@ -10,7 +10,7 @@ Screenshots of your app
 https://github.com/thinkful-ei23/kathy-practice-client.git <br />
 NavBar
 1<br />
-![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar")<br />
+![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png)<br />
 2<br />
 ![alt text](kathy-practice-client/src/img/navBar.png "NavBar")<br />
 3<br />
