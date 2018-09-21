@@ -64,16 +64,16 @@ export class App extends React.Component {
             <LogIn />
             <br />
             <br />
-            <OnBoardingS />
+            {/* <OnBoardingS /> */}
             <br />
             <br />
-            <OnBoardingT />
+            {/* <OnBoardingT /> */}
             <br />
             <br />
-            <RegisterFormS />
+            {/* <RegisterFormS /> */}
             <br />
             <br />
-            <RegisterFormT />
+            {/* <RegisterFormT /> */}
             <br />
             <br />
             {/* <BoardS /> */}

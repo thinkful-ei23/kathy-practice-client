@@ -10,6 +10,11 @@ https://www.practicePartner-client.herokuapp.com <br />
 **LogIn**
 >Simple log-in for both teachers and students.<br />
 ![LogIn](src/img/logIn.png)<br />
+2
+![LogIn](src/img/loginNew.png)<br />
+3
+![LogIn](src/img/ppLoginNew.png)<br />
+
 **SignUp for Teachers**
 >Teachers and students have different sign-up forms. When teachers sign-up, they will be assigned a "Teacher code".  That code is used once by each student to connect the teacher to that student. Teachers can connect with 1 or as many students as they wish!<br />
 ![SignUp for Teachers](src/img/registerT.png)<br />
@@ -29,7 +34,7 @@ https://www.practicePartner-client.herokuapp.com <br />
 **Tech Stack**<br />
 Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
 
-Frontend, HTML, CSS, Javascript, jQuery, jwt, react, redux, redux-form
+Frontend: HTML, CSS, Javascript, jwt, react, redux, redux-form
 
 **Target Audience**<br />
 Music teachers and their students, private studio teachers, Suzuki families
