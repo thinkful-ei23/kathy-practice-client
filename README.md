@@ -14,19 +14,19 @@ Simple log-in for both teachers and students.
 ![LogIn](src/img/logIn.png | width=100)<br />
 ![LogIn](src/img/logIn.png)<br />
 **SignUp for Teachers**
-Teachers and students have a different sign-up form. When teachers sign-up, they will be given a "Teacher code".  That code is used once by each student when they are signing-up.
+>Teachers and students have different sign-up forms. When teachers sign-up, they will be assigned a "Teacher code".  That code is used once by each student to connect the teacher to that student. Teachers can connect with 1 or as many students as they wish!
 ![SignUp for Teachers](src/img/registerT.png)<br />
 
 **SignUp for Students**
-Students will sign-up and, at that time, input the "Teacher code" given. That code will connect the teacher and that student.
+>Students will sign-up and, at that time, input the "Teacher code" given to them by their teacher. That code will connect the student and that teacher.
 ![SignUp for Students](src/img/registerS.png)<br />
 
 **Get Started for Teachers**
-Get Started page for teachers, all of the parts explained with drop down.
+>Get Started page for teachers, all of the parts explained with drop down.
 ![Get Started for Teachers](src/img/onBoardingT.png)<br />
 
 **Get Started for Students**
-Get Started page allows students to interact with a sample practice chart.
+>Get Started page allows students to interact with a sample practice chart.
 ![Get Started for Students](src/img/onBoardingS.png)<br />
 
 
