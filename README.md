@@ -11,7 +11,7 @@ Screenshots of your app
 
 **LogIn**
 
-![LogIn](src/img/logIn.png)<br />
+![LogIn](src/img/logIn.png =100)<br />
 **SignUp for Teachers**
 ![SignUp for Teachers](src/img/logIn.png)<br />
 **SignUp for Students**
