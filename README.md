@@ -7,13 +7,8 @@ A link to a deployed version
 https://www.practicePartner-client.herokuapp.com <br />
 https://git.heroku.com/cryptic-basin-90804.git <br />
 
-Screenshots of your app
-kathy-practice-client.git
-
 **LogIn**
-Simple log-in for both teachers and students.
-![LogIn](https://github.com/thinkful-ei23/kathy-practice-client/src/img/logIn.png | width=100)<br />
-![LogIn](kathy-practice-client/src/img/logIn.png | width=100)<br />
+>Simple log-in for both teachers and students.<br />
 ![LogIn](src/img/logIn.png)<br />
 **SignUp for Teachers**
 >Teachers and students have different sign-up forms. When teachers sign-up, they will be assigned a "Teacher code".  That code is used once by each student to connect the teacher to that student. Teachers can connect with 1 or as many students as they wish!<br />
@@ -33,6 +28,39 @@ Simple log-in for both teachers and students.
 
 
 
-A description of your tech stack
 
-A brief description of where each of the key parts of the project live in your codebase
+**Tech Stack**
+* Backend
+  * Node.js
+  * bcrypt
+  * body-parser
+  * cors
+  * dotenv
+  * express
+  * jsonwebtoken
+  * knex
+  * morgan
+  * passport
+  * passport-jwt
+  * passport-local
+  * pg
+  * sqlite3
+
+* Frontend
+  * HTML
+  * CSS
+  * Javascript
+  * jQuery
+  * jwt
+  * react
+  * react-dom
+  * react-redux
+  * react-router-dom
+  * react-scripts
+  * redux
+  * redux-devtools-extension
+  * redux-form
+  * redux-thunk
+
+**Target Audience**<br />
+Music teachers and their students, private studio teachers, Suzuki families
