@@ -22,6 +22,7 @@ text-align: center;
 .onBoard1 .after {
 	flex-grow: 1;
 	display: none;
+	display: visible;
 }
 .onBoard1:hover .after {
 	display: block;
