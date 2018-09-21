@@ -4,14 +4,30 @@ Benjamin Franklin wrote, "in this world nothing can be said to be certain, excep
 
 A link to a deployed version
 https://www.practicePartner-client.herokuapp.com <br />
-https://git.heroku.com/cryptic-basin-90804.git
+https://git.heroku.com/cryptic-basin-90804.git <br />
 
 Screenshots of your app
-https://github.com/thinkful-ei23/kathy-practice-client.git
-./scr/img.navBar.png
+https://github.com/thinkful-ei23/kathy-practice-client.git <br />
+NavBar
+./scr/img.navBar.png<br />
+src/img/navBar.png
+LogIn
+src/img/logIn.png <br />
 
-./src/img/onBoardingT.png
+SignUp for Teachers
+src/img/logIn.png<br />
+SignUp for Students
+src/img/registerS.png<br />
+Get Started for Teachers
+./src/img/onBoardingT.png<br />
+src/img/onBoardingT.png<br />
+Get Started for Students
+./src/img/onBoardingS.png<br />
+src/img/onBoardingS.png<br />
 
+Dashboard for Teachers
+
+Dashboard for Students
 
 
 A description of your tech stack

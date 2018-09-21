@@ -16,13 +16,13 @@ import './App.css';
 // import ClassManager from './components/classManager.js';
 // import Scratch from './components/scratch';
 //================== compnenets needed below ============
-// import BoardS from './components/boardS.js';
+import BoardS from './components/boardS.js';
 // import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
 // import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-import OnBoardingT from './components/onBoardingT.js';
+// import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardT from './components/onBoardT.js';
 // import OnBoardingS from './components/onBoardingS.js';
 // import RegisterFormS from './components/registerS.js';
@@ -62,12 +62,12 @@ export class App extends React.Component {
           <main role="main">
             {/* <TitleList /> */}
             {/* <LogIn /> */}
-            <OnBoardingT />
+            {/* <OnBoardingS /> */}
             {/* <OnBoardT /> */}
             {/* <RegisterFormS /> */}
-            <br />
-            <br />
-            {/* <RegisterFormS /> */}
+            {/* <RegisterFormT /> */}
+            <BoardS />
+
             <br />
             <br />
             {/* <p>ClassManager</p> */}
