@@ -10,7 +10,8 @@ Screenshots of your app
 https://github.com/thinkful-ei23/kathy-practice-client.git <br />
 NavBar
 
-     url('https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png')
+![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar")
+
 
 ./scr/img.navBar.png<br />
 src/img/navBar.png
