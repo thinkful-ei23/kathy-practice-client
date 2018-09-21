@@ -10,19 +10,19 @@ https://git.heroku.com/cryptic-basin-90804.git <br />
 Screenshots of your app
 
 **LogIn**
-
-![LogIn](src/img/logIn.png =100)<br />
+![LogIn](src/img/logIn.png | width=100)<br />
+![LogIn](src/img/logIn.png)<br />
 **SignUp for Teachers**
-![SignUp for Teachers](src/img/logIn.png)<br />
+![SignUp for Teachers](src/img/registerT.png)<br />
+
 **SignUp for Students**
 ![SignUp for Students](src/img/registerS.png)<br />
+
 **Get Started for Teachers**
 ![Get Started for Teachers](src/img/onBoardingT.png)<br />
+
 **Get Started for Students**
 ![Get Started for Students](src/img/onBoardingS.png)<br />
-
-![Dashboard for Teachers]()<br />
-![Dashboard for Students]()<br />
 
 
 
