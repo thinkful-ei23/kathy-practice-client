@@ -1,5 +1,6 @@
 .list{
 	width: 100%;
+	transition:all 0.4s ease-in-out;
  }
 .collapsible {
 	background-color: #f5fafe;

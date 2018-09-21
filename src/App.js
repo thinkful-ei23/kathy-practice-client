@@ -16,17 +16,17 @@ import './App.css';
 // import ClassManager from './components/classManager.js';
 // import Scratch from './components/scratch';
 //================== compnenets needed below ============
-import BoardS from './components/boardS.js';
+// import BoardS from './components/boardS.js';
 // import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-// import LogIn from './components/log-in.js';
+import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
-// import OnBoardingT from './components/onBoardingT.js';
+import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardT from './components/onBoardT.js';
-// import OnBoardingS from './components/onBoardingS.js';
-// import RegisterFormS from './components/registerS.js';
-// import RegisterFormT from './components/registerT.js';
+import OnBoardingS from './components/onBoardingS.js';
+import RegisterFormS from './components/registerS.js';
+import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
@@ -61,12 +61,22 @@ export class App extends React.Component {
           <NavBar />
           <main role="main">
             {/* <TitleList /> */}
-            {/* <LogIn /> */}
-            {/* <OnBoardingS /> */}
-            {/* <OnBoardT /> */}
-            {/* <RegisterFormS /> */}
-            {/* <RegisterFormT /> */}
-            <BoardS />
+            <LogIn />
+            <br />
+            <br />
+            <OnBoardingS />
+            <br />
+            <br />
+            <OnBoardingT />
+            <br />
+            <br />
+            <RegisterFormS />
+            <br />
+            <br />
+            <RegisterFormT />
+            <br />
+            <br />
+            {/* <BoardS /> */}
 
             <br />
             <br />

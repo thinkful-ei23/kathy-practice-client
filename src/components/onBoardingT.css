@@ -1,12 +1,14 @@
 #teacherOnBoard {
 display: flex;
 flex-wrap: wrap;
-flex-direction: column;
+/* flex-direction: column; */ /*  TODO */
+flex-direction: row;
 justify-content: stretch;
+transition:all 0.5s ease-in-out;
 }
 .howTo {
 padding: 1rem;
-font-size: 1.7rem;
+font-size: 1.5rem;
 text-align: center;
 }
 .howTo span{
@@ -18,6 +20,8 @@ text-align: center;
 .onBoard1 {
 	order: 1;
 	border: .5rem solid red;
+	flex-grow: 1;
+	/*  TODO */
 }
 .onBoard1 .after {
 	flex-grow: 1;
@@ -31,6 +35,8 @@ text-align: center;
 .onBoard2 {
 	order: 2;
 	border: .5rem solid blue;
+	flex-grow: 1;
+	/*  TODO */
 }
 .onBoard2 .after {
 	flex-grow: 1;
@@ -43,9 +49,11 @@ text-align: center;
 .onBoard3 {
 	order: 3;
 	border: .5rem solid green;
+	flex-grow: 2;
+	/*  TODO */
 }
 .onBoard3 .after {
-	flex-grow: 1;
+	flex-grow: 2;
 	display: none;
 }
 .onBoard3:hover .after {
@@ -55,6 +63,8 @@ text-align: center;
 .onBoard4 {
 	order: 4;
 	border: .5rem solid orange;
+	flex-grow: 1;
+	/*  TODO */
 }
 .onBoard4 .after {
 	flex-grow: 1;
