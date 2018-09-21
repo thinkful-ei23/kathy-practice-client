@@ -21,11 +21,11 @@ https://www.practicePartner-client.herokuapp.com <br />
 
 **Get Started for Teachers**
 >Get Started page for teachers, all of the parts explained with drop down.<br />
-![Get Started for Teachers](src/img/onBoardTNew.png)<br />
+![Get Started for Teachers](src/img/ppOnBoardTNew.png)<br />
 
 **Get Started for Students**
 >Get Started page allows students to interact with a sample practice chart.<br />
-![Get Started for Students](src/img/onBoardSNew.png)<br />
+![Get Started for Students](src/img/ppOnBoardSNew.png)<br />
 
 **Tech Stack**<br />
 Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
