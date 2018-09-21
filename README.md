@@ -9,25 +9,39 @@ https://git.heroku.com/cryptic-basin-90804.git <br />
 Screenshots of your app
 https://github.com/thinkful-ei23/kathy-practice-client.git <br />
 NavBar
-
-![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar")
-
-[navBar]: https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar"
-
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+1<br />
+![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar")<br />
+2<br />
+![alt text](kathy-practice-client/src/img/navBar.png "NavBar")<br />
+3<br />
+[navBar]: https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar"<br />
+4<br />
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"<br />
+5<br />
 ./scr/img.navBar.png<br />
-src/img/navBar.png
-LogIn
-src/img/logIn.png <br />
+6<br />
+src/img/navBar.png<br />
+7<br />
 
+LogIn
+8<br />
+ kathy-practice-client/src/img/logIn.png
+ 9<br />
+src/img/logIn.png <br />
+10<br />
 SignUp for Teachers
 src/img/logIn.png<br />
+
+11<br />
 SignUp for Students
 src/img/registerS.png<br />
+
+12<br />
 Get Started for Teachers
 ./src/img/onBoardingT.png<br />
 src/img/onBoardingT.png<br />
+
+13<br />
 Get Started for Students
 ./src/img/onBoardingS.png<br />
 src/img/onBoardingS.png<br />
