@@ -60,20 +60,25 @@ export class App extends React.Component {
         <div className="app">
           <NavBar />
           <main role="main">
-            {/* <TitleList /> */}
-            <LogIn />
-            <br />
-            <br />
-            {/* <OnBoardingS /> */}
-            <br />
-            <br />
-            {/* <OnBoardingT /> */}
-            <br />
-            <br />
-            {/* <RegisterFormS /> */}
-            <br />
-            <br />
+            {/* <LogIn /> */}
             {/* <RegisterFormT /> */}
+            {/* <RegisterFormS /> */}
+            {/* <OnBoardingT /> */}
+            {/* <OnBoardingS /> */}
+            {/* <BoardS /> */}
+
+            <br />
+            <br />
+
+            <br />
+            <br />
+
+            <br />
+            <br />
+
+            <br />
+            <br />
+
             <br />
             <br />
             {/* <BoardS /> */}
