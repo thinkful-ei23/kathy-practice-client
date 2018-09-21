@@ -1,4 +1,3 @@
-<!-- ![navBAR](src/img/ppNavBarNew.png)<br /> -->
 <a href="url"><img src="src/img/ppNavBarNew.png" align="center" height="auto" width="600" ></a><br />
 
 **PRACTICE PARTNER** - an app for music teachers and their students
@@ -8,6 +7,7 @@ Benjamin Franklin wrote, "in this world nothing can be said to be certain, excep
 A link to a deployed version
 https://www.practicePartner-client.herokuapp.com <br />
 <!-- https://git.heroku.com/cryptic-basin-90804.git <br /> -->
+login for demonstration: email = demo  password = demouser1234
 
 **LogIn**
 >Simple log-in for both teachers and students.<br />
@@ -21,14 +21,16 @@ https://www.practicePartner-client.herokuapp.com <br />
 >Students will sign-up and, at that time, input the "Teacher code" given to them by their teacher. That code will connect the student and that teacher.<br />
 <a href="url"><img src="src/img/ppRegSNew.png" align="center" height="auto" width="600" ></a><br />
 
-**Get Started for Teachers**
->Get Started page for teachers, all of the parts explained with drop down menus.<br />
-<a href="url"><img src="src/img/ppOnBoardTNew.png" align="center" height="auto" width="600" ></a><br />
-
 **Get Started for Students**
 >Get Started page allows students to interact with a sample practice chart.<br />
 <a href="url"><img src="src/img/ppOnBoardSNew.png" align="center" height="auto" width="600" ></a><br />
 <br />
+
+**Get Started for Teachers**
+>Get Started page for teachers, all of the parts explained with drop down menus.<br />
+<a href="url"><img src="src/img/ppOnBoardTNew.png" align="center" height="auto" width="600" ></a><br />
+
+
 **Tech Stack**<br />
 Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
 
