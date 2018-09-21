@@ -12,7 +12,10 @@ NavBar
 
 ![alt text](https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar")
 
+[navBar]: https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png "NavBar"
 
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 ./scr/img.navBar.png<br />
 src/img/navBar.png
 LogIn
