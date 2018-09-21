@@ -5,7 +5,7 @@ Benjamin Franklin wrote, "in this world nothing can be said to be certain, excep
 
 A link to a deployed version
 https://www.practicePartner-client.herokuapp.com <br />
-https://git.heroku.com/cryptic-basin-90804.git <br />
+<!-- https://git.heroku.com/cryptic-basin-90804.git <br /> -->
 
 **LogIn**
 >Simple log-in for both teachers and students.<br />
@@ -26,41 +26,10 @@ https://git.heroku.com/cryptic-basin-90804.git <br />
 >Get Started page allows students to interact with a sample practice chart.<br />
 ![Get Started for Students](src/img/onBoardingS.png)<br />
 
+**Tech Stack**<br />
+Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
 
-
-
-**Tech Stack**
-* Backend
-  * Node.js
-  * bcrypt
-  * body-parser
-  * cors
-  * dotenv
-  * express
-  * jsonwebtoken
-  * knex
-  * morgan
-  * passport
-  * passport-jwt
-  * passport-local
-  * pg
-  * sqlite3
-
-* Frontend
-  * HTML
-  * CSS
-  * Javascript
-  * jQuery
-  * jwt
-  * react
-  * react-dom
-  * react-redux
-  * react-router-dom
-  * react-scripts
-  * redux
-  * redux-devtools-extension
-  * redux-form
-  * redux-thunk
+Frontend, HTML, CSS, Javascript, jQuery, jwt, react, redux, redux-form
 
 **Target Audience**<br />
 Music teachers and their students, private studio teachers, Suzuki families
