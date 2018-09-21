@@ -23,14 +23,12 @@ https://www.practicePartner-client.herokuapp.com <br />
 >Get Started page for teachers, all of the parts explained with drop down menus.<br />
 ![Get Started for Teachers](src/img/ppOnBoardTNew.png)<br />
 2
-<a href="url"><img src="src/img/ppOnBoardTNew.png" align="left" height="auto" width="800" ></a>
-<!-- <img src="https://github.com/thinkful-ei23/kathy-practice-client/src/img/ppOnBoardTNew.png"> -->
-<!-- <img src="https://github.com/thinkful-ei23/kathy-practice-client/src/img/ppOnBoardTNew.png" width="48"> -->
+<a href="url"><img src="src/img/ppOnBoardTNew.png" align="left" height="auto" width="600" ></a>
 
 **Get Started for Students**
 >Get Started page allows students to interact with a sample practice chart.<br />
 ![Get Started for Students](src/img/ppOnBoardSNew.png)<br />
-
+<a href="url"><img src="src/img/ppOnBoardSNew.png" align="left" height="auto" width="400" ></a>
 **Tech Stack**<br />
 Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
 
