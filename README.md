@@ -9,6 +9,9 @@ https://git.heroku.com/cryptic-basin-90804.git <br />
 Screenshots of your app
 https://github.com/thinkful-ei23/kathy-practice-client.git <br />
 NavBar
+
+     https://github.com/thinkful-ei23/kathy-practice-client/src/img/navBar.png
+
 ./scr/img.navBar.png<br />
 src/img/navBar.png
 LogIn
