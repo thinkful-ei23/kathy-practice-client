@@ -9,10 +9,6 @@ https://www.practicePartner-client.herokuapp.com <br />
 
 **LogIn**
 >Simple log-in for both teachers and students.<br />
-![LogIn](src/img/logIn.png)<br />
-2
-![LogIn](src/img/loginNew.png)<br />
-3
 ![LogIn](src/img/ppLoginNew2.png)<br />
 
 **SignUp for Teachers**
