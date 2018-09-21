@@ -20,9 +20,10 @@ https://www.practicePartner-client.herokuapp.com <br />
 ![SignUp for Students](src/img/ppRegSNew.png)<br />
 
 **Get Started for Teachers**
->Get Started page for teachers, all of the parts explained with drop down.<br />
+>Get Started page for teachers, all of the parts explained with drop down menus.<br />
 ![Get Started for Teachers](src/img/ppOnBoardTNew.png)<br />
-
+2
+<img src="https://github.com/thinkful-ei23/kathy-practice-client/src/img/ppOnBoardTNew.png" width="48">
 **Get Started for Students**
 >Get Started page allows students to interact with a sample practice chart.<br />
 ![Get Started for Students](src/img/ppOnBoardSNew.png)<br />
