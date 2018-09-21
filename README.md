@@ -12,13 +12,13 @@ Screenshots of your app
 LogIn
 
 ![LogIn](src/img/logIn.png)<br />
-
+SignUp for Teachers
 ![SignUp for Teachers](src/img/logIn.png)<br />
-
+SignUp for Students
 ![SignUp for Students](src/img/registerS.png)<br />
-
+Get Started for Teachers
 ![Get Started for Teachers](src/img/onBoardingT.png)<br />
-
+Get Started for Students
 ![Get Started for Students](src/img/onBoardingS.png)<br />
 
 ![Dashboard for Teachers]()<br />
