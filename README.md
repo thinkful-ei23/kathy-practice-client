@@ -1,5 +1,5 @@
 <!-- ![navBAR](src/img/ppNavBarNew.png)<br /> -->
-<a href="url"><img src="src/img/ppNavBarNeww.png" align="center" height="auto" width="600" ></a><br />
+<a href="url"><img src="src/img/ppNavBarNew.png" align="center" height="auto" width="600" ></a><br />
 
 **PRACTICE PARTNER** - an app for music teachers and their students
 
