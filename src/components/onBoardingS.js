@@ -4,6 +4,7 @@ import './card.css';
 import './list.css';
 import NavBar from './nav-bar.js';
 import './nav-bar.css';
+import './onBoardingS.css';
 
 export default function OnBoardingS(props) {
 
@@ -21,6 +22,9 @@ export default function OnBoardingS(props) {
 	return (
 		<section>
 			<NavBar />
+			<section className="howToS"><h2>
+				Welcome! This is a sample practice chart. Click or tap anywhere on the title to expand each row and see the assignment. The row will stay open until you click or tap to close it. When you are ready to see the practice chart your teacher has create just for you, click on the <span>"PRACTICE&nbsp;PARTNER"</span> at the top to the page.
+			</h2></section>
 			<div className="card" >
 				<h3 className="title">Your First Practice Chart</h3>
 				<ul>

@@ -1,0 +1,14 @@
+.howToS {
+	padding: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	line-height: 2rem;
+	background-color: rgba(255, 255, 255, .9);
+	border-radius: 1rem;
+	}
+	.howToS span{
+		background-color: #064784;
+		color: #f8f8f8;
+		text-transform: uppercase;
+		padding: .3rem .5rem;
+	}
