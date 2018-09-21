@@ -26,6 +26,9 @@ export default function OnBoardingT(props) {
 
 	return (
 		<main id="teacherOnBoard">
+			<section className="howTo"><h2>
+				Hover with your cursor or tap each section below to unlock the power of <span>"PRACTICE&nbsp;PARTNER"</span>
+			</h2></section>
 			<section className="onBoard2">
 				<div className="card">
 					<h3 className="title">Sample of the first row of a chart</h3>
@@ -38,12 +41,8 @@ export default function OnBoardingT(props) {
 							</div>
 						</div>
 					</ul>
-
-
-
 				</div>
 				<form className="addList" >
-
 					<label
 						id="label-addList"
 						htmlFor="input-addList">Row Title:</label>
@@ -67,6 +66,7 @@ export default function OnBoardingT(props) {
 							aria-label="click to save the paractice chart">Save practice chart</button>
 					</div>
 				</form>
+				<div className="after"><p>2. Each new practice chart starts with the title and 1 row.  The row has 2 parts, the title and the expandable content. Lots of room for skills, assignments, and reminders. Add as many rows as you like, and when you are done, save the chart.</p></div>
 
 			</section>
 
@@ -89,7 +89,7 @@ export default function OnBoardingT(props) {
 						type="button"
 						aria-label="click to add another practice chart">Add chart</button>
 				</form>
-				<div className="after">These are the directions for using this component of the Practice Partner App</div>
+				<div className="after"><p>1. Start by creating a practice chart. Type in a title and click Add chart button</p></div>
 			</section>
 			{/* //=========== */}
 
@@ -149,6 +149,7 @@ export default function OnBoardingT(props) {
 						</div>
 					</ul>
 				</div>
+				<div className="after"><p>3. Here is a sample practice chart. Click on a row to see it expand. Lots of room for practice notes and reminders as well as assignments. Click on it again to close, or keep multiple rows expanded. It's all your choice! This is what your students use to guide their practicing. Teach students how to practice as well as what to practice.</p></div>
 			</section>
 			{/* //=========== */}
 			<section className="classManager onBoard4">
@@ -191,6 +192,7 @@ export default function OnBoardingT(props) {
 							Assign </button >
 					</div >
 				</div>
+				<div className="after after_black"><p>3. This is list all your students and all your saved practice charts. To assign a practice chart is as easy as "Click, Click, Assign" and you are done! Ready to start - click on the "Practice Partner" logo at the top to get "Practicing"!</p></div>
 			</section>
 			{/* //=========== */}
 
