@@ -28,7 +28,7 @@ https://www.practicePartner-client.herokuapp.com <br />
 **Get Started for Students**
 >Get Started page allows students to interact with a sample practice chart.<br />
 ![Get Started for Students](src/img/ppOnBoardSNew.png)<br />
-<a href="url"><img src="src/img/ppOnBoardSNew.png" align="left" height="auto" width="400" ></a>
+<a href="url"><img src="src/img/ppOnBoardSNew.png" align="left" height="auto" width="800" ></a>
 **Tech Stack**<br />
 Backend: Node.js, express, bcrypt, cors, knex, passport, postgreSQL
 
