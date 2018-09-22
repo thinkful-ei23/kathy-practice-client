@@ -1,6 +1,5 @@
 .list{
 	width: 100%;
-	transition:all 0.4s ease-in-out;
  }
 .collapsible {
 	background-color: #f5fafe;
@@ -15,6 +14,7 @@
 	font-size: 2rem;
 	display:flex;
 	justify-content: space-between;
+	transition: all .1s linear;
 }
 .active,
 .collapsible:hover {
@@ -39,10 +39,11 @@
 .collapsible.active::after {
 	content: '\2613';/* Unicode character for X sign */
 	 color: #ffc966;
-
 }
 .edit {
 	 width: 100%;
 	 font-size: 1.5rem;
 	 padding: .5rem .5rem 0 .5rem;
+	 transition: all .5s onClick linear;
+
 }

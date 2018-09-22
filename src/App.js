@@ -11,7 +11,7 @@ import './App.css';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
-// import List from './components/list.js';
+import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
 // import ClassManager from './components/classManager.js';
 // import Scratch from './components/scratch';
@@ -22,6 +22,7 @@ import './App.css';
 // import LandingPageT from './components/landingPageT.js';
 import LogIn from './components/log-in.js';
 import NavBar from './components/nav-bar';
+import NavBarDemo from './components/nav-barDemo';
 import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardT from './components/onBoardT.js';
 import OnBoardingS from './components/onBoardingS.js';
@@ -64,15 +65,15 @@ export class App extends React.Component {
             {/* <RegisterFormT /> */}
             {/* <RegisterFormS /> */}
             {/* <OnBoardingT /> */}
-            {/* <OnBoardingS /> */}
+            <OnBoardingS />
             {/* <BoardS /> */}
 
             <br />
             <br />
-
+            <NavBarDemo />
             <br />
             <br />
-
+            <List />
             <br />
             <br />
 
@@ -89,7 +90,7 @@ export class App extends React.Component {
             {/* <ClassManager /> */}
             <br />
             <br />
-            {/* <List /> */}
+
             <br />
             <br />
             {/* <AddList /> */}
