@@ -1,18 +1,18 @@
+
 import {
 	REGISTER_TEACHER_REQUEST,
 	REGISTER_TEACHER_SUCCESS,
 	REGISTER_TEACHER_ERROR
 } from '../actions/usersT.js';
-
+//  import onBoardingT from '../components/onBoardingT.js';
+//
 const initialState = {
-	id: null,
-	first_name_signUpT: null,
-	last_name_signUpT: null,
-	email_signUpT: null,
-	password_signUpT: null,
-	card_data: null
+	onBoardingT: []
+};
 
-}; //TODO
+
+
+//TODO
 //login initital state
 // email_signUpT: null,
 // 	password_signUpT: null
@@ -20,7 +20,7 @@ const initialState = {
 //card id
 //titles of saved cards
 // names of students connected with teacher
-
+//< Redirect to="/OnboardT" />
 
 export default function teacherSignupReducer(state = initialState, action) {
 	if (action.type === REGISTER_TEACHER_REQUEST) {
@@ -29,9 +29,10 @@ export default function teacherSignupReducer(state = initialState, action) {
 			error: null
 		});
 	} else if (action.type === REGISTER_TEACHER_SUCCESS) {
-		console.log(action, 'action in registerT.reducer')
+		console.log(action, 'action in registerT.reducer - line 32')
 		return Object.assign({}, state, {
-			card_data: action.data //success message where is it called? TODO
+			onboardingT: action.OnboardingT
+			// card_data: action.data //success message where is it called? TODO
 			// currentUser: what the updated state will be -> store //TODO
 		});
 	} else if (action.type === REGISTER_TEACHER_ERROR) {

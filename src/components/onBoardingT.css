@@ -19,8 +19,11 @@ text-align: center;
 }
 .onBoard1 {
 	order: 1;
-	border: .5rem solid red;
-
+	border: .3rem solid transparent;
+}
+.onBoard1:hover {
+	order: 1;
+	border: .3rem solid red;
 }
 .onBoard1 .after {
 	flex-grow: 1;
@@ -29,12 +32,15 @@ text-align: center;
 }
 .onBoard1:hover .after {
 	display: block;
-	background: rgba(255, 0, 0, .95);
+	background: rgba(255, 0, 0, .7);
+
 }
 .onBoard2 {
 	order: 2;
-	border: .5rem solid blue;
-
+	border: .3rem solid transparent;
+}
+.onBoard2:hover{
+	border: .3rem solid blue;
 }
 .onBoard2 .after {
 	flex-grow: 1;
@@ -46,9 +52,10 @@ text-align: center;
 }
 .onBoard3 {
 	order: 3;
-	border: .5rem solid green;
-
-
+	border: .3rem solid transparent;
+}
+.onBoard3:hover {
+	border: .3rem solid green;
 }
 .onBoard3 .after {
 	flex-grow: 2;
@@ -60,8 +67,10 @@ text-align: center;
 }
 .onBoard4 {
 	order: 4;
-	border: .5rem solid orange;
-
+	border: .3rem solid transparent;
+}
+.onBoard4:hover {
+	border: .3rem solid orange;
 }
 .onBoard4 .after {
 	flex-grow: 1;
@@ -81,4 +90,8 @@ text-align: center;
 }
 .after_black p {
 	color:black;
+}
+.btn-dash {
+	text-decoration: none;
+	color: #eee;
 }

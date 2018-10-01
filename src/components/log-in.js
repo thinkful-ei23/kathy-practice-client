@@ -56,7 +56,7 @@ export class LogInForm extends React.Component {
 						aria-label="submit info for log in"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
-						Login
+						Log in
 				</button>
 				</form>
 
@@ -64,11 +64,15 @@ export class LogInForm extends React.Component {
 		);
 	}
 }
+console.log("I'm in log-in.js at the bottom 1", login)
 
 export default reduxForm({
 	form: 'login',
 	onSubmitFail: (errors, dispatch) => {
 		dispatch(focus('email', 'password'))
 		//return dispatch(focus('login', Object.keys(errors)[0]))
+		console.log("--------I'm in log-in.js at the bottom 2", login)
+
 	}
+
 })(connect()(LogInForm));

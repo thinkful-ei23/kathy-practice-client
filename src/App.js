@@ -11,7 +11,7 @@ import './App.css';
 // import CardT from './components/cardT';
 // import ClassList from './components/class-list.js';
 // import Edit from './components/edit.js';
-import List from './components/list.js';
+// import List from './components/list.js';
 // import TitleList from './components/title-listT.js';
 // import ClassManager from './components/classManager.js';
 // import Scratch from './components/scratch';
@@ -21,13 +21,13 @@ import List from './components/list.js';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
 import LogIn from './components/log-in.js';
-import NavBar from './components/nav-bar';
-import NavBarDemo from './components/nav-barDemo';
-import OnBoardingT from './components/onBoardingT.js';
+// import NavBar from './components/nav-bar';
+// import NavBarDemo from './components/nav-barDemo';
+// import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardT from './components/onBoardT.js';
-import OnBoardingS from './components/onBoardingS.js';
-import RegisterFormS from './components/registerS.js';
-import RegisterFormT from './components/registerT.js';
+// import OnBoardingS from './components/onBoardingS.js';
+// import RegisterFormS from './components/registerS.js';
+// import RegisterFormT from './components/registerT.js';
 import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
@@ -59,29 +59,32 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="app">
-          <NavBar />
+          {/* <NavBar /> */}
           <main role="main">
             {/* <LogIn /> */}
             {/* <RegisterFormT /> */}
             {/* <RegisterFormS /> */}
             {/* <OnBoardingT /> */}
-            <OnBoardingS />
+            {/* <OnBoardingS /> */}
             {/* <BoardS /> */}
 
             <br />
             <br />
-            <NavBarDemo />
+            {/* <NavBarDemo /> */}
             <br />
             <br />
-            <List />
+            {/* <List /> */}
             <br />
             <br />
+            {/* <RegisterFormT /> */}
 
             <br />
             <br />
 
+            {/* <RegisterFormS /> */}
             <br />
             <br />
+            <LogIn />
             {/* <BoardS /> */}
 
             <br />
@@ -104,7 +107,7 @@ export class App extends React.Component {
             {/* <Route exact path="/landingPageT" component={landingPageT} /> */}
             {/* <Route exact path="/landingPageS" component={landingPageS} /> */}
             {/* <Route exact path="/boardS" component={BoardS} /> */}
-            {/* <Route exact path="/boardT" component={BoardT} /> */}
+            {/* <Route exact path="/boardT" component={BoardT} /> */} */}
           </main>
         </div>
       </Router>

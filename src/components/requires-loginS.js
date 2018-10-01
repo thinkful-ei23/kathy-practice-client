@@ -13,10 +13,10 @@ export default () => Component => {
 		else if (!loggedIn || error) {
 			return <Redirect to="/log-in" />;
 		}
-		console.log(result, 'i am in requires-loginT')
 
 		return <Component {...passThroughProps} />;
 	}
+	console.log(result, 'i am in requires-loginS')
 
 	const displayName = Component.displayName || Component.name || 'Component';
 	RequiresLogin.displayName = `RequiresLogin(${displayName})`;

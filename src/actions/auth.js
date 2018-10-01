@@ -33,9 +33,21 @@ export const authError = error => ({
 	error
 });
 
+// Stores the auth token in state and localStorage, and decodes and stores
+// the user data stored in the token
+const storeAuthInfo = (authToken, dispatch) => {
+	const decodedToken = jwtDecode(authToken);
+	dispatch(setAuthToken(authToken));
+	dispatch(authSuccess(decodedToken.user));
+	saveAuthToken(authToken);
+};
+
+
 
 export const login = (email, password) => dispatch => {
 	dispatch(authRequest());
+	console.log('i am in auth.js', authRequest)
+
 	return (
 		fetch(`${API_BASE_URL}/auth/login`, {
 			method: 'POST',
@@ -46,9 +58,11 @@ export const login = (email, password) => dispatch => {
 				email,
 				password
 			})
-		})
-			// Reject any requests which don't return a 200 status, creating
-			// errors which follow a consistent format
+		}),
+		// Reject any requests which don't return a 200 status, creating
+		// errors which follow a consistent format
+		console.log('i am in auth.js 5------------')
+
 			.then(res => normalizeResponseErrors(res))
 			.then(res => res.json())
 			.then(({ authToken }) => storeAuthInfo(authToken, dispatch))
@@ -61,6 +75,8 @@ export const login = (email, password) => dispatch => {
 				dispatch(authError(err));
 				// Could not authenticate, so return a SubmissionError for Redux
 				// Form
+				console.log('+++++++++++++++i am in actions/auth.js 5')
+
 				return Promise.reject(
 					new SubmissionError({
 						_error: message
@@ -93,11 +109,3 @@ export const refreshAuthToken = () => (dispatch, getState) => {
 		});
 };
 
-// Stores the auth token in state and localStorage, and decodes and stores
-// the user data stored in the token
-const storeAuthInfo = (authToken, dispatch) => {
-	const decodedToken = jwtDecode(authToken);
-	dispatch(setAuthToken(authToken));
-	dispatch(authSuccess(decodedToken.user));
-	saveAuthToken(authToken);
-};
