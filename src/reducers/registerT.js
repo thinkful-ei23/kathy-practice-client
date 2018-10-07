@@ -10,8 +10,6 @@ const initialState = {
 	onBoardingT: []
 };
 
-
-
 //TODO
 //login initital state
 // email_signUpT: null,
@@ -44,3 +42,5 @@ export default function teacherSignupReducer(state = initialState, action) {
 }
 
 // initial state login
+
+

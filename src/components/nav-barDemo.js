@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
+import { Link, NavLink } from 'react-router-dom';
 
 import './nav-bar.css';
 
-export class NavBar extends React.Component {
+export class NavBarDemo extends React.Component {
 	logOut() {
 		this.props.dispatch(clearAuth());
 		clearAuthToken();
@@ -46,6 +47,15 @@ export class NavBar extends React.Component {
 
 			<header role="banner" className="header" >
 				<h1 className="brand">Practice Partner</h1>
+
+				<NavLink to='/registration-pageT'
+					className="btn-nav__active btn-signup"
+					aria-label="Teacher sign up" >Teachers Sign up</NavLink>
+
+				<NavLink to='/registration-pageS'
+					className="btn-nav__active btn-signup"
+					aria-label="Student sign up" >Student Sign up</NavLink>
+
 				{logOutButton}
 				{signUpButtonT}
 				{signUpButtonS}
@@ -58,4 +68,4 @@ const mapStateToProps = state => ({
 	loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(mapStateToProps)(NavBarDemo);

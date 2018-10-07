@@ -1,8 +1,7 @@
 import React from 'react';
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 // import AddCard from './components/add-card.js';
@@ -22,7 +21,7 @@ import './App.css';
 // import LandingPageT from './components/landingPageT.js';
 import LogIn from './components/log-in.js';
 // import NavBar from './components/nav-bar';
-// import NavBarDemo from './components/nav-barDemo';
+import NavBarDemo from './components/nav-barDemo';
 // import OnBoardingT from './components/onBoardingT.js';
 // import OnBoardT from './components/onBoardT.js';
 // import OnBoardingS from './components/onBoardingS.js';
@@ -59,44 +58,11 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="app">
-          {/* <NavBar /> */}
+          <NavBarDemo />
           <main role="main">
-            {/* <LogIn /> */}
-            {/* <RegisterFormT /> */}
-            {/* <RegisterFormS /> */}
-            {/* <OnBoardingT /> */}
-            {/* <OnBoardingS /> */}
-            {/* <BoardS /> */}
 
-            <br />
-            <br />
-            {/* <NavBarDemo /> */}
-            <br />
-            <br />
-            {/* <List /> */}
-            <br />
-            <br />
-            {/* <RegisterFormT /> */}
-
-            <br />
-            <br />
-
-            {/* <RegisterFormS /> */}
-            <br />
-            <br />
             <LogIn />
-            {/* <BoardS /> */}
 
-            <br />
-            <br />
-            {/* <p>ClassManager</p> */}
-            {/* <ClassManager /> */}
-            <br />
-            <br />
-
-            <br />
-            <br />
-            {/* <AddList /> */}
             <br />
             <br />
             {/* <OnBoardingS /> */}
@@ -107,7 +73,7 @@ export class App extends React.Component {
             {/* <Route exact path="/landingPageT" component={landingPageT} /> */}
             {/* <Route exact path="/landingPageS" component={landingPageS} /> */}
             {/* <Route exact path="/boardS" component={BoardS} /> */}
-            {/* <Route exact path="/boardT" component={BoardT} /> */} */}
+            {/* <Route exact path="/boardT" component={BoardT} /> */}
           </main>
         </div>
       </Router>
