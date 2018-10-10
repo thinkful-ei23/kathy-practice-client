@@ -1,32 +1,22 @@
 import React from 'react';
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
-//import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-// import AddCard from './components/add-card.js';
-// import AddList from './components/add-list.js';
-// import CardS from './components/cardS';
-// import CardT from './components/cardT';
-// import ClassList from './components/class-list.js';
-// import Edit from './components/edit.js';
-// import List from './components/list.js';
-// import TitleList from './components/title-listT.js';
-// import ClassManager from './components/classManager.js';
-// import Scratch from './components/scratch';
+
 //================== compnenets needed below ============
-// import BoardS from './components/boardS.js';
-// import BoardT from './components/boardT';
+import BoardS from './components/boardS.js';
+import BoardT from './components/boardT';
 // import LandingPageS from './components/landingPageS.js';
 // import LandingPageT from './components/landingPageT.js';
-import LogIn from './components/log-in.js';
+import LogInForm from './components/log-in.js';
 // import NavBar from './components/nav-bar';
-import NavBarDemo from './components/nav-barDemo';
-// import OnBoardingT from './components/onBoardingT.js';
-// import OnBoardT from './components/onBoardT.js';
-// import OnBoardingS from './components/onBoardingS.js';
-// import RegisterFormS from './components/registerS.js';
-// import RegisterFormT from './components/registerT.js';
+// import NavBarDemo from './components/nav-barDemo';
+import OnBoardingT from './components/onBoardingT.js';
+import OnBoardT from './components/onBoardT.js';
+import OnBoardingS from './components/onBoardingS.js';
+import RegisterFormS from './components/signupS.js';
+import RegisterFormT from './components/signupT.js';
 import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
@@ -58,22 +48,33 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="app">
-          <NavBarDemo />
+
           <main role="main">
+            {/* <LogInForm /><br></br> */}
+            {/* <NavBar /><br></br><br></br> */}
 
-            <LogIn />
+            {/* <NavBar /><br></br><br></br> */}
+            <BoardS /><br></br>
+            <BoardT /><br></br>
+            {/* <RegisterFormT /><br></br> */}
+            {/* <RegisterFormS /><br></br> */}
+            <OnBoardingS /><br></br>
+            <OnBoardingT /><br></br>
 
-            <br />
-            <br />
-            {/* <OnBoardingS /> */}
-            {/* <Route exact path="/" component={Home} /> */}
-            {/* <Route exact path="/login" component={LogIn} /> */}
-            {/* <Route exact path="/registerS" component={RegisterFormS} /> */}
-            {/* <Route exact path="/registerT" component={RegisterFormT} /> */}
-            {/* <Route exact path="/landingPageT" component={landingPageT} /> */}
-            {/* <Route exact path="/landingPageS" component={landingPageS} /> */}
-            {/* <Route exact path="/boardS" component={BoardS} /> */}
-            {/* <Route exact path="/boardT" component={BoardT} /> */}
+            <Route exact path="/login" component={LogInForm} />
+
+            <Route exact path="/onBoardingS" component={OnBoardingS} />
+            <Route exact path="/onBoardingT" component={OnBoardingT} />
+
+
+            <Route exact path="/boardS" component={BoardS} />
+            <Route exact path="/boardT" component={BoardT} />
+
+            <Route exact path="/signupS" component={RegisterFormT} />
+            <Route exact path="/signupT" component={RegisterFormS} />
+
+
+
           </main>
         </div>
       </Router>
@@ -89,12 +90,12 @@ const mapStateToProps = state => ({
 
 // Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
 export default /*withRouter*/(connect(mapStateToProps)(App));
-//TODO Router
+        //TODO Router
 
 
-  /*  TODO suggestions from group
-  select for saved logs and student list with one assign button
-  teacher code = last name
+          /*  TODO suggestions from group
+          select for saved logs and student list with one assign button
+          teacher code = last name
 {/*
         <AddCard />
         <AddList />
@@ -106,7 +107,7 @@ export default /*withRouter*/(connect(mapStateToProps)(App));
         <TitleList />
         <LandingPageS />
         <LandingPageT />
-
+<NavBarDemo />
 
         <NavBar />
 
@@ -129,8 +130,9 @@ export default /*withRouter*/(connect(mapStateToProps)(App));
         <ClassList />
         <Edit />
 * /
+  /*
+  <Route exact path="/" component={LogIn} />
 
-
-        /* <Route exact path="/X" component={LandingPage} />
+       <Route exact path="/X" component={LandingPage} />
         <Route exact path="/Xboard" component={Dashboard} />
         <Route exact path="/Xregister" component={RegistrationPage} /> */

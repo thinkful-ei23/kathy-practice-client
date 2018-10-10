@@ -5,6 +5,7 @@ import { fetchProtectedData } from '../actions/protected-data';
 
 import './card.css';
 import CardS from './cardS.js';
+import NavBar from './nav-bar.js';
 
 
 export class BoardS extends React.Component {
@@ -15,7 +16,7 @@ export class BoardS extends React.Component {
 		return (
 			<section className="dash" >
 
-
+				<NavBar />
 
 				<div className="student">
 					<CardS />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Link, NavLink } from 'react-router-dom';
 
 import './add-card.css';
 import './add-list.css';
@@ -194,9 +195,13 @@ export default function OnBoardingT(props) {
 				</div>
 				<div className="after after_black"><p>3. This lists all your students and all your saved practice charts. To assign a practice chart is as easy as "Click, Click, Assign" and you are done! Ready to start - click on the "Teacher Dashboard" button below to get "Practicing"!</p></div>
 
-				<div>
+				<div className="btn-wrapper btn-dash">
 					<button class="btn-large btn-dash">
-						<a href="boardT.js"> Teacher dashboard </a>
+						{/* <NavLink to="boardT.js"> Teacher dashboard </NavLink> */}
+						<NavLink to='/boardT.js'
+							activeClassName="btn-nav__active"
+							className="btn-dash"
+							aria-label="Teacher dashboard" >Teacher dashboard</NavLink>
 					</button>
 				</div>
 			</section>
@@ -207,3 +212,7 @@ export default function OnBoardingT(props) {
 	//change state here
 };
 
+// <NavLink to='/boardT.js'
+// 	activeClassName="btn-nav__active"
+// 	className="btn-signup"
+// 	aria-label="Teacher sign up" >Teacher dashboard</NavLink>

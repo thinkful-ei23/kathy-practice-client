@@ -10,7 +10,7 @@ html {
 body {
 	font-family: sans-serif;
 }
-h3{
+h2, h3{
 	font-size: 2rem;
 }
 .btn-large {

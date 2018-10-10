@@ -6,11 +6,12 @@ import { login } from '../actions/auth';
 import Input from './input';
 import { required, nonEmpty } from '../validators';
 import './log-in.css';
+import NavBarDemo from './nav-barDemo';
 
 export class LogInForm extends React.Component {
 	onSubmit(values) {
-		console.log(values, 'values in login.js') // TODO
-		return this.props.dispatch(login(values.email, values.password));
+		// console.log(values, 'values in login.js') // TODO
+		return this.props.dispatch(login(values.email, values.password)); //check to see how to change state
 	}
 	render() {
 		let error;
@@ -22,7 +23,9 @@ export class LogInForm extends React.Component {
 			);
 		}
 		return (
+
 			<section>
+				<NavBarDemo />
 				<form
 					id="logInForm"
 					aria-labelledby="logInForm"

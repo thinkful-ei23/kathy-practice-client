@@ -31,7 +31,7 @@ export default function reducer(state = initialState, action) {
 	} else if (action.type === AUTH_SUCCESS) {
 		return Object.assign({}, state, {
 			loading: false,
-			currentUser: action.currentUser
+			currentUser: action.boardT // state is changed to dashboard
 		});
 	} else if (action.type === AUTH_ERROR) {
 		return Object.assign({}, state, {

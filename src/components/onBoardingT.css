@@ -32,7 +32,7 @@ text-align: center;
 }
 .onBoard1:hover .after {
 	display: block;
-	background: rgba(255, 0, 0, .7);
+	background: rgba(255, 0, 0, .6);
 
 }
 .onBoard2 {
@@ -48,7 +48,7 @@ text-align: center;
 }
 .onBoard2:hover .after {
 	display: block;
-	background: rgba(0, 0, 255, .95);
+	background: rgba(0, 0, 255, .6);
 }
 .onBoard3 {
 	order: 3;
@@ -63,7 +63,7 @@ text-align: center;
 }
 .onBoard3:hover .after {
 	display: block;
-	background: rgba(0, 128, 0, .95);
+	background: rgba(0, 128, 0, .5);
 }
 .onBoard4 {
 	order: 4;
@@ -78,7 +78,7 @@ text-align: center;
 }
 .onBoard4:hover .after {
 	display: block;
-	background: rgba(255, 165, 0, .95);
+	background: rgba(255, 165, 0, .5);
 }
 .after {
 	flex-grow: 1;
@@ -91,7 +91,15 @@ text-align: center;
 .after_black p {
 	color:black;
 }
-.btn-dash {
+.btn-dash, NavLink {
+	width: 100%;
+	font-size: 1.8rem;
 	text-decoration: none;
-	color: #eee;
+	color: #064784;
+	text-transform: uppercase;
+}
+.btn-dash:hover,
+.btn-dash:active {
+	color: #ffc966;
+	background-color: #064784;
 }
