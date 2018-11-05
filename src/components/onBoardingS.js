@@ -2,7 +2,7 @@ import React from 'react';
 
 import './card.css';
 import './list.css';
-import NavBar from './nav-bar.js';
+import NavBar from './nav-bar';
 import './nav-bar.css';
 import './onBoardingS.css';
 
@@ -84,3 +84,4 @@ export default function OnBoardingS(props) {
 		</section>
 	);
 }
+

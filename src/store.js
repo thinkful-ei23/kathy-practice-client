@@ -2,14 +2,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { reducer as formReducer } from 'redux-form';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
-
 import { loadAuthToken } from './local-storage';
-import { setAuthToken, refreshAuthToken } from './actions/auth';
 import authReducer from './reducers/auth';
-import { practiceReducer } from './reducers/course';
 import protectedDataReducer from './reducers/protected-data';
-
+import { setAuthToken, refreshAuthToken } from './actions/auth';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { practiceReducer } from './reducers/course';
 import registerTeacher from './reducers/registerT';
 // import registerStudent from './reducers/registerS';
 

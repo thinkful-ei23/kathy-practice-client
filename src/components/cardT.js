@@ -45,3 +45,7 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(CardT);
+
+
+/* 			<button className="btn btn-large" aria-label="click to save the practice chart" >Save</button>
+ */

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './nav-bar.css';
 
@@ -14,14 +14,16 @@ export class NavBar extends React.Component {
 
 	render() {
 		// Only render the log out button if we are logged in
-		// let logOutButton;
-		// if (this.props.loggedIn) {
-		// 	logOutButton = (
-		// 		<button
-		// 			className="btn-nav"
-		// 			onClick={() => this.logOut()}
-		// 			aria-label="log out" >Log out</button>
-		// 	);
+		let logOutButton;
+		if (this.props.loggedIn) {
+			logOutButton = (
+				<NavLink to='/'
+					activeClassName="btn-nav__active"
+					className="btn-logout"
+					aria-label="Log out"
+					onClick={() => this.logOut()}>Log out</NavLink>
+			);
+		}
 		// }
 		// // Only render the sign up button if we are logged out
 		// let signUpButtonT;
@@ -47,11 +49,7 @@ export class NavBar extends React.Component {
 
 			<header role="banner" className="header" >
 				<h1 className="brand">Practice Partner</h1>
-				
-				<NavLink to='/login'
-					activeClassName="btn-nav__active"
-					className="btn-logout"
-					aria-label="Log out" >Log out</NavLink>
+				{logOutButton}
 			</header>
 		);
 	}

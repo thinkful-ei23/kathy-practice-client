@@ -15,7 +15,7 @@ export const fetchProtectedDataError = error => ({
 
 export const fetchProtectedData = () => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
-	return fetch(`${API_BASE_URL}/protected`, {
+	return fetch(`${API_BASE_URL}/api/protected`, {
 		method: 'GET',
 		headers: {
 			// Provide our auth token as credentials
@@ -26,6 +26,9 @@ export const fetchProtectedData = () => (dispatch, getState) => {
 		.then(res => res.json())
 		.then(({ data }) => dispatch(fetchProtectedDataSuccess(data)))
 		.catch(err => {
+			// TODO
+			console.log(err, 'looking for response in pro-data actions@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+
 			dispatch(fetchProtectedDataError(err));
 		});
 };

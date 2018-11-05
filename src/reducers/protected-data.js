@@ -19,5 +19,6 @@ export default function reducer(state = initialState, action) {
 			error: action.error
 		});
 	}
+	// TODO console.log('looking for error in pro-data reducer________________________________________')
 	return state;
 }

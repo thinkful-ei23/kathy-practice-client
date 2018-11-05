@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	border: .3rem solid #F39C12;
+	border: .3rem solid #ffc966;
 }
 #classManager{
 	display: flex;

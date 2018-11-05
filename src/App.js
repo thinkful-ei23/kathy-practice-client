@@ -2,22 +2,17 @@ import React from 'react';
 // import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { refreshAuthToken } from './actions/auth';
 import './App.css';
 
 //================== compnenets needed below ============
-import BoardS from './components/boardS.js';
+import BoardS from './components/boardS';
 import BoardT from './components/boardT';
-// import LandingPageS from './components/landingPageS.js';
-// import LandingPageT from './components/landingPageT.js';
 import LogInForm from './components/log-in.js';
-// import NavBar from './components/nav-bar';
-// import NavBarDemo from './components/nav-barDemo';
 import OnBoardingT from './components/onBoardingT.js';
-import OnBoardT from './components/onBoardT.js';
 import OnBoardingS from './components/onBoardingS.js';
 import RegisterFormS from './components/signupS.js';
 import RegisterFormT from './components/signupT.js';
-import { refreshAuthToken } from './actions/auth';
 
 export class App extends React.Component {
   componentDidUpdate(prevProps) {
@@ -48,33 +43,14 @@ export class App extends React.Component {
     return (
       <Router>
         <div className="app">
-
           <main role="main">
-            {/* <LogInForm /><br></br> */}
-            {/* <NavBar /><br></br><br></br> */}
-
-            {/* <NavBar /><br></br><br></br> */}
-            <BoardS /><br></br>
-            <BoardT /><br></br>
-            {/* <RegisterFormT /><br></br> */}
-            {/* <RegisterFormS /><br></br> */}
-            <OnBoardingS /><br></br>
-            <OnBoardingT /><br></br>
-
-            <Route exact path="/login" component={LogInForm} />
-
-            <Route exact path="/onBoardingS" component={OnBoardingS} />
-            <Route exact path="/onBoardingT" component={OnBoardingT} />
-
-
+            <Route exact path="/" component={LogInForm} />
+            <Route exact path="/demoS" component={OnBoardingS} />
+            <Route exact path="/demoT" component={OnBoardingT} />
             <Route exact path="/boardS" component={BoardS} />
             <Route exact path="/boardT" component={BoardT} />
-
-            <Route exact path="/signupS" component={RegisterFormT} />
-            <Route exact path="/signupT" component={RegisterFormS} />
-
-
-
+            <Route exact path="/signupS" component={RegisterFormS} />
+            <Route exact path="/signupT" component={RegisterFormT} />
           </main>
         </div>
       </Router>
@@ -89,50 +65,8 @@ const mapStateToProps = state => ({
 })
 
 // Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
-export default /*withRouter*/(connect(mapStateToProps)(App));
+// export default withRouter(connect(mapStateToProps)(App));
+export default connect(mapStateToProps)(App);
+
         //TODO Router
 
-
-          /*  TODO suggestions from group
-          select for saved logs and student list with one assign button
-          teacher code = last name
-{/*
-        <AddCard />
-        <AddList />
-        <CardS />
-        <CardT />
-        <ClassList />
-        <Edit />
-        <List />
-        <TitleList />
-        <LandingPageS />
-        <LandingPageT />
-<NavBarDemo />
-
-        <NavBar />
-
-        <RegisterFormT />
-        <RegisterFormS />
-        <BoardS />
-        <BoardT />
-
-
-        <RegisterFormT />
-        <RegisterFormS />
-        <LogIn />
-        <BoardS />
-        <BoardT />
-        <CardS />
-        <CardT />
-        <List />
-        <AddList />
-        <TitleList />
-        <ClassList />
-        <Edit />
-* /
-  /*
-  <Route exact path="/" component={LogIn} />
-
-       <Route exact path="/X" component={LandingPage} />
-        <Route exact path="/Xboard" component={Dashboard} />
-        <Route exact path="/Xregister" component={RegistrationPage} /> */

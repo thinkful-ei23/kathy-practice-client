@@ -5,35 +5,30 @@ import {
 } from '../actions/usersS.js';
 
 // import OnBoardingS from '../components/onBoardingS.js';
-
 const initialState = {
-	// id: null,
-	// first_name: null,
-	// last_name: null,
-	// email: null,
-	// password: null,
-	// teacher_code: null,
-	onBoardingS: null
+	authToken: null, // authToken !== null does not mean it has been validated
+	currentUser: null,
+	loading: false,
+	error: null,
+	loggedOut: false
 };
-
 
 export default function reducer(state = initialState, action) {
 	if (action.type === REGISTER_STUDENT_REQUEST) {
 		return Object.assign({}, state, {
-			data: action.data,
+			loading: true,
 			error: null
 		});
 	} else if (action.type === REGISTER_STUDENT_SUCCESS) {
 		return Object.assign({}, state, {
-			// success_message:
-			onBoardingS: action.onBoardingS
+			currentUser: action.OnboardingS,
+			loading: false
 		});
 	} else if (action.type === REGISTER_STUDENT_ERROR) {
 		return Object.assign({}, state, {
+			loading: false,
 			error: action.error
 		});
 	}
-
-
 	return state;
 }

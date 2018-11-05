@@ -15,9 +15,7 @@ export class BoardS extends React.Component {
 	render() {
 		return (
 			<section className="dash" >
-
 				<NavBar />
-
 				<div className="student">
 					<CardS />
 				</div>
@@ -28,13 +26,14 @@ export class BoardS extends React.Component {
 const mapStateToProps = state => {
 	const { currentUser } = state.auth;
 	return {
-		// username: state.auth.currentUser.username,
-		// name: `${currentUser.firstName} ${currentUser.lastName}`,
-		// protectedData: state.protectedData.data
+		username: state.auth.currentUser.username,
+		name: `${currentUser.firstName} ${currentUser.lastName}`,
+		protectedData: state.protectedData.data
 	};
 };
 
 export default requiresLogin()(connect(mapStateToProps)(BoardS));
+// export default (connect(mapStateToProps)(BoardS));
 
 
 /*

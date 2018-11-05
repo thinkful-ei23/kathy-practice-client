@@ -8,5 +8,5 @@ html {
     background-image: linear-gradient(to right, rgba(255, 255, 255,.85),rgba(255, 255, 255,.4),rgba(255, 255, 255,.85)),  url("img/pastel-background2.jpeg");
 }
 body {
-  padding: 1rem 4rem;
+  padding: .4rem;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm, Field, focus, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
-
+import { login } from '../actions/auth'
 import { registerUser } from '../actions/usersT';
 import Input from './input';
 import { required, nonEmpty, matches } from '../validators';
@@ -13,9 +13,9 @@ export class RegisterFormT extends React.Component {
 	onSubmit(values) {
 		const { first_name_signUpT, last_name_signUpT, email_signUpT, password_signUpT } = values;
 		const user = { first_name_signUpT, last_name_signUpT, email_signUpT, password_signUpT };
-
 		return this.props
 			.dispatch(registerUser(user))
+			.then(() => this.props.dispatch(login(email_signUpT, password_signUpT)));
 	}
 	render() {
 		return (
@@ -84,18 +84,20 @@ export class RegisterFormT extends React.Component {
 		);
 	}
 }
-const onSubmitFail = (errors, dispatch, submitError) => {
-	if (submitError instanceof SubmissionError) {
+// ?????????
+// const onSubmitFail = (errors, dispatch, submitError) => {
+// 	if (submitError instanceof SubmissionError) {
 
-	} else {
-		throw submitError
-	}
-}
+// 	} else {
+// 		throw submitError
+// 	}
+// }
+// ?????????
 
 RegisterFormT = connect()(RegisterFormT)
+
 export default reduxForm({
 	form: 'registerT',
-	// onSubmitFail,
 	onSubmitFail: (error, dispatch) => {
 		return dispatch(focus('registerT', Object.keys(error)[0]))
 	}

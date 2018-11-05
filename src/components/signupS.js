@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import RegistrationFormS from './registerS';
-// import LogInForm from './log-in';
-// import BoardS from './boardS';
+import NavBar from './nav-bar';
 
 export function RegistrationPage(props) {
 	// If we are logged in (which happens automatically when registration
@@ -14,14 +13,11 @@ export function RegistrationPage(props) {
 	}
 	return (
 		<div className="home">
-
+			<NavBar />
 			<RegistrationFormS />
-			<Link aria-label="Button to log in" to="/log-in">Login</Link>
-
 		</div>
 	);
 }
-
 const mapStateToProps = state => ({
 	loggedIn: state.auth.currentUser !== null
 });

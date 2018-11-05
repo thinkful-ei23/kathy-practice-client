@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './add-card.css';
 import './add-list.css';
@@ -124,7 +124,7 @@ export default function OnBoardingT(props) {
 						<div className="list">
 							<button aria-label="click to expand and collapse row" onClick={handleToggle} className="collapsible">Etude</button>
 							<div className="content">
-								<textarea aria-label="add additional assignment to row" className="edit" type="text" rows="4">pay attention to measures 16 - end, be sure to have independent fingers, even on the string crossings! ;-)</textarea>
+								<textarea aria-label="add additional assignment to row" className="edit" type="text" rows="4">pay attention to measures 16 - end, be sure to have independent fingers, even on the string crossings!</textarea>
 							</div>
 						</div>
 
@@ -208,7 +208,6 @@ export default function OnBoardingT(props) {
 		</main >
 
 	);
-
 	//change state here
 };
 

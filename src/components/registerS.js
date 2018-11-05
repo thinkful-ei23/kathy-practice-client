@@ -2,10 +2,12 @@ import React from 'react';
 import { reduxForm, Field, focus, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 
+import { login } from '../actions/auth'
 import { registerUser } from '../actions/usersS';
 import Input from './input';
 import { required, nonEmpty, isAllDigits, matches } from '../validators';
 import './register.css';
+
 const matchesPassword = matches('password_signUpS');
 
 export class RegisterFormS extends React.Component {
@@ -15,6 +17,7 @@ export class RegisterFormS extends React.Component {
 		const user = { name_signUpS, last_name_signUpS, email_signUpS, password_signUpS, teacher_id_signUpS };
 		return this.props
 			.dispatch(registerUser(user))
+			.then(() => this.props.dispatch(login(email_signUpS, password_signUpS)));
 	}
 	render() {
 		return (
@@ -80,8 +83,8 @@ export class RegisterFormS extends React.Component {
 					/>
 
 					<button
-						aria-label="Button to sign in"
 						className="row btn-large"
+						aria-label="Button to sign in"
 						type="submit"
 						disabled={this.props.pristine || this.props.submitting}>
 						Sign Up!
@@ -99,12 +102,9 @@ const onSubmitFail = (errors, dispatch, submitError) => {
 		throw submitError
 	}
 }
-
 RegisterFormS = connect()(RegisterFormS)
+
 export default reduxForm({
 	form: 'registerS',
-	// onSubmitFail,
-	onSubmitFail: (error, dispatch) => {
-		return dispatch(focus('registerS', Object.keys(error)[0]))
-	}
+	onSubmitFail: (error, dispatch) => dispatch(focus('registerS', Object.keys(error)[0]))
 })(RegisterFormS)

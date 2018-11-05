@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './nav-bar.css';
 // import RegistrationFormT from './registerT';
@@ -66,27 +66,27 @@ export class NavBarDemo extends React.Component {
 
 			</header>
 
-			/*<Router basename="/react-auth-ui/">
-			<div className="App">
-				<div className="App__Aside"></div>
-				<div className="App__Form">
-					<div className="PageSwitcher">
-							<NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-							<NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-						</div>
+			// <Router basename="/react-auth-ui/">
+			// 	<div className="App">
+			// 		<div className="App__Aside"></div>
+			// 		<div className="App__Form">
+			// 			<div className="PageSwitcher">
+			// 				<NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+			// 				<NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+			// 			</div>
 
-						<div className="FormTitle">
-								<NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
-						</div>
+			// 			<div className="FormTitle">
+			// 				<NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
+			// 			</div>
 
-						<Route exact path="/" component={SignUpForm}>
-						</Route>
-						<Route path="/sign-in" component={SignInForm}>
-						</Route>
-				</div>
+			// 			<Route exact path="/" component={SignUpForm}>
+			// 			</Route>
+			// 			<Route path="/sign-in" component={SignInForm}>
+			// 			</Route>
+			// 		</div>
 
-			</div>
-		</Router> */
+			// 	</div>
+			// </Router>
 
 
 

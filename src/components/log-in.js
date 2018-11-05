@@ -1,12 +1,11 @@
 import React from 'react';
 import { reduxForm, Field, focus } from 'redux-form';
-import { connect } from 'react-redux';
-
-import { login } from '../actions/auth';
 import Input from './input';
+import { connect } from 'react-redux';
+import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
-import './log-in.css';
 import NavBarDemo from './nav-barDemo';
+import './log-in.css';
 
 export class LogInForm extends React.Component {
 	onSubmit(values) {
@@ -23,7 +22,6 @@ export class LogInForm extends React.Component {
 			);
 		}
 		return (
-
 			<section>
 				<NavBarDemo />
 				<form
@@ -67,15 +65,15 @@ export class LogInForm extends React.Component {
 		);
 	}
 }
+// TODO
 console.log("I'm in log-in.js at the bottom 1", login)
 
 export default reduxForm({
 	form: 'login',
 	onSubmitFail: (errors, dispatch) => {
 		dispatch(focus('email', 'password'))
-		//return dispatch(focus('login', Object.keys(errors)[0]))
+		return dispatch(focus('login', Object.keys(errors)[0]))
+		// TODO
 		console.log("--------I'm in log-in.js at the bottom 2", login)
-
 	}
-
 })(connect()(LogInForm));

@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-//import { LogInForm } from './log-in';
-
 export default () => Component => {
 	function RequiresLogin(props) {
 		const { authenticating, loggedIn, error, ...passThroughProps } = props;
@@ -13,7 +11,8 @@ export default () => Component => {
 		else if (!loggedIn || error) {
 			return <Redirect to="/log-in" />;
 		}
-		// console.log(result, 'i am in requires-loginT')
+		// TODO
+		console.log(error, 'i am in requires-loginT')
 
 		return <Component {...passThroughProps} />;
 	}
